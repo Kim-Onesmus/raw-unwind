@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% block title %}
+<title>Explore Kenya Safaris | Raw & Unwind Luxury Safari Experiences</title>
+{% endblock %}
+
+{% block meta_description %}
+<meta name="description"
+    content="Discover unforgettable safari adventures in Kenya with Raw & Unwind Safaris. Explore Nairobi, Maasai homesteads, Lake Victoria, and coastal treasures.">
+{% endblock %}
+
+<section class="relative w-full h-[50vh] overflow-hidden">
+
+    <!-- Background image -->
+    <div class="absolute inset-0">
+        <img src="{% static 'images/blogs/2.webp' %}" alt="About Raw Unwind Safaris"
+            class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 h-full flex items-center justify-center px-6 text-center">
+        <div class="max-w-3xl">
+            <h1 class="font-display text-4xl lg:text-6xl font-bold mb-6 text-[#faf8f3]">
+                Legacy Portfolio
+            </h1>
+
+            <p class="text-lg lg:text-xl mb-8 text-[#f0ebe0] leading-relaxed">
+                Explore Kenya Safaris | Raw & Unwind Luxury Safari Experiences
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section id="legacy-portfolio" class="w-full px-6 py-20 md:py-24">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- 3 columns on large screens -->
+
+            <!-- Nairobi City -->
+            <div class="p-6 rounded-2xl card-hover bg-[#faf8f3]">
+                <img src="{% static 'images/blogs/nairobi.jpg' %}" alt="Nairobi City Safari"
+                    class="w-full h-48 object-cover rounded-2xl mb-4">
+                <h4 class="font-display text-xl font-bold mb-2 text-[#1a4d2e]">Nairobi City</h4>
+                <p class="text-sm mb-3 text-[#3d5a46]">Urban safari experience. Giraffe Centre, elephant orphanage,
+                    Karen Blixen Museum. 2-day city immersion.</p>
+                <p class="font-display text-2xl font-bold text-[#1a4d2e]">$1,200 <span
+                        class="text-sm font-normal">pp</span></p>
+            </div>
+
+            <!-- Kajiado Maasai -->
+            <div class="p-6 rounded-2xl card-hover bg-[#faf8f3]">
+                <img src="{% static 'images/about/2.jpeg' %}" alt="Kajiado Maasai Safari"
+                    class="w-full h-48 object-cover rounded-2xl mb-4">
+                <h4 class="font-display text-xl font-bold mb-2 text-[#1a4d2e]">Kajiado Maasai</h4>
+                <p class="text-sm mb-3 text-[#3d5a46]">Authentic Maasai homestead stay. Traditional ceremonies, beadwork
+                    workshops, warrior training. 3 days.</p>
+                <p class="font-display text-2xl font-bold text-[#1a4d2e]">$2,800 <span
+                        class="text-sm font-normal">pp</span></p>
+            </div>
+
+            <!-- Kisumu Lakeside -->
+            <div class="p-6 rounded-2xl card-hover bg-[#faf8f3]">
+                <img src="{% static 'images/blogs/kisumu.jpg' %}" alt="Kisumu Lakeside Safari"
+                    class="w-full h-48 object-cover rounded-2xl mb-4">
+                <h4 class="font-display text-xl font-bold mb-2 text-[#1a4d2e]">Kisumu Lakeside</h4>
+                <p class="text-sm mb-3 text-[#3d5a46]">Lake Victoria discovery. Hippo encounters, fishing villages,
+                    sunset dhow cruises. 3-day lakeside retreat.</p>
+                <p class="font-display text-2xl font-bold text-[#1a4d2e]">$2,400 <span
+                        class="text-sm font-normal">pp</span></p>
+            </div>
+
+            <!-- Rusinga Island -->
+            <div class="p-6 rounded-2xl card-hover bg-[#faf8f3]">
+                <img src="{% static 'images/blogs/rusinga.jpg' %}" alt="Rusinga Island Safari"
+                    class="w-full h-48 object-cover rounded-2xl mb-4">
+                <h4 class="font-display text-xl font-bold mb-2 text-[#1a4d2e]">Rusinga Island</h4>
+                <p class="text-sm mb-3 text-[#3d5a46]">Hidden Lake Victoria gem. Pristine beaches, birdwatching, fossil
+                    sites, local fishing culture. 4-day island escape.</p>
+                <p class="font-display text-2xl font-bold text-[#1a4d2e]">$3,200 <span
+                        class="text-sm font-normal">pp</span></p>
+            </div>
+
+            <!-- Malindi Blue Carbon -->
+            <div class="p-6 rounded-2xl card-hover bg-[#faf8f3]">
+                <img src="{% static 'images/blogs/carbon.jpg' %}" alt="Malindi Blue Carbon Safari"
+                    class="w-full h-48 object-cover rounded-2xl mb-4">
+                <h4 class="font-display text-xl font-bold mb-2 text-[#1a4d2e]">Malindi Blue Carbon</h4>
+                <p class="text-sm mb-3 text-[#3d5a46]">Coastal conservation experience. Mangrove restoration, marine
+                    park snorkeling, Swahili culture. 3-day eco-adventure.</p>
+                <p class="font-display text-2xl font-bold text-[#1a4d2e]">$2,900 <span
+                        class="text-sm font-normal">pp</span></p>
+            </div>
+
+            <!-- Grand Kenya Circuit -->
+            <div class="p-6 rounded-2xl card-hover bg-[#faf8f3]">
+                <img src="{% static 'images/blogs/lions.jpg' %}" alt="Grand Kenya Circuit Safari"
+                    class="w-full h-48 object-cover rounded-2xl mb-4">
+                <h4 class="font-display text-xl font-bold mb-2 text-[#1a4d2e]">Grand Kenya Circuit</h4>
+                <p class="text-sm mb-3 text-[#3d5a46]">Ultimate 10-day journey. Amboseli, Tsavo, Mara, Nakuru, coastal
+                    finale. Private charter flights throughout.</p>
+                <p class="font-display text-2xl font-bold text-[#1a4d2e]">$28,500 <span
+                        class="text-sm font-normal">pp</span></p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock content %}

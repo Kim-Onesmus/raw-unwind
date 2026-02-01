@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% block title %}
+<title>About Raw Unwind Safaris | Purpose-Driven Luxury Travel in Kenya</title>
+{% endblock %}
+
+{% block meta_description %}
+<meta name="description"
+    content="Learn about Raw Unwind Safaris — a Kenyan travel brand offering regenerative luxury safaris, cultural immersion, and meaningful journeys rooted in conservation and community.">
+{% endblock %}
+
+<section class="relative w-full h-[50vh] overflow-hidden">
+
+    <!-- Background image -->
+    <div class="absolute inset-0">
+        <img src="{% static 'images/about/2.jpeg' %}" alt="About Raw Unwind Safaris"
+            class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 h-full flex items-center justify-center px-6 text-center">
+        <div class="max-w-3xl">
+            <h1 class="font-display text-4xl lg:text-6xl font-bold mb-6 text-[#faf8f3]">
+                About Raw Unwind Safaris
+            </h1>
+
+            <p class="text-lg lg:text-xl mb-8 text-[#f0ebe0] leading-relaxed">
+                Raw Unwind is a regenerative luxury safari brand rooted in Kenya.
+                We design journeys that slow you down, connect you to culture,
+                and protect the landscapes that make Africa extraordinary.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="about-us" class="w-full px-6 py-20 md:py-24"
+    style="background: linear-gradient(180deg, rgba(26, 77, 46, 0.03) 0%, rgba(26, 77, 46, 0.06) 100%);">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-display text-5xl md:text-6xl font-bold mb-6" style="color: #0d2818;">About Raw
+                Unwind</h2>
+            <p id="about-intro" class="text-xl max-w-4xl mx-auto leading-relaxed" style="color: #3d5a46;">We
+                are Kenya's premier sustainable safari company, dedicated to creating transformative travel
+                experiences that honor both people and planet. Since our founding, we've connected travelers
+                with Africa's untamed beauty while supporting local communities and conservation efforts.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <div class="p-8 rounded-3xl card-hover" style="background-color: #faf8f3;">
+                <div class="w-14 h-14 rounded-full flex items-center justify-center mb-6"
+                    style="background-color: rgba(26, 77, 46, 0.1);">
+                    <svg class="w-7 h-7" viewbox="0 0 24 24" fill="none" stroke="#1a4d2e" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold mb-4" style="color: #1a4d2e;">Our Mission</h3>
+                <p id="mission-text" class="text-base leading-relaxed" style="color: #3d5a46;">To create
+                    unforgettable safari experiences that inspire conservation, empower local communities,
+                    and achieve net-zero carbon impact. We believe luxury travel can be a force for positive
+                    change.</p>
+            </div>
+            <div class="p-8 rounded-3xl card-hover" style="background-color: #faf8f3;">
+                <div class="w-14 h-14 rounded-full flex items-center justify-center mb-6"
+                    style="background-color: rgba(201, 162, 39, 0.1);">
+                    <svg class="w-7 h-7" viewbox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2">
+                        <path
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold mb-4" style="color: #1a4d2e;">Our Vision</h3>
+                <p id="vision-text" class="text-base leading-relaxed" style="color: #3d5a46;">A world where
+                    every journey heals—healing the land, the communities we visit, and the travelers
+                    themselves. Where sustainable tourism becomes the gold standard for exploring our
+                    planet's wonders.</p>
+            </div>
+        </div>
+        <div class="p-10 rounded-3xl text-center"
+            style="background: linear-gradient(135deg, #1a4d2e 0%, #2d5a41 100%);">
+            <h3 class="font-display text-3xl font-bold mb-4" style="color: #faf8f3;">Partnership with Mikoko
+                Pamoja</h3>
+            <p id="partnership-text" class="text-lg max-w-3xl mx-auto leading-relaxed mb-6"
+                style="color: rgba(250, 248, 243, 0.9);">We're proud partners of Mikoko Pamoja—the world's
+                first community-led blue carbon project. Together, we protect vital mangrove ecosystems
+                along Kenya's coast while supporting local livelihoods. Every safari with Raw Unwind
+                contributes directly to this groundbreaking conservation initiative.</p>
+            <div class="flex flex-wrap justify-center gap-8 mt-8">
+                <div class="text-center">
+                    <p class="font-display text-4xl font-bold" style="color: #c9a227;">40%</p>
+                    <p class="text-sm mt-2" style="color: rgba(250, 248, 243, 0.8);">Revenue to Communities
+                    </p>
+                </div>
+                <div class="text-center">
+                    <p class="font-display text-4xl font-bold" style="color: #c9a227;">100%</p>
+                    <p class="text-sm mt-2" style="color: rgba(250, 248, 243, 0.8);">Carbon Neutral</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-display text-4xl font-bold" style="color: #c9a227;">1,000+</p>
+                    <p class="text-sm mt-2" style="color: rgba(250, 248, 243, 0.8);">Hectares Protected</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- Legacy Portfolio Section -->
+
+
+{% endblock content %}
+
+                        

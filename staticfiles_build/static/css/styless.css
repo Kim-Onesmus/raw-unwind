@@ -1,0 +1,113 @@
+/* GLOBAL */
+body {
+    box-sizing: border-box;
+}
+
+/* SLIDER */
+#hero-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+}
+
+.hero-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* IMAGE */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: heroZoom 10s ease-in-out infinite;
+}
+
+/* OVERLAY */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.35)
+    );
+}
+
+/* TEXT */
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    font-weight: 700;
+    color: #faf8f3;
+    margin-bottom: 1rem;
+}
+
+.hero-text {
+    max-width: 640px;
+    font-size: 1.125rem;
+    color: #f0ebe0;
+    margin-bottom: 2rem;
+}
+
+/* BUTTON */
+.hero-btn {
+    padding: 0.75rem 2.2rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: #1a4d2e;
+    color: #faf8f3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* ZOOM EFFECT */
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.12);
+    }
+}
+
+
+/* Button container */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Primary button (already styled) */
+.hero-btn.primary {
+    background-color: #1a4d2e;
+    color: #faf8f3;
+}
+
+/* Secondary (outline) button */
+.hero-btn.secondary {
+    background-color: transparent;
+    color: #faf8f3;
+    border: 1.5px solid rgba(250, 248, 243, 0.8);
+}
+
+.hero-btn.secondary:hover {
+    background-color: rgba(250, 248, 243, 0.12);
+}

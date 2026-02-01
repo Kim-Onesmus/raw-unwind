@@ -1,0 +1,1505 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags for High-End International Clients -->
+    <title>Raw Unwind | Ultra-Luxury Kenya Safaris | Bespoke Indigenous Experiences | UK, Switzerland, China, USA,
+        Australia Elite Travel</title>
+    <meta name="description"
+        content="Kenya's premier ultra-luxury safari house for UHNW families and discerning travelers from London, Zurich, Hong Kong, Singapore, New York, Sydney. Private conservancies, helicopter transfers, exclusive Maasai cultural immersion. Starting from $12,500 per person. Net-zero certified, 40% community investment. Private jet arrangements available.">
+    <meta name="keywords"
+        content="luxury safari Kenya UK, Switzerland luxury safari, China UHNW safari Kenya, Hong Kong elite safari, Singapore luxury travel Kenya, London luxury safari packages, Zurich bespoke safari, Australian luxury safari Kenya, New York elite safari, ultra-high-net-worth safari Kenya, UHNW family safari Africa, private jet safari Kenya, helicopter safari Maasai Mara, exclusive Kenya safari UK clients, Swiss luxury African safari, Chinese luxury safari packages, bespoke safari Asia, Australian exclusive Kenya tours, private conservancy safari, Maasai Mara helicopter access, Amboseli luxury tented camps, net-zero luxury travel, sustainable safari UHNW, Great Migration private viewing, indigenous cultural immersion luxury, Samburu exclusive access, Lamu heritage luxury, private island Kenya safari, multi-generational luxury safari, family office safari Kenya, concierge safari services, blue carbon offset luxury travel, conservation safari investment">
+    <meta name="author" content="Raw Unwind - Premium Safari Experiences"><!-- Open Graph for Social Sharing -->
+    <meta property="og:title"
+        content="Raw Unwind | Ultra-Luxury Kenya Safaris for UK, Swiss, Chinese, American &amp; Australian Elite">
+    <meta property="og:description"
+        content="Exclusive safari adventures for UHNW families from London, Zurich, Hong Kong, Singapore, New York, Sydney. Private conservancies, indigenous cultural immersion, net-zero luxury travel. From $12,500pp.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{% static 'images/favicon.jpg' %}">
+    <meta name="geo.region" content="KE">
+    <meta name="geo.placename" content="Kenya">
+    <meta name="target-markets"
+        content="United Kingdom, Switzerland, China, Hong Kong, Singapore, United States, Australia, New Zealand">
+    <!-- Language & Currency Hints -->
+    <meta name="currencies-accepted" content="GBP, CHF, CNY, USD, AUD, EUR">
+    <meta name="payment-methods" content="Bank Transfer, SWIFT, Credit Card, WeChat Pay (for Chinese clients)">
+
+        <link rel="icon" type="image/png" href="{% static 'images/favicon.jpg' %}">
+        <link rel="apple-touch-icon" href="{% static 'images/favicon.jpg' %}">
+    <!-- Structured Data for Search Engines -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Raw Unwind",
+    "description": "Ultra-luxury safari company specializing in exclusive indigenous cultural experiences and premium wildlife adventures in Kenya. Serving UHNW clients from UK, Switzerland, China, Hong Kong, Singapore, USA, Australia.",
+    "url": "https://rawunwind.com",
+    "priceRange": "$$$$$",
+    "currenciesAccepted": ["USD", "GBP", "CHF", "CNY", "AUD", "EUR"],
+    "areaServed": [
+      {"@type": "Country", "name": "United Kingdom"},
+      {"@type": "Country", "name": "Switzerland"},
+      {"@type": "Country", "name": "China"},
+      {"@type": "Country", "name": "Hong Kong"},
+      {"@type": "Country", "name": "Singapore"},
+      {"@type": "Country", "name": "United States"},
+      {"@type": "Country", "name": "Australia"},
+      {"@type": "Country", "name": "New Zealand"}
+    ],
+    "serviceType": ["Luxury Safari", "Cultural Tourism", "Sustainable Travel", "Wildlife Photography Tours", "Private Jet Safari", "Helicopter Safari", "Bespoke Travel"],
+    "knowsAbout": ["Maasai Culture", "Indigenous Heritage", "Wildlife Conservation", "Blue Carbon Projects", "UHNW Travel", "Family Office Travel"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Luxury Safari Packages",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Maasai Mara Ultimate Safari Experience",
+            "description": "5-day exclusive Great Migration safari with private conservancy access and authentic Maasai cultural immersion",
+            "itinerary": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Private charter flight and Maasai welcome ceremony"},
+                {"@type": "ListItem", "position": 2, "name": "Hot air balloon safari and river crossing witness"},
+                {"@type": "ListItem", "position": 3, "name": "Full-day Maasai manyatta immersion and big cat tracking"},
+                {"@type": "ListItem", "position": 4, "name": "Private conservancy full-day safari"},
+                {"@type": "ListItem", "position": 5, "name": "Conservation certificate and departure"}
+              ]
+            }
+          },
+          "price": "12500",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Helicopter Safari - Mombasa to Tsavo",
+            "description": "8-hour exclusive helicopter safari from cruise port to Tsavo East National Park"
+          },
+          "price": "3500",
+          "priceCurrency": "USD"
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "127"
+    }
+  }
+  </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+
+<body class="h-full font-body">
+    <div id="app-wrapper" class="w-full h-full overflow-auto">
+        <div class="min-h-full w-full"
+            style="background: linear-gradient(180deg, #fdfcfa 0%, #f5f3ef 50%, #ebe8e0 100%);">
+            <!-- Luxury Navigation -->
+            <nav class="sticky top-0 z-50 w-full px-6 py-4 flex justify-between items-center backdrop-blur-md"
+                style="background-color: rgba(253, 252, 250, 0.95); border-bottom: 1px solid rgba(26, 26, 26, 0.08);">
+                <div class="flex items-center gap-3"><button id="side-menu-toggle"
+                        class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-opacity-80 transition-all"
+                        style="background-color: rgba(26, 26, 26, 0.05);">
+                        <svg class="w-6 h-6" viewbox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2.5">
+                            <path d="M3 12h18M3 6h18M3 18h18" />
+                        </svg></button>
+                    <svg class="w-11 h-11" viewbox="0 0 44 44" fill="none">
+                        <circle cx="22" cy="22" r="20" stroke="#1a1a1a" stroke-width="2" fill="none" />
+                        <path d="M22 8 C16 16, 13 22, 22 36 C31 22, 28 16, 22 8" fill="#1a1a1a" />
+                        <circle cx="22" cy="24" r="2" fill="#d4af37" />
+                    </svg>
+                    <div><span id="nav-company-name" class="font-display text-2xl font-bold block tracking-wide"
+                            style="color: #1a1a1a;">Raw Unwind</span> <span id="nav-slogan"
+                            class="text-xs tracking-widest uppercase font-light" style="color: #666;">Indigenous
+                            Heritage · Luxury Safaris</span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center gap-8"><a href="#heritage-experiences"
+                        class="font-body text-sm font-medium tracking-wide hover:opacity-70 transition-opacity"
+                        style="color: #1a1a1a;">Cultural Heritage</a> <a href="#signature-journeys"
+                        class="font-body text-sm font-medium tracking-wide hover:opacity-70 transition-opacity"
+                        style="color: #1a1a1a;">Signature Journeys</a> <a href="#bespoke-itineraries"
+                        class="font-body text-sm font-medium tracking-wide hover:opacity-70 transition-opacity"
+                        style="color: #1a1a1a;">Bespoke Travel</a> <a href="#sustainability"
+                        class="font-body text-sm font-medium tracking-wide hover:opacity-70 transition-opacity"
+                        style="color: #1a1a1a;">Sustainability</a>
+                </div><button id="nav-cta"
+                    class="px-6 py-2.5 text-sm font-semibold tracking-widest uppercase transition-all duration-300 hover:shadow-xl rounded-sm"
+                    style="background-color: #1a1a1a; color: #fdfcfa;"> Private Inquiry </button>
+            </nav><!-- Side Menu -->
+            <div id="menu-overlay"
+                class="fixed inset-0 bg-black z-40 pointer-events-none transition-opacity duration-300"
+                style="opacity: 0;"></div>
+            <aside id="side-menu"
+                class="fixed top-0 left-0 h-full w-80 z-50 overflow-y-auto transition-transform duration-300"
+                style="background-color: #fdfcfa; transform: translateX(-100%); box-shadow: 4px 0 20px rgba(0,0,0,0.1);">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-10 h-10" viewbox="0 0 44 44" fill="none">
+                                <circle cx="22" cy="22" r="20" stroke="#1a1a1a" stroke-width="2" fill="none" />
+                                <path d="M22 8 C16 16, 13 22, 22 36 C31 22, 28 16, 22 8" fill="#1a1a1a" />
+                                <circle cx="22" cy="24" r="2" fill="#d4af37" />
+                            </svg><span class="font-display text-xl font-bold" style="color: #1a1a1a;">Raw Unwind</span>
+                        </div><button id="side-menu-close"
+                            class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-opacity-80 transition-all"
+                            style="background-color: rgba(26, 26, 26, 0.05);">
+                            <svg class="w-6 h-6" viewbox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2.5">
+                                <path d="M6 18L18 6M6 6l12 12" />
+                            </svg></button>
+                    </div>
+                    <nav class="space-y-2 mb-8"><a href="#heritage-experiences"
+                            class="menu-link block px-4 py-3 rounded-xl font-medium transition-all"
+                            style="color: #1a1a1a;">Indigenous Heritage</a> <a href="#signature-journeys"
+                            class="menu-link block px-4 py-3 rounded-xl font-medium transition-all"
+                            style="color: #1a1a1a;">Signature Journeys</a> <a href="#bespoke-itineraries"
+                            class="menu-link block px-4 py-3 rounded-xl font-medium transition-all"
+                            style="color: #1a1a1a;">Bespoke Itineraries</a> <a href="#sustainability"
+                            class="menu-link block px-4 py-3 rounded-xl font-medium transition-all"
+                            style="color: #1a1a1a;">Sustainability Commitment</a> <a href="#payment-details"
+                            class="menu-link block px-4 py-3 rounded-xl font-medium transition-all"
+                            style="color: #1a1a1a;">Investment &amp; Booking</a>
+                    </nav>
+                </div>
+            </aside><!-- Hero Section -->
+            <section class="w-full px-6 py-24 md:py-32 max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="animate-slide-in">
+                        <div class="inline-flex items-center gap-3 px-5 py-2 rounded-sm mb-6"
+                            style="background-color: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3);">
+                            <svg class="w-5 h-5" viewbox="0 0 24 24" fill="#d4af37">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                            </svg><span class="text-xs font-semibold tracking-widest uppercase"
+                                style="color: #1a1a1a;">Net-Zero Certified Luxury</span>
+                        </div>
+                        <h1 id="hero-headline"
+                            class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+                            style="color: #1a1a1a;">Where Indigenous Wisdom Meets Timeless Luxury</h1>
+                        <p id="hero-subtext" class="text-lg md:text-xl leading-relaxed mb-8 max-w-lg font-light"
+                            style="color: #4a4a4a;">Immerse yourself in Kenya's living heritage through exclusive
+                            encounters with Maasai elders, Samburu warriors, and Swahili craftsmen. Ultra-luxury safaris
+                            curated for discerning global travelers.</p>
+                        <div class="flex flex-wrap gap-4"><button id="hero-cta"
+                                class="px-10 py-4 font-semibold tracking-widest uppercase transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 rounded-sm"
+                                style="background-color: #1a1a1a; color: #fdfcfa;"> Design My Journey </button> <button
+                                id="hero-donate"
+                                class="px-10 py-4 font-semibold tracking-widest uppercase border-2 transition-all duration-300 hover:shadow-lg rounded-sm"
+                                style="border-color: #1a1a1a; color: #1a1a1a; background: transparent;"> Conservation
+                                Partnership </button>
+                        </div>
+                        <div class="mt-8 flex items-center gap-6 text-sm flex-wrap" style="color: #666;">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5" viewbox="0 0 24 24" fill="#d4af37">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg><span>Private Conservancies</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5" viewbox="0 0 24 24" fill="#d4af37">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg><span>Indigenous Guides</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5" viewbox="0 0 24 24" fill="#d4af37">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg><span>127 UHNW Families Served</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t" style="border-color: rgba(26, 26, 26, 0.1);">
+                            <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color: #1a1a1a;">
+                                TRUSTED BY CLIENTS FROM</p>
+                            <div class="flex flex-wrap gap-3 text-xs font-light" style="color: #666;"><span
+                                    class="px-3 py-1.5 rounded-sm"
+                                    style="background-color: rgba(212, 175, 55, 0.1);">🇬🇧 London</span> <span
+                                    class="px-3 py-1.5 rounded-sm"
+                                    style="background-color: rgba(212, 175, 55, 0.1);">🇨🇭 Zurich</span> <span
+                                    class="px-3 py-1.5 rounded-sm"
+                                    style="background-color: rgba(212, 175, 55, 0.1);">🇭🇰 Hong Kong</span> <span
+                                    class="px-3 py-1.5 rounded-sm"
+                                    style="background-color: rgba(212, 175, 55, 0.1);">������🇬 Singapore</span> <span
+                                    class="px-3 py-1.5 rounded-sm"
+                                    style="background-color: rgba(212, 175, 55, 0.1);">🇺🇸 New York</span> <span
+                                    class="px-3 py-1.5 rounded-sm"
+                                    style="background-color: rgba(212, 175, 55, 0.1);">🇦🇺 Sydney</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-fade-in-up relative">
+                        <div class="relative aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
+                            <div class="w-full h-full luxury-gradient flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <svg class="w-24 h-24 mx-auto mb-4 animate-float opacity-90" viewbox="0 0 80 80"
+                                        fill="none">
+                                        <circle cx="40" cy="40" r="35" stroke="white" stroke-width="1.5"
+                                            opacity="0.6" />
+                                        <path d="M40 15 C30 25, 25 35, 40 65 C55 35, 50 25, 40 15" fill="white"
+                                            opacity="0.8" />
+                                        <circle cx="40" cy="42" r="3" fill="#d4af37" />
+                                    </svg>
+                                    <p class="text-sm font-light tracking-widest uppercase">Kenya's Timeless Heritage
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Indigenous Heritage Experiences -->
+            <section id="heritage-experiences" class="w-full px-6 py-20 md:py-28"
+                style="background: linear-gradient(180deg, rgba(212, 175, 55, 0.03) 0%, rgba(212, 175, 55, 0.08) 100%);">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-20">
+                        <div class="inline-block px-6 py-2 rounded-sm mb-6"
+                            style="background-color: rgba(26, 26, 26, 0.05);"><span
+                                class="text-xs font-semibold tracking-widest uppercase" style="color: #1a1a1a;">Cultural
+                                Immersion</span>
+                        </div>
+                        <h2 class="font-display text-5xl md:text-6xl font-bold mb-6" style="color: #1a1a1a;">Living
+                            Indigenous Heritage</h2>
+                        <p class="text-xl max-w-3xl mx-auto font-light leading-relaxed" style="color: #4a4a4a;">
+                            Experience Kenya's ancient cultures through intimate encounters designed exclusively for our
+                            guests. These are not performances—they are sacred traditions shared with respect and
+                            reciprocity.</p>
+                    </div>
+                    <div class="grid lg:grid-cols-3 gap-8"><!-- Maasai Cultural Immersion -->
+                        <div class="rounded-sm overflow-hidden card-hover"
+                            style="background-color: #fdfcfa; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <div class="w-full h-full"
+                                    style="background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(77, 77, 77, 0.6) 100%), linear-gradient(135deg, #d4af37 0%, #8b7355 100%);">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="text-center text-white">
+                                            <svg class="w-16 h-16 mx-auto mb-3" viewbox="0 0 64 64" fill="white"
+                                                opacity="0.9">
+                                                <circle cx="32" cy="20" r="8" />
+                                                <path d="M32 30 L20 50 L26 50 L32 40 L38 50 L44 50 Z" />
+                                                <circle cx="32" cy="24" r="2" fill="#d4af37" />
+                                            </svg>
+                                            <p class="text-xs tracking-wider uppercase">Maasai Warriors</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-display text-3xl font-bold mb-4" style="color: #1a1a1a;">Maasai Warrior
+                                    Traditions</h3>
+                                <p class="text-sm mb-6 font-light leading-relaxed" style="color: #4a4a4a;">Spend
+                                    intimate time with Maasai elders and moran (warriors) in their ancestral lands.
+                                    Learn ancient warrior rituals, beadwork symbolism, traditional medicine, and
+                                    participate in blessing ceremonies reserved for honored guests.</p>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-start gap-3 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                        </svg><span><strong>Private manyatta visits</strong> with elder-led
+                                            storytelling</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                        </svg><span><strong>Traditional ceremonies</strong> including fire-making and
+                                            blessing rituals</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                        </svg><span><strong>Wildlife tracking</strong> with Maasai naturalist
+                                            guides</span>
+                                    </li>
+                                </ul>
+                                <div class="pt-6 border-t" style="border-color: rgba(26, 26, 26, 0.08);">
+                                    <p class="text-xs font-semibold tracking-wider uppercase mb-2" style="color: #666;">
+                                        Community Impact</p>
+                                    <p class="text-sm font-light" style="color: #4a4a4a;">40% of fees support Maasai
+                                        education and land conservation</p>
+                                </div>
+                            </div>
+                        </div><!-- Samburu Indigenous Experience -->
+                        <div class="rounded-sm overflow-hidden card-hover"
+                            style="background-color: #fdfcfa; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <div class="w-full h-full"
+                                    style="background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(77, 77, 77, 0.6) 100%), linear-gradient(135deg, #8b4513 0%, #d2691e 100%);">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="text-center text-white">
+                                            <svg class="w-16 h-16 mx-auto mb-3" viewbox="0 0 64 64" fill="white"
+                                                opacity="0.9">
+                                                <path d="M32 8 L20 20 L32 32 L44 20 Z" />
+                                                <path d="M32 32 L20 44 L32 56 L44 44 Z" />
+                                                <circle cx="32" cy="32" r="3" fill="#d4af37" />
+                                            </svg>
+                                            <p class="text-xs tracking-wider uppercase">Samburu Heritage</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-display text-3xl font-bold mb-4" style="color: #1a1a1a;">Samburu Desert
+                                    Wisdom</h3>
+                                <p class="text-sm mb-6 font-light leading-relaxed" style="color: #4a4a4a;">Journey to
+                                    Kenya's northern frontier to meet the Samburu people—cousins of the Maasai who've
+                                    thrived in harsh desert landscapes for centuries. Experience their unique singing
+                                    traditions and nomadic lifestyle.</p>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-start gap-3 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                        </svg><span><strong>Traditional singing circles</strong> with women's
+                                            cooperatives</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                        </svg><span><strong>Beadwork masterclasses</strong> learning symbolic
+                                            patterns</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                        </svg><span><strong>Desert survival techniques</strong> passed through
+                                            generations</span>
+                                    </li>
+                                </ul>
+                                <div class="pt-6 border-t" style="border-color: rgba(26, 26, 26, 0.08);">
+                                    <p class="text-xs font-semibold tracking-wider uppercase mb-2" style="color: #666;">
+                                        Community Impact</p>
+                                    <p class="text-sm font-light" style="color: #4a4a4a;">Supports women's beading
+                                        cooperatives and water projects</p>
+                                </div>
+                            </div>
+                        </div><!-- Swahili Coastal Heritage -->
+                        <div class="rounded-sm overflow-hidden card-hover"
+                            style="background-color: #fdfcfa; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <div class="w-full h-full"
+                                    style="background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(77, 77, 77, 0.6) 100%), linear-gradient(135deg, #4682b4 0%, #5f9ea0 100%);">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="text-center text-white">
+                                            <svg class="w-16 h-16 mx-auto mb-3" viewbox="0 0 64 64" fill="white"
+                                                opacity="0.9">
+                                                <path d="M10 32 L32 10 L54 32 L32 54 Z" />
+                                                <circle cx="32" cy="32" r="8" fill="none" stroke="white"
+                                                    stroke-width="2" />
+                                                <circle cx="32" cy="32" r="3" fill="#d4af37" />
+                                            </svg>
+                                            <p class="text-xs tracking-wider uppercase">Swahili Culture</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-display text-3xl font-bold mb-4" style="color: #1a1a1a;">Swahili Coastal
+                                    Heritage</h3>
+                                <p class="text-sm mb-6 font-light leading-relaxed" style="color: #4a4a4a;">Explore 1,000
+                                    years of Swahili civilization in UNESCO heritage sites. Learn taarab music, Swahili
+                                    poetry, traditional dhow building, and the fusion of African, Arab, and Asian
+                                    influences that created this unique culture.</p>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-start gap-3 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                        </svg><span><strong>Private mansion tours</strong> in Lamu &amp; Mombasa old
+                                            towns</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                        </svg><span><strong>Taarab music sessions</strong> with master musicians</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                        </svg><span><strong>Traditional dhow sailing</strong> and spice market
+                                            experiences</span>
+                                    </li>
+                                </ul>
+                                <div class="pt-6 border-t" style="border-color: rgba(26, 26, 26, 0.08);">
+                                    <p class="text-xs font-semibold tracking-wider uppercase mb-2" style="color: #666;">
+                                        Community Impact</p>
+                                    <p class="text-sm font-light" style="color: #4a4a4a;">Preserves Swahili heritage
+                                        sites and artisan livelihoods</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Signature Journeys with Detailed Itineraries -->
+            <section id="signature-journeys" class="w-full px-6 py-20 md:py-28">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-20">
+                        <div class="inline-block px-6 py-2 rounded-sm mb-6"
+                            style="background-color: rgba(26, 26, 26, 0.05);"><span
+                                class="text-xs font-semibold tracking-widest uppercase"
+                                style="color: #1a1a1a;">Ultra-Luxury Itineraries</span>
+                        </div>
+                        <h2 class="font-display text-5xl md:text-6xl font-bold mb-6" style="color: #1a1a1a;">Signature
+                            Journeys</h2>
+                        <p class="text-xl max-w-3xl mx-auto font-light leading-relaxed" style="color: #4a4a4a;">
+                            Meticulously crafted itineraries combining wildlife encounters, indigenous cultural
+                            immersion, and unparalleled luxury. Each journey tells Kenya's story through authentic
+                            experiences.</p>
+                    </div><!-- Journey 1: Maasai Mara Great Migration -->
+                    <div class="mb-20 rounded-sm overflow-hidden"
+                        style="background-color: #fdfcfa; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
+                        <div class="grid lg:grid-cols-5">
+                            <div class="lg:col-span-2 relative" style="min-height: 400px;">
+                                <div class="absolute inset-0"
+                                    style="background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(77, 77, 77, 0.5) 100%), linear-gradient(135deg, #8b4513 0%, #d2691e 100%);">
+                                    <div class="h-full flex flex-col justify-center items-center text-white p-8">
+                                        <svg class="w-20 h-20 mb-4 opacity-90" viewbox="0 0 80 80" fill="white">
+                                            <circle cx="40" cy="30" r="12" />
+                                            <path d="M25 45 Q20 50, 20 60 L30 60" />
+                                            <path d="M55 45 Q60 50, 60 60 L50 60" />
+                                            <path d="M30 42 L40 52 L50 42" />
+                                        </svg>
+                                        <h3 class="font-display text-4xl font-bold text-center mb-2">The Great Migration
+                                        </h3>
+                                        <p class="text-sm tracking-wider uppercase">Maasai Mara Ultimate</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-3 p-10">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div>
+                                        <h4 class="font-display text-3xl font-bold mb-2" style="color: #1a1a1a;">5 Days
+                                            / 4 Nights</h4>
+                                        <p class="text-sm font-light" style="color: #666;">July - October Peak Season
+                                        </p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="font-display text-4xl font-bold" style="color: #1a1a1a;">$12,500</p>
+                                        <p class="text-sm font-light" style="color: #666;">per person</p>
+                                    </div>
+                                </div>
+                                <p class="text-base font-light leading-relaxed mb-8" style="color: #4a4a4a;">Witness
+                                    nature's greatest spectacle from exclusive mobile camps positioned at river crossing
+                                    points. Combine thrilling wildlife encounters with profound Maasai cultural
+                                    experiences in their ancestral homelands.</p>
+                                <div class="mb-8">
+                                    <h5 class="font-semibold text-sm tracking-wider uppercase mb-4"
+                                        style="color: #1a1a1a;">Journey Highlights</h5>
+                                    <div class="grid md:grid-cols-2 gap-3">
+                                        <div class="flex items-start gap-2 text-sm" style="color: #4a4a4a;">
+                                            <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20"
+                                                fill="#d4af37">
+                                                <path
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                            </svg><span>Private conservancy access</span>
+                                        </div>
+                                        <div class="flex items-start gap-2 text-sm" style="color: #4a4a4a;">
+                                            <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20"
+                                                fill="#d4af37">
+                                                <path
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                            </svg><span>Hot air balloon safari</span>
+                                        </div>
+                                        <div class="flex items-start gap-2 text-sm" style="color: #4a4a4a;">
+                                            <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20"
+                                                fill="#d4af37">
+                                                <path
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                            </svg><span>Maasai elder ceremonies</span>
+                                        </div>
+                                        <div class="flex items-start gap-2 text-sm" style="color: #4a4a4a;">
+                                            <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20"
+                                                fill="#d4af37">
+                                                <path
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                            </svg><span>Professional photography guide</span>
+                                        </div>
+                                    </div>
+                                </div><button
+                                    class="px-8 py-3 text-sm font-semibold tracking-widest uppercase transition-all hover:shadow-lg rounded-sm"
+                                    style="background-color: #1a1a1a; color: #fdfcfa;"> View Detailed Itinerary
+                                </button>
+                            </div>
+                        </div><!-- Detailed Day-by-Day Itinerary -->
+                        <div class="p-10 border-t"
+                            style="border-color: rgba(26, 26, 26, 0.08); background-color: rgba(212, 175, 55, 0.03);">
+                            <h5 class="font-display text-2xl font-bold mb-8" style="color: #1a1a1a;">Detailed Itinerary
+                            </h5>
+                            <div class="space-y-8"><!-- Day 1 -->
+                                <div class="itinerary-day">
+                                    <div class="day-marker">
+                                        1
+                                    </div>
+                                    <h6 class="font-semibold text-lg mb-3" style="color: #1a1a1a;">Arrival &amp; Maasai
+                                        Welcome Ceremony</h6>
+                                    <p class="text-sm font-light mb-4 leading-relaxed" style="color: #4a4a4a;">
+                                        <strong>Morning:</strong> Private charter flight from Nairobi (Wilson Airport)
+                                        to Mara North Conservancy airstrip (45 minutes). Upon landing, you're greeted by
+                                        your Maasai guide in traditional attire.<br><br><strong>Midday:</strong>
+                                        Transfer to your luxury mobile camp overlooking the Mara River. Your personal
+                                        butler serves champagne as you settle into your canvas suite with king bed,
+                                        en-suite bathroom, and private deck.<br><br><strong>Afternoon:</strong>
+                                        Traditional Maasai welcome ceremony with elders. Participate in blessing rituals
+                                        and learn the meaning of traditional beadwork patterns. Afternoon game drive in
+                                        private 4x4 with expert naturalist.<br><br><strong>Evening:</strong> Sundowner
+                                        cocktails on a kopje (rocky outcrop) overlooking the plains. Seven-course
+                                        tasting menu featuring local ingredients paired with South African wines.
+                                        Stargazing session with astronomy guide.</p>
+                                    <div class="flex flex-wrap gap-2"><span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Private
+                                            Charter</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Cultural
+                                            Ceremony</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Game
+                                            Drive</span>
+                                    </div>
+                                </div><!-- Day 2 -->
+                                <div class="itinerary-day">
+                                    <div class="day-marker">
+                                        2
+                                    </div>
+                                    <h6 class="font-semibold text-lg mb-3" style="color: #1a1a1a;">Hot Air Balloon &amp;
+                                        River Crossing</h6>
+                                    <p class="text-sm font-light mb-4 leading-relaxed" style="color: #4a4a4a;">
+                                        <strong>Pre-Dawn:</strong> 5:30 AM wake-up with fresh coffee delivered to your
+                                        tent. Transfer to balloon launch site in private
+                                        vehicle.<br><br><strong>Morning:</strong> One-hour hot air balloon flight over
+                                        the Mara plains at sunrise (6:30-7:30 AM). Witness wildlife awakening from
+                                        aerial perspective. Land in the bush for champagne breakfast with views of
+                                        grazing wildebeest herds. Return to camp by 10:00
+                                        AM.<br><br><strong>Midday:</strong> Leisure time at camp. Optional spa
+                                        treatments, swimming pool, or photography tutorial with resident wildlife
+                                        photographer.<br><br><strong>Afternoon:</strong> 4:00 PM departure for extended
+                                        game drive positioned at Mara River crossing point. Witness wildebeest dramatic
+                                        river crossings (dependent on animal movement). Packed gourmet picnic dinner
+                                        served by the river.<br><br><strong>Evening:</strong> Return after dark with
+                                        spotlight for nocturnal wildlife viewing. Traditional Maasai storytelling around
+                                        the campfire.</p>
+                                    <div class="flex flex-wrap gap-2"><span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Hot Air
+                                            Balloon</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">River
+                                            Crossing</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Bush
+                                            Dining</span>
+                                    </div>
+                                </div><!-- Day 3 -->
+                                <div class="itinerary-day">
+                                    <div class="day-marker">
+                                        3
+                                    </div>
+                                    <h6 class="font-semibold text-lg mb-3" style="color: #1a1a1a;">Maasai Manyatta
+                                        Immersion &amp; Big Cat Tracking</h6>
+                                    <p class="text-sm font-light mb-4 leading-relaxed" style="color: #4a4a4a;">
+                                        <strong>Morning:</strong> 7:00 AM departure for private Maasai manyatta
+                                        (homestead) visit. Spend 3 hours with Maasai families learning traditional
+                                        lifestyle: milk collection, fire-making, beadwork. Participate in warrior
+                                        training including spear throwing and traditional jumping dance
+                                        (adumu).<br><br><strong>Midday:</strong> Traditional Maasai lunch prepared by
+                                        community women—taste ugali, nyama choma (grilled meat), and fermented milk.
+                                        Learn about Maasai social structure, age-set system, and rites of passage from
+                                        elders (through interpreter).<br><br><strong>Afternoon:</strong> Return to camp
+                                        for brief rest. 3:30 PM specialized big cat tracking experience with Kenya
+                                        Wildlife Service-trained guide. Use radio telemetry to locate collared lions and
+                                        cheetahs. Photography masterclass focusing on predator
+                                        behavior.<br><br><strong>Evening:</strong> Private bush dinner under acacia
+                                        trees with live taarab music. Sleep-out option available under the stars on
+                                        raised platform (with full support staff).</p>
+                                    <div class="flex flex-wrap gap-2"><span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Cultural
+                                            Immersion</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Big Cat
+                                            Tracking</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Warrior
+                                            Training</span>
+                                    </div>
+                                </div><!-- Day 4 -->
+                                <div class="itinerary-day">
+                                    <div class="day-marker">
+                                        4
+                                    </div>
+                                    <h6 class="font-semibold text-lg mb-3" style="color: #1a1a1a;">Full-Day Private
+                                        Reserve Safari</h6>
+                                    <p class="text-sm font-light mb-4 leading-relaxed" style="color: #4a4a4a;">
+                                        <strong>Early Morning:</strong> 6:00 AM departure for full-day safari in
+                                        exclusive Olare Motorogi Conservancy (accessible only to conservancy
+                                        guests—maximum 6 vehicles per sighting vs. 20+ in main reserve). Pack gourmet
+                                        picnic breakfast and lunch.<br><br><strong>Morning:</strong> Track elephant
+                                        herds, observe hunting strategies of resident lion prides, and photograph
+                                        leopards in riverine forests. Morning coffee break at scenic viewpoint
+                                        overlooking conservancy.<br><br><strong>Midday:</strong> Riverside picnic lunch
+                                        under doum palms. Optional guided nature walk with armed ranger focusing on
+                                        smaller wildlife, bird species, and traditional plant
+                                        medicines.<br><br><strong>Afternoon:</strong> Continue game driving through
+                                        diverse habitats: open grassland, fever tree forests, lugga (seasonal
+                                        waterways). Seek out rhinos, giraffes, and resident cheetah
+                                        coalition.<br><br><strong>Evening:</strong> Sundowner stop at conservancy
+                                        boundary with 360° views. Return to camp by 7:00 PM for final farewell dinner
+                                        featuring regional specialties. Maasai warrior dance performance and fire
+                                        ceremony.</p>
+                                    <div class="flex flex-wrap gap-2"><span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Full Day
+                                            Safari</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Private
+                                            Reserve</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Walking
+                                            Safari</span>
+                                    </div>
+                                </div><!-- Day 5 -->
+                                <div class="itinerary-day">
+                                    <div class="day-marker">
+                                        5
+                                    </div>
+                                    <h6 class="font-semibold text-lg mb-3" style="color: #1a1a1a;">Departure &amp;
+                                        Conservation Legacy</h6>
+                                    <p class="text-sm font-light mb-4 leading-relaxed" style="color: #4a4a4a;">
+                                        <strong>Morning:</strong> Leisurely breakfast on your private deck. Optional
+                                        final morning game drive (6:30-9:00 AM) to bid farewell to the Mara. Return for
+                                        camp checkout by 10:30 AM.<br><br><strong>Late Morning:</strong> Before
+                                        departure, visit Mara Conservancy headquarters for briefing on your conservation
+                                        impact. Receive personalized certificate showing: carbon offset achieved (1,250
+                                        kg CO���), hectares of wildlife corridor protected (5 hectares), and community
+                                        funds contributed ($5,000 to Maasai
+                                        education/healthcare).<br><br><strong>Midday:</strong> Transfer to airstrip.
+                                        Private charter flight back to Nairobi Wilson Airport (11:30 AM departure, 12:15
+                                        PM arrival). Connecting flights or extended Nairobi stay
+                                        arrangements.<br><br><strong>Post-Journey:</strong> Receive professional photo
+                                        album within 2 weeks, detailed species checklist with sighting notes, and
+                                        personalized follow-up report on conservation projects your visit supported.</p>
+                                    <div class="flex flex-wrap gap-2"><span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Conservation
+                                            Certificate</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Private
+                                            Charter</span> <span class="px-3 py-1 text-xs rounded-sm"
+                                            style="background-color: rgba(212, 175, 55, 0.15); color: #1a1a1a;">Photo
+                                            Album</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-10 p-6 rounded-sm" style="background-color: rgba(26, 26, 26, 0.03);">
+                                <h6 class="font-semibold text-sm tracking-wider uppercase mb-4" style="color: #1a1a1a;">
+                                    Included in Your Investment</h6>
+                                <div class="grid md:grid-cols-3 gap-6 text-sm" style="color: #4a4a4a;">
+                                    <div>
+                                        <p class="font-semibold mb-2" style="color: #1a1a1a;">Accommodations</p>
+                                        <ul class="space-y-1 font-light">
+                                            <li>• Luxury mobile camp suite</li>
+                                            <li>• En-suite bathroom</li>
+                                            <li>• Personal butler service</li>
+                                            <li>• Private deck &amp; viewing area</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold mb-2" style="color: #1a1a1a;">Experiences</p>
+                                        <ul class="space-y-1 font-light">
+                                            <li>• All game drives &amp; activities</li>
+                                            <li>• Hot air balloon safari</li>
+                                            <li>• Maasai cultural immersion</li>
+                                            <li>• Photography masterclass</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold mb-2" style="color: #1a1a1a;">Sustainability</p>
+                                        <ul class="space-y-1 font-light">
+                                            <li>• 100% carbon offset</li>
+                                            <li>• 40% to communities</li>
+                                            <li>• Conservation certificate</li>
+                                            <li>• Wildlife corridor protection</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Journey 2: Mombasa Port to Tsavo Helicopter Safari -->
+                    <div class="mb-20 rounded-sm overflow-hidden"
+                        style="background-color: #fdfcfa; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
+                        <div class="grid lg:grid-cols-5">
+                            <div class="lg:col-span-2 relative" style="min-height: 400px;">
+                                <div class="absolute inset-0 luxury-gradient">
+                                    <div class="h-full flex flex-col justify-center items-center text-white p-8">
+                                        <svg class="w-20 h-20 mb-4 opacity-90" viewbox="0 0 80 80" fill="white">
+                                            <circle cx="40" cy="50" r="8" />
+                                            <ellipse cx="40" cy="30" rx="20" ry="8" fill="none" stroke="white"
+                                                stroke-width="2" />
+                                            <path d="M20 30 Q20 25, 25 22 L40 18 L55 22 Q60 25, 60 30" />
+                                        </svg>
+                                        <h3 class="font-display text-4xl font-bold text-center mb-2">Helicopter Safari
+                                        </h3>
+                                        <p class="text-sm tracking-wider uppercase">Cruise Port Exclusive</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-3 p-10">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div>
+                                        <h4 class="font-display text-3xl font-bold mb-2" style="color: #1a1a1a;">8 Hours
+                                            Total</h4>
+                                        <p class="text-sm font-light" style="color: #666;">Mombasa Port to Tsavo East
+                                        </p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="font-display text-4xl font-bold" style="color: #1a1a1a;">$3,500</p>
+                                        <p class="text-sm font-light" style="color: #666;">per person</p>
+                                    </div>
+                                </div>
+                                <p class="text-base font-light leading-relaxed mb-8" style="color: #4a4a4a;">Designed
+                                    exclusively for cruise passengers docking in Mombasa. Private helicopter whisks you
+                                    from port to Tsavo East National Park—famous for red elephants and Lugard Falls.
+                                    Complete African safari in 8 hours, returning before ship departure.</p><button
+                                    class="px-8 py-3 text-sm font-semibold tracking-widest uppercase transition-all hover:shadow-lg rounded-sm"
+                                    style="background-color: #1a1a1a; color: #fdfcfa;"> View Detailed Itinerary
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-10 border-t"
+                            style="border-color: rgba(26, 26, 26, 0.08); background-color: rgba(212, 175, 55, 0.03);">
+                            <h5 class="font-display text-2xl font-bold mb-8" style="color: #1a1a1a;">Hour-by-Hour
+                                Timeline</h5>
+                            <div class="space-y-6">
+                                <div class="itinerary-day">
+                                    <div class="day-marker" style="font-size: 0.7rem;">
+                                        7:00
+                                    </div>
+                                    <h6 class="font-semibold text-base mb-2" style="color: #1a1a1a;">Port Pickup &amp;
+                                        Helicopter Departure</h6>
+                                    <p class="text-sm font-light leading-relaxed" style="color: #4a4a4a;">Meet your
+                                        guide at Mombasa Port terminal (we coordinate with cruise line for timing).
+                                        10-minute transfer to nearby helipad. Safety briefing and departure by 7:30 AM.
+                                        35-minute scenic flight over coastal palms, sisal plantations, and Tsavo
+                                        wilderness—game viewing begins from air.</p>
+                                </div>
+                                <div class="itinerary-day">
+                                    <div class="day-marker" style="font-size: 0.7rem;">
+                                        8:15
+                                    </div>
+                                    <h6 class="font-semibold text-base mb-2" style="color: #1a1a1a;">Land at Satao Camp
+                                        &amp; Game Drive</h6>
+                                    <p class="text-sm font-light leading-relaxed" style="color: #4a4a4a;">Touch down at
+                                        exclusive Satao Camp airstrip within Tsavo East. Transfer to luxury 4x4 for
+                                        2.5-hour game drive seeking Tsavo's famous red elephants (they bathe in red
+                                        volcanic soil), lions, buffalo herds, and over 500 bird species. Visit Aruba
+                                        Dam—prime wildlife waterhole.</p>
+                                </div>
+                                <div class="itinerary-day">
+                                    <div class="day-marker" style="font-size: 0.7rem;">
+                                        11:00
+                                    </div>
+                                    <h6 class="font-semibold text-base mb-2" style="color: #1a1a1a;">Champagne Breakfast
+                                        &amp; Lugard Falls</h6>
+                                    <p class="text-sm font-light leading-relaxed" style="color: #4a4a4a;">Champagne
+                                        breakfast at Lugard Falls on the Galana River—dramatic rock formations where
+                                        river squeezes through narrow gorge. Crocodiles sunbathe on rocks below. Learn
+                                        about Tsavo Man-Eaters legend from 1898 railway construction. Time for photos
+                                        and stretching legs.</p>
+                                </div>
+                                <div class="itinerary-day">
+                                    <div class="day-marker" style="font-size: 0.7rem;">
+                                        12:30
+                                    </div>
+                                    <h6 class="font-semibold text-base mb-2" style="color: #1a1a1a;">Extended Game Drive
+                                        &amp; Lunch</h6>
+                                    <p class="text-sm font-light leading-relaxed" style="color: #4a4a4a;">Continue game
+                                        viewing through different park sectors. Gourmet packed lunch served under acacia
+                                        shade with camp-style setup (tables, linens, full service). Seek out lesser
+                                        kudu, gerenuk, and the rare fringe-eared oryx endemic to this region.</p>
+                                </div>
+                                <div class="itinerary-day">
+                                    <div class="day-marker" style="font-size: 0.7rem;">
+                                        14:00
+                                    </div>
+                                    <h6 class="font-semibold text-base mb-2" style="color: #1a1a1a;">Return Flight &amp;
+                                        Port Arrival</h6>
+                                    <p class="text-sm font-light leading-relaxed" style="color: #4a4a4a;">Final game
+                                        viewing en route back to airstrip. Board helicopter by 2:15 PM for return flight
+                                        to Mombasa. Aerial views of Tsavo's baobab forests and seasonal rivers. Land at
+                                        Mombasa helipad 2:50 PM, transfer to port by 3:00 PM—plenty of time before ship
+                                        departure (most cruises depart 5-6 PM).</p>
+                                </div>
+                            </div>
+                            <div class="mt-10 grid md:grid-cols-3 gap-6 text-sm" style="color: #4a4a4a;">
+                                <div class="p-4 rounded-sm" style="background-color: rgba(26, 26, 26, 0.03);">
+                                    <p class="font-semibold mb-2" style="color: #1a1a1a;">Perfect For</p>
+                                    <p class="font-light">Cruise passengers wanting authentic safari without overnight
+                                        stay. Families, couples, and solo travelers.</p>
+                                </div>
+                                <div class="p-4 rounded-sm" style="background-color: rgba(26, 26, 26, 0.03);">
+                                    <p class="font-semibold mb-2" style="color: #1a1a1a;">Included</p>
+                                    <p class="font-light">Round-trip helicopter, all game drives, champagne breakfast,
+                                        gourmet lunch, park fees, guide.</p>
+                                </div>
+                                <div class="p-4 rounded-sm" style="background-color: rgba(26, 26, 26, 0.03);">
+                                    <p class="font-semibold mb-2" style="color: #1a1a1a;">Best Season</p>
+                                    <p class="font-light">Year-round availability. Dry season (June-October,
+                                        January-February) offers best sightings.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Additional Luxury Packages Summary -->
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="p-8 rounded-sm"
+                            style="background-color: #fdfcfa; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                            <h4 class="font-display text-2xl font-bold mb-4" style="color: #1a1a1a;">Grand Kenya Circuit
+                            </h4>
+                            <p class="text-sm font-light mb-4" style="color: #4a4a4a;">10-day ultimate journey: Amboseli
+                                (Mt. Kilimanjaro views), Tsavo East &amp; West, Samburu (unique northern species),
+                                Maasai Mara, Lake Nakuru (flamingos), coastal finale in Diani Beach. All private charter
+                                flights.</p>
+                            <p class="font-display text-3xl font-bold mb-4" style="color: #1a1a1a;">$28,500 <span
+                                    class="text-base font-normal" style="color: #666;">pp</span></p><button
+                                class="px-6 py-2 text-sm font-semibold tracking-widest uppercase transition-all hover:shadow-lg rounded-sm"
+                                style="background-color: #1a1a1a; color: #fdfcfa;">View Itinerary</button>
+                        </div>
+                        <div class="p-8 rounded-sm"
+                            style="background-color: #fdfcfa; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                            <h4 class="font-display text-2xl font-bold mb-4" style="color: #1a1a1a;">WRC Safari Rally
+                                VIP</h4>
+                            <p class="text-sm font-light mb-4" style="color: #4a4a4a;">June motorsport exclusive: VIP
+                                paddock access, driver meet-and-greets, helicopter stage transfers, exclusive
+                                after-parties, luxury lodge accommodation. Combines adrenaline racing with premium
+                                safari. Limited to 12 guests annually.</p>
+                            <p class="font-display text-3xl font-bold mb-4" style="color: #1a1a1a;">$18,500 <span
+                                    class="text-base font-normal" style="color: #666;">pp</span></p><button
+                                class="px-6 py-2 text-sm font-semibold tracking-widest uppercase transition-all hover:shadow-lg rounded-sm"
+                                style="background-color: #1a1a1a; color: #fdfcfa;">View Itinerary</button>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Bespoke Itineraries -->
+            <section id="bespoke-itineraries" class="w-full px-6 py-20 md:py-28"
+                style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);">
+                <div class="max-w-6xl mx-auto"><!-- Testimonials from Key Markets -->
+                    <div class="mb-20">
+                        <div class="text-center mb-12">
+                            <h3 class="font-display text-3xl font-bold mb-4 text-white">Testimonials from Our Global
+                                Clientele</h3>
+                            <p class="text-base font-light" style="color: rgba(255, 255, 255, 0.7);">Trusted by
+                                discerning families worldwide</p>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-6 mb-12">
+                            <div class="p-6 rounded-sm" style="background-color: rgba(255, 255, 255, 0.05);">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                                        style="background-color: rgba(212, 175, 55, 0.2);">
+                                        🇬🇧
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-white">The Harrington Family</p>
+                                        <p class="text-xs" style="color: rgba(255, 255, 255, 0.6);">London, United
+                                            Kingdom</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-light italic leading-relaxed"
+                                    style="color: rgba(255, 255, 255, 0.8);">"The Maasai cultural immersion exceeded all
+                                    expectations. Our children still speak of the warrior training and elder
+                                    storytelling. Impeccable service throughout."</p>
+                            </div>
+                            <div class="p-6 rounded-sm" style="background-color: rgba(255, 255, 255, 0.05);">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                                        style="background-color: rgba(212, 175, 55, 0.2);">
+                                        🇨🇭
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-white">Familie Weber</p>
+                                        <p class="text-xs" style="color: rgba(255, 255, 255, 0.6);">Zurich, Switzerland
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-light italic leading-relaxed"
+                                    style="color: rgba(255, 255, 255, 0.8);">"Swiss precision meets African soul. The
+                                    helicopter safari from Mombasa was seamless. Carbon offset certificates were a
+                                    thoughtful touch for our family values."</p>
+                            </div>
+                            <div class="p-6 rounded-sm" style="background-color: rgba(255, 255, 255, 0.05);">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                                        style="background-color: rgba(212, 175, 55, 0.2);">
+                                        🇭🇰
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-white">陳氏家族 Chen Family</p>
+                                        <p class="text-xs" style="color: rgba(255, 255, 255, 0.6);">Hong Kong, China</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-light italic leading-relaxed"
+                                    style="color: rgba(255, 255, 255, 0.8);">"Raw Unwind arranged Mandarin-speaking
+                                    guides and WeChat coordination. The Great Migration experience was beyond
+                                    spectacular. Will return for the Grand Circuit."</p>
+                            </div>
+                            <div class="p-6 rounded-sm" style="background-color: rgba(255, 255, 255, 0.05);">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                                        style="background-color: rgba(212, 175, 55, 0.2);">
+                                        🇺🇸
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-white">The Goldstein Family</p>
+                                        <p class="text-xs" style="color: rgba(255, 255, 255, 0.6);">New York, USA</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-light italic leading-relaxed"
+                                    style="color: rgba(255, 255, 255, 0.8);">"Three generations traveled together. The
+                                    private conservancy access meant no crowds, just wildlife. The community partnership
+                                    model aligned with our philanthropic values."</p>
+                            </div>
+                            <div class="p-6 rounded-sm" style="background-color: rgba(255, 255, 255, 0.05);">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                                        style="background-color: rgba(212, 175, 55, 0.2);">
+                                        🇦🇺
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-white">The Mackenzie Family</p>
+                                        <p class="text-xs" style="color: rgba(255, 255, 255, 0.6);">Sydney, Australia
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-light italic leading-relaxed"
+                                    style="color: rgba(255, 255, 255, 0.8);">"Worth every dollar. The photography guide
+                                    helped capture magazine-quality shots. Comparing to our Tanzania safari, Kenya with
+                                    Raw Unwind was far superior in cultural depth."</p>
+                            </div>
+                            <div class="p-6 rounded-sm" style="background-color: rgba(255, 255, 255, 0.05);">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                                        style="background-color: rgba(212, 175, 55, 0.2);">
+                                        🇸🇬
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-white">The Tan Family</p>
+                                        <p class="text-xs" style="color: rgba(255, 255, 255, 0.6);">Singapore</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-light italic leading-relaxed"
+                                    style="color: rgba(255, 255, 255, 0.8);">"Exceptional value for an ultra-luxury
+                                    experience. The hot air balloon over the Mara at sunrise was unforgettable. Butler
+                                    service rivaled top hotels in Asia."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mb-12">
+                        <h2 class="font-display text-5xl md:text-6xl font-bold mb-6 text-white">Bespoke Journey Design
+                        </h2>
+                        <p class="text-xl max-w-3xl mx-auto font-light leading-relaxed mb-10"
+                            style="color: rgba(255, 255, 255, 0.85);">For discerning travelers seeking entirely
+                            personalized experiences. Our journey designers craft bespoke itineraries tailored to your
+                            interests, schedule, and desires—from private island retreats to multi-generational family
+                            safaris.</p>
+                        <div class="grid md:grid-cols-3 gap-8 mb-12">
+                            <div class="p-8 rounded-sm" style="background-color: rgba(255, 255, 255, 0.05);">
+                                <svg class="w-12 h-12 mx-auto mb-4" viewbox="0 0 48 48" fill="#d4af37">
+                                    <path
+                                        d="M24 4L29.09 13.26L40 14.77L32 22.53L34.18 33.42L24 28.15L13.82 33.42L16 22.53L8 14.77L18.91 13.26L24 4Z" />
+                                </svg>
+                                <h4 class="font-semibold text-lg mb-3 text-white">Private Conservancy Access</h4>
+                                <p class="text-sm font-light" style="color: rgba(255, 255, 255, 0.7);">Exclusive rights
+                                    to private wildlife reserves closed to general tourists. Just you, wildlife, and
+                                    endless horizons.</p>
+                            </div>
+                            <div class="p-8 rounded-sm" style="background-color: rgba(255, 255, 255, 0.05);">
+                                <svg class="w-12 h-12 mx-auto mb-4" viewbox="0 0 48 48" fill="#d4af37">
+                                    <circle cx="24" cy="16" r="6" />
+                                    <path d="M12 32 C12 26, 16 24, 24 24 C32 24, 36 26, 36 32 L36 40 L12 40 Z" />
+                                </svg>
+                                <h4 class="font-semibold text-lg mb-3 text-white">Personal Journey Designer</h4>
+                                <p class="text-sm font-light" style="color: rgba(255, 255, 255, 0.7);">Dedicated
+                                    specialist works with you for months pre-trip, crafting every detail to your exact
+                                    specifications.</p>
+                            </div>
+                            <div class="p-8 rounded-sm" style="background-color: rgba(255, 255, 255, 0.05);">
+                                <svg class="w-12 h-12 mx-auto mb-4" viewbox="0 0 48 48" fill="#d4af37">
+                                    <rect x="8" y="12" width="32" height="24" rx="2" fill="none" stroke="#d4af37"
+                                        stroke-width="2" />
+                                    <path d="M16 24 L24 28 L32 24" stroke="#d4af37" stroke-width="2" />
+                                </svg>
+                                <h4 class="font-semibold text-lg mb-3 text-white">Heritage Estate Buyouts</h4>
+                                <p class="text-sm font-light" style="color: rgba(255, 255, 255, 0.7);">Exclusive use of
+                                    historic Swahili mansions, colonial-era properties, or entire luxury camps for
+                                    ultimate privacy.</p>
+                            </div>
+                        </div><button
+                            class="px-12 py-5 font-bold text-lg tracking-widest uppercase transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 rounded-sm"
+                            style="background-color: #d4af37; color: #1a1a1a;"> Initiate Bespoke Consultation </button>
+                        <p class="text-sm mt-4 font-light" style="color: rgba(255, 255, 255, 0.6);">Minimum investment:
+                            $50,000 per journey | Complimentary consultation</p>
+                    </div>
+                </div>
+            </section><!-- Sustainability & Net-Zero Commitment -->
+            <section id="sustainability" class="w-full px-6 py-20 md:py-28">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-display text-5xl font-bold mb-6" style="color: #1a1a1a;">Our Sustainability
+                            Commitment</h2>
+                        <p class="text-xl max-w-3xl mx-auto font-light" style="color: #4a4a4a;">Luxury without
+                            compromise. Net-zero certified travel that protects Kenya's future.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="p-10 rounded-sm"
+                            style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.15) 100%);">
+                            <h3 class="font-display text-3xl font-bold mb-6" style="color: #1a1a1a;">40% Revenue to
+                                Communities</h3>
+                            <p class="text-base font-light mb-6 leading-relaxed" style="color: #4a4a4a;">Nearly half of
+                                every dollar you invest goes directly to indigenous communities and conservation
+                                projects. This isn't charity—it's partnership.</p>
+                            <ul class="space-y-3 text-sm" style="color: #4a4a4a;">
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg><span><strong>Maasai &amp; Samburu</strong> education scholarships, healthcare
+                                        clinics</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg><span><strong>Women's cooperatives</strong> for beadwork, textiles, and
+                                        crafts</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg><span><strong>Wildlife corridors</strong> protecting migration routes on
+                                        community land</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-10 rounded-sm"
+                            style="background: linear-gradient(135deg, rgba(26, 26, 26, 0.05) 0%, rgba(26, 26, 26, 0.08) 100%);">
+                            <h3 class="font-display text-3xl font-bold mb-6" style="color: #1a1a1a;">100% Carbon Neutral
+                            </h3>
+                            <p class="text-base font-light mb-6 leading-relaxed" style="color: #4a4a4a;">Every journey
+                                achieves net-zero carbon through Mikoko Pamoja—the world's first community-led blue
+                                carbon project.</p>
+                            <ul class="space-y-3 text-sm" style="color: #4a4a4a;">
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg><span><strong>Mangrove restoration</strong> sequestering 10x more carbon than
+                                        forests</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg><span><strong>REDD+ forest protection</strong> around national parks</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg><span><strong>Verified offset certificates</strong> delivered with
+                                        post-journey impact report</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Payment & Booking Information -->
+            <section id="payment-details" class="w-full px-6 py-20 md:py-28"
+                style="background: linear-gradient(180deg, rgba(212, 175, 55, 0.03) 0%, rgba(212, 175, 55, 0.08) 100%);">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-display text-5xl font-bold mb-6" style="color: #1a1a1a;">Investment &amp;
+                            Booking</h2>
+                        <p class="text-xl max-w-3xl mx-auto font-light" style="color: #4a4a4a;">Securing your journey
+                            with flexible, discreet payment arrangements.</p>
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-12 mb-12">
+                        <div class="p-10 rounded-sm"
+                            style="background-color: #fdfcfa; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                            <h3 class="font-display text-2xl font-bold mb-6" style="color: #1a1a1a;">Global Payment
+                                Options</h3>
+                            <div class="space-y-4 text-sm" style="color: #4a4a4a;">
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg>
+                                    <div>
+                                        <p class="font-semibold" style="color: #1a1a1a;">Bank Transfer (Preferred)</p>
+                                        <p class="font-light">KCB Bank Kenya | Paybill: 522522 | Account: 7580761 |
+                                            Sarit Branch | Zero processing fees</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg>
+                                    <div>
+                                        <p class="font-semibold" style="color: #1a1a1a;">International SWIFT Transfer
+                                        </p>
+                                        <p class="font-light">🇬🇧 GBP | 🇨🇭 CHF | 🇪🇺 EUR | 🇺🇸 USD | 🇦🇺 AUD |
+                                            Full SWIFT details provided upon booking</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg>
+                                    <div>
+                                        <p class="font-semibold" style="color: #1a1a1a;">Chinese Payment Methods</p>
+                                        <p class="font-light">🇨🇳 WeChat Pay | Alipay | UnionPay | CNY bank transfer
+                                            available for mainland China &amp; Hong Kong clients</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg>
+                                    <div>
+                                        <p class="font-semibold" style="color: #1a1a1a;">Premium Credit Cards</p>
+                                        <p class="font-light">Visa, Mastercard, Amex, Diners Club (3% processing fee) |
+                                            Installment plans available over $20,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8 p-6 rounded-sm" style="background-color: rgba(26, 26, 26, 0.03);">
+                                <p class="text-xs font-semibold tracking-wider uppercase mb-2" style="color: #1a1a1a;">
+                                    Global Office Hours</p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2 text-sm" style="color: #4a4a4a;">
+                                        <svg class="w-4 h-4" viewbox="0 0 20 20" fill="#d4af37">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" />
+                                        </svg><span class="font-light">Monday - Friday, 8:30 AM - 4:30 PM EAT
+                                            (GMT+3)</span>
+                                    </div>
+                                    <div class="text-xs font-light ml-6" style="color: #666;">
+                                        London: 6:30 AM - 2:30 PM BST | Zurich: 7:30 AM - 3:30 PM CET | Hong Kong: 1:30
+                                        PM - 9:30 PM HKT | New York: 1:30 AM - 9:30 AM EST | Sydney: 3:30 PM - 11:30 PM
+                                        AEDT
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-10 rounded-sm luxury-gradient text-white">
+                            <h3 class="font-display text-2xl font-bold mb-6">Booking Terms</h3>
+                            <div class="space-y-6 text-sm">
+                                <div>
+                                    <p class="font-semibold mb-2">20% Deposit</p>
+                                    <p class="font-light opacity-90">Secures your reservation and locks in pricing.
+                                        Flexible payment schedules available for journeys over $20,000.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-2">Final Payment</p>
+                                    <p class="font-light opacity-90">Due 45 days prior to departure. Late payments may
+                                        result in reservation release without refund.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-2">Cancellation Policy</p>
+                                    <p class="font-light opacity-90">90+ days: Full refund minus 10% admin fee<br>
+                                        60-89 days: 50% refund<br>
+                                        30-59 days: 25% refund<br>
+                                        Under 30 days: Non-refundable, 2-year travel credit issued</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-2">Travel Insurance</p>
+                                    <p class="font-light opacity-90">Mandatory comprehensive coverage required. We
+                                        partner with premium insurers for bespoke policies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center p-10 rounded-sm" style="background-color: rgba(26, 26, 26, 0.03);">
+                        <h4 class="font-display text-2xl font-bold mb-4" style="color: #1a1a1a;">Ready to Begin Your
+                            Journey?</h4>
+                        <p class="text-base font-light mb-6" style="color: #4a4a4a;">Our multilingual journey designers
+                            serve clients worldwide. We speak English, Mandarin, Cantonese, German, French, and Italian.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-4"><a href="mailto:concierge@rawunwind.com"
+                                class="px-10 py-4 font-semibold tracking-widest uppercase transition-all hover:shadow-lg rounded-sm"
+                                style="background-color: #1a1a1a; color: #fdfcfa;"> Email Concierge </a> <a
+                                href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer"
+                                class="px-10 py-4 font-semibold tracking-widest uppercase transition-all hover:shadow-lg rounded-sm"
+                                style="background-color: #25D366; color: white;"> WhatsApp Inquiry </a> <a
+                                href="https://wa.me/8618600000000" target="_blank" rel="noopener noreferrer"
+                                class="px-10 py-4 font-semibold tracking-widest uppercase transition-all hover:shadow-lg rounded-sm"
+                                style="background-color: #09B83E; color: white;"> WeChat/微信 </a>
+                        </div>
+                        <p class="text-xs mt-6 font-light" style="color: #666;">Response time: Within 4 hours (business
+                            hours) | 24/7 emergency support for confirmed guests</p>
+                        <div class="mt-6 pt-6 border-t" style="border-color: rgba(26, 26, 26, 0.1);">
+                            <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color: #1a1a1a;">
+                                CONCIERGE LANGUAGES</p>
+                            <div class="flex flex-wrap justify-center gap-3 text-sm font-light" style="color: #666;">
+                                <span>🇬🇧 English</span> <span>•</span> <span>🇨🇳 普通话 Mandarin</span> <span>•</span>
+                                <span>🇭🇰 粵語 Cantonese</span> <span>•</span> <span>🇩🇪 Deutsch</span> <span>•</span>
+                                <span>🇫🇷 Français</span> <span>•</span> <span>🇮🇹 Italiano</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Footer -->
+            <footer class="w-full px-6 py-16 luxury-gradient">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid md:grid-cols-4 gap-12 mb-12">
+                        <div class="md:col-span-2">
+                            <div class="flex items-center gap-3 mb-4">
+                                <svg class="w-10 h-10" viewbox="0 0 44 44" fill="none">
+                                    <circle cx="22" cy="22" r="20" stroke="rgba(255,255,255,0.5)" stroke-width="2"
+                                        fill="none" />
+                                    <path d="M22 8 C16 16, 13 22, 22 36 C31 22, 28 16, 22 8"
+                                        fill="rgba(255,255,255,0.5)" />
+                                    <circle cx="22" cy="24" r="2" fill="#d4af37" />
+                                </svg>
+                                <div><span id="footer-company-name" class="font-display text-2xl font-bold block"
+                                        style="color: rgba(255,255,255,0.95);">Raw Unwind</span> <span
+                                        id="footer-slogan" class="text-xs tracking-widest uppercase font-light"
+                                        style="color: rgba(255,255,255,0.6);">Indigenous Heritage · Luxury
+                                        Safaris</span>
+                                </div>
+                            </div>
+                            <p class="text-sm font-light leading-relaxed max-w-md"
+                                style="color: rgba(255,255,255,0.7);">Kenya's premier net-zero luxury safari company.
+                                Ultra-exclusive cultural immersion and wildlife experiences for discerning global
+                                travelers.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm uppercase tracking-wider mb-4"
+                                style="color: rgba(255,255,255,0.95);">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#heritage-experiences"
+                                        class="text-sm font-light hover:opacity-70 transition-opacity"
+                                        style="color: rgba(255,255,255,0.7);">Indigenous Heritage</a></li>
+                                <li><a href="#signature-journeys"
+                                        class="text-sm font-light hover:opacity-70 transition-opacity"
+                                        style="color: rgba(255,255,255,0.7);">Signature Journeys</a></li>
+                                <li><a href="#bespoke-itineraries"
+                                        class="text-sm font-light hover:opacity-70 transition-opacity"
+                                        style="color: rgba(255,255,255,0.7);">Bespoke Itineraries</a></li>
+                                <li><a href="#sustainability"
+                                        class="text-sm font-light hover:opacity-70 transition-opacity"
+                                        style="color: rgba(255,255,255,0.7);">Sustainability</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm uppercase tracking-wider mb-4"
+                                style="color: rgba(255,255,255,0.95);">Connect</h4>
+                            <div class="flex gap-3 mb-6"><a href="https://facebook.com/rawunwind" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="w-10 h-10 rounded-sm flex items-center justify-center transition-all hover:opacity-70"
+                                    style="background-color: rgba(255,255,255,0.1);" aria-label="Facebook">
+                                    <svg class="w-5 h-5" viewbox="0 0 24 24" fill="white">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg></a> <a href="https://instagram.com/rawunwind" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="w-10 h-10 rounded-sm flex items-center justify-center transition-all hover:opacity-70"
+                                    style="background-color: rgba(255,255,255,0.1);" aria-label="Instagram">
+                                    <svg class="w-5 h-5" viewbox="0 0 24 24" fill="white">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    </svg></a>
+                            </div>
+                            <ul class="space-y-2 text-xs" style="color: rgba(255,255,255,0.7);">
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg><span class="font-light">Net-Zero Certified</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" viewbox="0 0 20 20" fill="#d4af37">
+                                        <path
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                    </svg><span class="font-light">40% Community Partnership</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4"
+                        style="border-color: rgba(255,255,255,0.1);">
+                        <p class="text-sm font-light" style="color: rgba(255,255,255,0.5);">© 2024 Raw Unwind. All
+                            Rights Reserved.</p>
+                        <p class="text-sm font-light" style="color: rgba(255,255,255,0.5);">Partnership: Mikoko Pamoja
+                            Conservation</p>
+                    </div>
+                </div>
+            </footer>
+        </div><!-- WhatsApp Float Button --> <a
+            href="https://wa.me/254712420338?text=I'm%20interested%20in%20luxury%20safari%20experiences" target="_blank"
+            rel="noopener noreferrer"
+            class="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-2xl hover:scale-110"
+            style="background-color: #25D366; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);" aria-label="WhatsApp">
+            <svg class="w-8 h-8" viewbox="0 0 24 24" fill="white">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg></a>
+    </div>
+    <script>
+        const defaultConfig = {
+            company_name: "Raw Unwind",
+            company_slogan: "Indigenous Heritage · Luxury Safaris",
+            hero_headline: "Where Indigenous Wisdom Meets Timeless Luxury",
+            hero_subtext: "Immerse yourself in Kenya's living heritage through exclusive encounters with Maasai elders, Samburu warriors, and Swahili craftsmen. Ultra-luxury safaris curated for discerning global travelers.",
+            about_intro: "We are Kenya's premier sustainable safari company, dedicated to creating transformative travel experiences that honor both people and planet.",
+            mission_text: "To create unforgettable safari experiences that inspire conservation, empower local communities, and achieve net-zero carbon impact.",
+            vision_text: "A world where every journey heals—healing the land, the communities we visit, and the travelers themselves.",
+            partnership_text: "We're proud partners of Mikoko Pamoja���the world's first community-led blue carbon project.",
+            cta_button_text: "Private Inquiry",
+            donate_button_text: "Conservation Partnership",
+            background_color: "#fdfcfa",
+            primary_color: "#1a1a1a",
+            text_color: "#1a1a1a",
+            secondary_text_color: "#4a4a4a",
+            accent_color: "#d4af37"
+        };
+
+        let config = { ...defaultConfig };
+
+        async function onConfigChange(cfg) {
+            config = { ...defaultConfig, ...cfg };
+
+            document.getElementById('nav-company-name').textContent = config.company_name || defaultConfig.company_name;
+            document.getElementById('nav-slogan').textContent = config.company_slogan || defaultConfig.company_slogan;
+            document.getElementById('hero-headline').textContent = config.hero_headline || defaultConfig.hero_headline;
+            document.getElementById('hero-subtext').textContent = config.hero_subtext || defaultConfig.hero_subtext;
+            document.getElementById('footer-company-name').textContent = config.company_name || defaultConfig.company_name;
+            document.getElementById('footer-slogan').textContent = config.company_slogan || defaultConfig.company_slogan;
+
+            document.getElementById('nav-cta').textContent = config.cta_button_text || defaultConfig.cta_button_text;
+            document.getElementById('hero-cta').textContent = config.cta_button_text || defaultConfig.cta_button_text;
+            document.getElementById('hero-donate').textContent = config.donate_button_text || defaultConfig.donate_button_text;
+
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+            const bgColor = config.background_color || defaultConfig.background_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+
+            document.getElementById('nav-cta').style.backgroundColor = primaryColor;
+            document.getElementById('hero-cta').style.backgroundColor = primaryColor;
+            document.getElementById('hero-donate').style.borderColor = primaryColor;
+            document.getElementById('hero-donate').style.color = primaryColor;
+        }
+
+        function mapToCapabilities(cfg) {
+            return {
+                recolorables: [
+                    {
+                        get: () => cfg.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            cfg.background_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.primary_color || defaultConfig.primary_color,
+                        set: (value) => {
+                            cfg.primary_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ primary_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            cfg.text_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.secondary_text_color || defaultConfig.secondary_text_color,
+                        set: (value) => {
+                            cfg.secondary_text_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ secondary_text_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            cfg.accent_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ accent_color: value });
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(cfg) {
+            return new Map([
+                ["company_name", cfg.company_name || defaultConfig.company_name],
+                ["company_slogan", cfg.company_slogan || defaultConfig.company_slogan],
+                ["hero_headline", cfg.hero_headline || defaultConfig.hero_headline],
+                ["hero_subtext", cfg.hero_subtext || defaultConfig.hero_subtext],
+                ["about_intro", cfg.about_intro || defaultConfig.about_intro],
+                ["mission_text", cfg.mission_text || defaultConfig.mission_text],
+                ["vision_text", cfg.vision_text || defaultConfig.vision_text],
+                ["partnership_text", cfg.partnership_text || defaultConfig.partnership_text],
+                ["cta_button_text", cfg.cta_button_text || defaultConfig.cta_button_text],
+                ["donate_button_text", cfg.donate_button_text || defaultConfig.donate_button_text]
+            ]);
+        }
+
+        // Side Menu
+        const sideMenuToggle = document.getElementById('side-menu-toggle');
+        const sideMenuClose = document.getElementById('side-menu-close');
+        const sideMenu = document.getElementById('side-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        function openSideMenu() {
+            sideMenu.style.transform = 'translateX(0)';
+            menuOverlay.style.opacity = '0.5';
+            menuOverlay.style.pointerEvents = 'auto';
+        }
+
+        function closeSideMenu() {
+            sideMenu.style.transform = 'translateX(-100%)';
+            menuOverlay.style.opacity = '0';
+            menuOverlay.style.pointerEvents = 'none';
+        }
+
+        sideMenuToggle.addEventListener('click', openSideMenu);
+        sideMenuClose.addEventListener('click', closeSideMenu);
+        menuOverlay.addEventListener('click', closeSideMenu);
+
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', closeSideMenu);
+            link.addEventListener('mouseenter', function () {
+                this.style.backgroundColor = 'rgba(26, 26, 26, 0.05)';
+            });
+            link.addEventListener('mouseleave', function () {
+                this.style.backgroundColor = 'transparent';
+            });
+        });
+
+        // Initialize SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9c20f3c7930433e5',t:'MTc2OTEwNDg0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>

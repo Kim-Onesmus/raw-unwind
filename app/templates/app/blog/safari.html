@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% block title %}
+<title>Contact Raw Unwind Safaris | WRC Safari Rally</title>
+{% endblock %}
+
+{% block meta_description %}
+<meta name="description"
+    content="4 Days of Dust. 100% Carbon-Neutral. The Future of Motorsport.">
+{% endblock %}
+
+{% block og %}
+<meta property="og:title" content="Contact Raw Unwind Safaris | WRC Safari Rally">
+<meta property="og:description" content="4 Days of Dust. 100% Carbon-Neutral. The Future of Motorsport.">
+<meta property="og:image" content="{% static 'images/hero/safari.jpg' %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rawunwindsafaris.com">
+{% endblock %}
+
+<section class="relative w-full h-[60vh] overflow-hidden">
+    <!-- Hero Image -->
+    <img src="{% static 'images/hero/safari.jpg' %}" alt="2026 Safari Rally Kenya"
+        class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 h-full flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <h1 class="font-display text-4xl lg:text-6xl font-bold text-[#faf8f3] mb-4">
+                The 2026 Safari Rally: Regenerative Adrenaline Package
+            </h1>
+            <p class="text-lg lg:text-xl text-[#f0ebe0] mb-6">
+                4 Days of Dust. 100% Carbon-Neutral. The Future of Motorsport.
+            </p>
+            <p class="text-sm tracking-wide uppercase text-[#c9a227]">
+                March 11 – 15, 2026 • Naivasha & The Great Rift Valley
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#faf8f3] py-24">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <!-- HERO -->
+        <div class="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl mb-20">
+            <img src="{% static 'images/hero/safari.jpg' %}" alt="Safari Rally Kenya"
+                class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <div class="absolute bottom-10 left-10 max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-white">
+                    The 2026 Safari Rally: Regenerative Adrenaline Package
+                </h1>
+                <p class="mt-4 text-lg text-white/90">
+                    4 Days of Dust. 100% Carbon-Neutral. The Future of Motorsport.
+                </p>
+                <p class="mt-2 text-white/80">
+                    Dates: March 11 – 15, 2026
+                </p>
+            </div>
+        </div>
+
+        <!-- META INFO -->
+        <div class="grid md:grid-cols-3 gap-6 mb-24 text-sm">
+            <div class="p-6 rounded-2xl bg-white shadow">
+                <strong>Location:</strong><br>
+                Naivasha & The Great Rift Valley
+            </div>
+            <div class="p-6 rounded-2xl bg-white shadow">
+                <strong>Host:</strong><br>
+                RawUnwind Safaris
+            </div>
+            <div class="p-6 rounded-2xl bg-white shadow">
+                <strong>Experience:</strong><br>
+                Regenerative Motorsport Safari
+            </div>
+        </div>
+
+        <!-- DAY 1 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <h2 class="text-2xl font-bold text-[#1a4d2e] mb-4">
+                    Day 1: The "Zero-Trace" Arrival (March 11)
+                </h2>
+                <p class="mb-3">
+                    Arrival: Private, low-emission transfer from JKIA/Nairobi to the Naivasha Service Park.
+                </p>
+                <p class="mb-3">
+                    Experience: VIP evening briefing at your lakeside lodge. Meet our Carbon Impact Specialist who will
+                    walk you through the math of how your trip is already being offset.
+                </p>
+                <p class="italic text-[#1a4d2e]">
+                    The Mission: 40% of your carbon levy is today released to the Naivasha Wetland Protection project.
+                </p>
+            </div>
+
+            <div class="h-[300px] rounded-3xl overflow-hidden shadow-lg">
+                <img src="{% static 'images/blogs/zeroo.jpeg' %}" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- DAY 2 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div class="h-[300px] rounded-3xl overflow-hidden shadow-lg">
+                <img src="{% static 'images/blogs/kedong.jpeg' %}" class="w-full h-full object-cover">
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-[#1a4d2e] mb-4">
+                    Day 2: The Dust & The Dawn (March 12)
+                </h2>
+                <p class="mb-3">
+                    Morning: Official Shakedown at Loldia. Witness the WRC1 hybrid cars testing the "fesh-fesh" sand.
+                </p>
+                <p class="mb-3">
+                    Afternoon: Ceremonial Start. RawUnwind guests enjoy a private viewing deck away from the crowds.
+                </p>
+                <p class="italic text-[#1a4d2e]">
+                    The Impact: For every liter of fuel used by our 4x4s today, we plant 5 mangroves in Gazi Bay via
+                    Mikoko Pamoja.
+                </p>
+            </div>
+        </div>
+
+        <!-- DAY 3 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <h2 class="text-2xl font-bold text-[#1a4d2e] mb-4">
+                    Day 3: The Hard Yards – Kedong & Geothermal (March 13)
+                </h2>
+                <p class="mb-3">
+                    Action: The longest day of the rally. We take you to the famous "Miti Mbili" jump at Kedong. Feel
+                    the earth shake as the world’s best drivers push 500hp through the volcanic dust.
+                </p>
+                <p class="mb-3">
+                    Lunch: Gourmet bush picnic featuring 100% locally sourced, plastic-free ingredients.
+                </p>
+                <p class="italic text-[#1a4d2e]">
+                    The Impact: Your "Adrenaline Pass" funds the Wildlife Works Kasigau Corridor, protecting the
+                    elephants that cross these very rally routes.
+                </p>
+            </div>
+
+            <div class="h-[300px] rounded-3xl overflow-hidden shadow-lg">
+                <img src="{% static 'images/blogs/dust.jpeg' %}" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- DAY 4 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div class="h-[300px] rounded-3xl overflow-hidden shadow-lg">
+                <img src="{% static 'images/blogs/worrior.jpeg' %}" class="w-full h-full object-cover">
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-[#1a4d2e] mb-4">
+                    Day 4: The Sleeping Warrior (March 14)
+                </h2>
+                <p class="mb-3">
+                    Action: Deep into the Soysambu Conservancy. Technical stages around Sleeping Warrior and Elmenteita.
+                </p>
+                <p class="mb-3">
+                    Exclusive Access: Visit the Service Park for a behind-the-scenes look at how teams like Toyota and
+                    Hyundai are using 100% Sustainable Fuels.
+                </p>
+                <p class="italic text-[#1a4d2e]">
+                    The Impact: RawUnwind sponsors a "Clean-Up Crew" that follows our spectator group to ensure the Rift
+                    Valley is cleaner than we found it.
+                </p>
+            </div>
+        </div>
+
+        <!-- DAY 5 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <h2 class="text-2xl font-bold text-[#1a4d2e] mb-4">
+                    Day 5: The Power Stage & The Legacy (March 15)
+                </h2>
+                <p class="mb-3">
+                    Finale: The Wolf Power Stage at Hell’s Gate. Watch the final sprint against the backdrop of towering
+                    obsidian cliffs.
+                </p>
+                <p class="mb-3">
+                    Celebration: Podium ceremony in Naivasha.
+                </p>
+                <p class="mb-3">
+                    Departure: Return to Nairobi. You receive your WRC 2026 Carbon Retirement Certificate—a digital
+                    asset proving your rally experience was 100% climate-positive.
+                </p>
+            </div>
+
+            <div class="h-[300px] rounded-3xl overflow-hidden shadow-lg">
+                <img src="{% static 'images/blogs/final.jpg' %}" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- INCLUDED -->
+        <div class="bg-white rounded-3xl shadow-xl p-10">
+            <h3 class="text-2xl font-bold text-[#1a4d2e] mb-6">
+                What’s Included for the "Millionaire" Fan:
+            </h3>
+
+            <ul class="space-y-3">
+                <li>Transportation: Professional-grade 4x4s with expert drivers.</li>
+                <li>Offsetting: Full CO₂ calculation and retirement via Plan Vivo standards.</li>
+                <li>VIP Access: Prime spectator spots, radio headsets for live commentary, and luxury hampers.</li>
+                <li>Community: A direct donation in your name to the Gazi Bay Education Fund.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock content %}

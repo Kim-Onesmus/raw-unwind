@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% block title %}
+<title>3-Day "Safari to Sea" Regenerative Shore Excursion</title>
+{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="3-Day 'Safari to Sea' Regenerative Shore Excursion">
+{% endblock %}
+
+{% block og %}
+<meta property="og:title" content="Mombasa Port– Tsavo/Amboseli Corridor – Blue Carbon Coast">
+<meta property="og:description" content="3-Day 'Safari to Sea' Regenerative Shore Excursion">
+<meta property="og:image" content="{% static 'images/blogs/ship.webp' %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rawunwindsafaris.com">
+{% endblock %}
+
+<section class="relative w-full h-[60vh] overflow-hidden">
+    <!-- Hero Image -->
+    <img src="{% static 'images/blogs/ship.webp' %}" alt="2026 Safari Rally Kenya"
+        class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 h-full flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <h1 class="font-display text-4xl lg:text-6xl font-bold text-[#faf8f3] mb-4">
+                3-Day "Safari to Sea" Regenerative Shore Excursion
+            </h1>
+            <p class="text-lg lg:text-xl text-[#f0ebe0] mb-6">
+                Mombasa Port – Tsavo/Amboseli Corridor – Blue Carbon Coast
+            </p>
+            <!-- <p class="text-sm tracking-wide uppercase text-[#c9a227]">
+                March 11 – 15, 2026 • Naivasha & The Great Rift Valley
+            </p> -->
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#faf8f3] py-24">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <!-- HERO -->
+        <div class="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl mb-20">
+            <img src="{% static 'images/blogs/ship.webp' %}" alt="Safari to Sea Regenerative Excursion"
+                class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/55"></div>
+
+            <div class="absolute bottom-10 left-10 max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-white">
+                    3-Day "Safari to Sea" Regenerative Shore Excursion
+                </h1>
+                <p class="mt-4 text-lg text-white/90">
+                    Mombasa Port – Tsavo/Amboseli Corridor – Blue Carbon Coast
+                </p>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE INTRO -->
+        <div class="max-w-4xl mb-24">
+            <h2 class="text-2xl font-bold text-[#1a4d2e] mb-4">The Experience</h2>
+            <p class="text-[#3d5a46] leading-relaxed">
+                RawUnwind Safaris invites your distinguished guests to step off the ship and into the soul of Kenya.
+                Designed for the February 2026 docking of the Crystal Symphony and other luxury vessels, this
+                3-day/2-night
+                transition offers a seamless blend of world-class wildlife viewing and impactful conservation.
+            </p>
+        </div>
+
+        <!-- DAY 1 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <h3 class="text-2xl font-bold text-[#1a4d2e] mb-4">
+                    Day 1: VIP Port Arrival & The Elephant Corridor
+                </h3>
+                <p class="mb-3">
+                    Private 4x4 transfer from Mombasa Port.
+                </p>
+                <p class="mb-3">
+                    Afternoon game drive in the Kasigau Corridor, home to over 11,000 elephants.
+                </p>
+                <p class="italic text-[#1a4d2e]">
+                    Stay at a Gold-Rated Eco-Lodge (Half Board).
+                </p>
+            </div>
+
+            <div class="h-[300px] rounded-3xl overflow-hidden shadow-lg">
+                <img src="{% static 'images/blogs/arrive.jpeg' %}" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- DAY 2 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div class="h-[300px] rounded-3xl overflow-hidden shadow-lg">
+                <img src="{% static 'images/blogs/zebra.jpeg' %}" class="w-full h-full object-cover">
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-[#1a4d2e] mb-4">
+                    Day 2: Conservation in Action
+                </h3>
+                <p class="mb-3">
+                    Sunrise game drive followed by a private session with local rangers.
+                </p>
+                <p class="text-[#3d5a46]">
+                    Experience the raw beauty of human-wildlife coexistence.
+                </p>
+            </div>
+        </div>
+
+        <!-- DAY 3 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <h3 class="text-2xl font-bold text-[#1a4d2e] mb-4">
+                    Day 3: The Blue Carbon Return
+                </h3>
+                <p class="mb-3">
+                    Journey back to the coast with an exclusive stop at the Mikoko Pamoja mangrove project.
+                </p>
+                <p class="mb-3">
+                    See the direct impact of your travel before a VIP return to the Port or Moi International Airport.
+                </p>
+            </div>
+
+            <div class="h-[300px] rounded-3xl overflow-hidden shadow-lg">
+                <img src="{% static 'images/blogs/magroove.jpeg' %}" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- WHY PARTNER -->
+        <div class="bg-white rounded-3xl shadow-xl p-10 mb-24">
+            <h3 class="text-2xl font-bold text-[#1a4d2e] mb-6">
+                Why Partner with RawUnwind Safaris?
+            </h3>
+
+            <p class="mb-6 text-[#3d5a46]">
+                We don't just sell seats; we sell a Net-Positive legacy.
+            </p>
+
+            <ul class="space-y-4">
+                <li>
+                    <strong>Verified Carbon Offsets:</strong>
+                    Every guest's footprint is audited and offset through our partners, Wildlife Works and Mikoko
+                    Pamoja.
+                </li>
+                <li>
+                    <strong>The Certificate of Impact:</strong>
+                    Guests receive a personalized, high-quality Sustainability Certificate validating their contribution
+                    to Kenya’s rangelands.
+                </li>
+                <li>
+                    <strong>VIP Logistics:</strong>
+                    Dedicated 4x4 Land Cruisers, expert conservationist guides, and 24/7 concierge support for cruise
+                    schedule synchronization.
+                </li>
+            </ul>
+        </div>
+
+
+
+    </div>
+</section>
+
+
+
+{% endblock content %}

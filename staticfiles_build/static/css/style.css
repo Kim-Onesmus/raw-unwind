@@ -1,0 +1,123 @@
+body {
+            box-sizing: border-box;
+        }
+
+        .font-display {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .font-body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-slide-in {
+            animation: slideInFromLeft 0.8s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .luxury-gradient {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            background-size: 200% 200%;
+            animation: shimmer 8s ease-in-out infinite;
+        }
+
+        .gold-accent {
+            color: #d4af37;
+        }
+
+        .itinerary-day {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .itinerary-day::before {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 2.5rem;
+            bottom: -1.5rem;
+            width: 2px;
+            background: linear-gradient(180deg, #d4af37 0%, rgba(212, 175, 55, 0.3) 100%);
+        }
+
+        .itinerary-day:last-child::before {
+            display: none;
+        }
+
+        .day-marker {
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #1a1a1a;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+        }
