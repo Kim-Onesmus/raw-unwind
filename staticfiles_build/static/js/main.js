@@ -358,7 +358,7 @@ function addUserMessage(text) {
 function addBotResponse(userMessage) {
   const lowerMessage = userMessage.toLowerCase();
   let response =
-    "Thank you for your message! Our team will get back to you shortly. You can also reach us on WhatsApp or email info@rawunwind.com for immediate assistance.";
+    "Thank you for your message! Our team will get back to you shortly. You can also reach us on WhatsApp or email info@rawunwindsafaris.com for immediate assistance.";
 
   if (lowerMessage.includes("safari") || lowerMessage.includes("package")) {
     response =
