@@ -59,3 +59,4 @@ setInterval(slideNext, 6500);
     }
   }
 })();
+

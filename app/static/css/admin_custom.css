@@ -1,0 +1,41 @@
+/* Raw Unwind DARK GREEN Theme */
+
+:root {
+    --primary: #0b3d2e;   /* dark green */
+    --success: #0b3d2e;
+}
+
+/* Sidebar active item */
+.sidebar .nav-link.active {
+    background-color: #0b3d2e !important;
+    color: #ffffff !important;
+}
+
+/* Sidebar hover */
+.sidebar .nav-link:hover {
+    background-color: rgba(11, 61, 46, 0.18);
+}
+
+/* Navbar branding */
+.navbar-success .navbar-brand {
+    font-weight: 600;
+}
+
+/* Login button */
+.login-box .btn-primary {
+    background-color: #0b3d2e;
+    border-color: #0b3d2e;
+}
+
+/* Button styling */
+.btn-success {
+    background-color: #0b3d2e;
+    border-color: #0b3d2e;
+    border-radius: 6px;
+}
+
+/* Button hover */
+.btn-success:hover {
+    background-color: #0a3427;
+    border-color: #0a3427;
+}

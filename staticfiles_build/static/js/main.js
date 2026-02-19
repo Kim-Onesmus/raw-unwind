@@ -143,33 +143,33 @@ function mapToEditPanelValues(cfg) {
   ]);
 }
 
-// Akiba Safaris Payment Calculator
-document
-  .getElementById("akiba-calculate")
-  .addEventListener("click", function () {
-    const packagePrice = parseFloat(
-      document.getElementById("akiba-package").value,
-    );
-    const months = parseInt(document.getElementById("akiba-months").value);
+// // Akiba Safaris Payment Calculator
+// document
+//   .getElementById("akiba-calculate")
+//   .addEventListener("click", function () {
+//     const packagePrice = parseFloat(
+//       document.getElementById("akiba-package").value,
+//     );
+//     const months = parseInt(document.getElementById("akiba-months").value);
 
-    if (!packagePrice) {
-      return;
-    }
+//     if (!packagePrice) {
+//       return;
+//     }
 
-    const deposit = Math.round(packagePrice * 0.2);
-    const remaining = packagePrice - deposit;
-    const monthlyPayment = Math.round(remaining / months);
+//     const deposit = Math.round(packagePrice * 0.2);
+//     const remaining = packagePrice - deposit;
+//     const monthlyPayment = Math.round(remaining / months);
 
-    document.getElementById("akiba-deposit").textContent =
-      deposit.toLocaleString();
-    document.getElementById("akiba-monthly").textContent =
-      monthlyPayment.toLocaleString();
-    document.getElementById("akiba-months-display").textContent = months;
-    document.getElementById("akiba-total").textContent =
-      packagePrice.toLocaleString();
+//     document.getElementById("akiba-deposit").textContent =
+//       deposit.toLocaleString();
+//     document.getElementById("akiba-monthly").textContent =
+//       monthlyPayment.toLocaleString();
+//     document.getElementById("akiba-months-display").textContent = months;
+//     document.getElementById("akiba-total").textContent =
+//       packagePrice.toLocaleString();
 
-    document.getElementById("akiba-result").classList.remove("hidden");
-  });
+//     document.getElementById("akiba-result").classList.remove("hidden");
+//   });
 
 // Donation Impact Calculator
 function calculateDonationImpact(amount) {
@@ -274,16 +274,16 @@ document.getElementById("carbon-form").addEventListener("submit", function (e) {
 });
 
 // Form handling
-document
-  .getElementById("inquiry-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-    document.getElementById("form-success").classList.remove("hidden");
-    this.reset();
-    setTimeout(() => {
-      document.getElementById("form-success").classList.add("hidden");
-    }, 5000);
-  });
+// document
+//   .getElementById("inquiry-form")
+//   .addEventListener("submit", function (e) {
+//     e.preventDefault();
+//     document.getElementById("form-success").classList.remove("hidden");
+//     this.reset();
+//     setTimeout(() => {
+//       document.getElementById("form-success").classList.add("hidden");
+//     }, 5000);
+//   });
 
 // FAQ Toggle
 function toggleFAQ(button) {

@@ -11,33 +11,42 @@
     content="Learn about Raw Unwind Safaris — a Kenyan travel brand offering regenerative luxury safaris, cultural immersion, and meaningful journeys rooted in conservation and community.">
 {% endblock %}
 
-<section class="relative w-full h-[50vh] overflow-hidden">
+<section class="relative w-full
+           h-[25vh] sm:h-[40vh] md:h-[60vh] lg:h-[90vh]
+           overflow-hidden">
 
-    <!-- Background image -->
-    <div class="absolute inset-0">
-        <img src="{% static 'images/about/2.jpeg' %}" alt="About Raw Unwind Safaris"
-            class="w-full h-full object-cover" />
-    </div>
 
-    <!-- Dark overlay -->
-    <div class="absolute inset-0 bg-black/50"></div>
+    <!-- Slider -->
+    <div id="hero-slider" class="absolute inset-0 h-full flex flex-nowrap">
 
-    <!-- Content -->
-    <div class="relative z-10 h-full flex items-center justify-center px-6 text-center">
-        <div class="max-w-3xl">
-            <h1 class="font-display text-4xl lg:text-6xl font-bold mb-6 text-[#faf8f3]">
-                About Raw Unwind Safaris
-            </h1>
-
-            <p class="text-lg lg:text-xl mb-8 text-[#f0ebe0] leading-relaxed">
-                Raw Unwind is a regenerative luxury safari brand rooted in Kenya.
-                We design journeys that slow you down, connect you to culture,
-                and protect the landscapes that make Africa extraordinary.
-            </p>
+        <div class="hero-slide relative w-full h-full flex-shrink-0">
+            <img src="{% static 'images/manifesto/1.jpeg' %}" alt="Luxury Safari"
+                class="w-full mt-0 object-cover mx-auto" />
         </div>
-    </div>
 
+        <div class="hero-slide relative w-full h-full flex-shrink-0">
+            <img src="{% static 'images/manifesto/2.jpeg' %}" alt="Luxury Safari"
+                class="w-full mt-0 object-cover mx-auto" />
+        </div>
+
+        <div class="hero-slide relative w-full h-full flex-shrink-0">
+            <img src="{% static 'images/manifesto/3.jpeg' %}" alt="Luxury Safari"
+                class="w-full mt-0 object-cover mx-auto" />
+        </div>
+
+        <div class="hero-slide relative w-full h-full flex-shrink-0">
+            <img src="{% static 'images/manifesto/4.jpeg' %}" alt="Luxury Safari"
+                class="w-full mt-0 object-cover mx-auto" />
+        </div>
+
+        <div class="hero-slide relative w-full h-full flex-shrink-0">
+            <img src="{% static 'images/manifesto/3.jpeg' %}" alt="Luxury Safari"
+                class="w-full mt-0 object-cover mx-auto" />
+        </div>
+
+    </div>
 </section>
+
 
 
 <section id="about-us" class="w-full px-6 py-20 md:py-24"
@@ -110,6 +119,57 @@
 </section><!-- Legacy Portfolio Section -->
 
 
-{% endblock content %}
+<!-- OUR TEAM -->
+<section id="our-team" class="w-full px-6 py-20 md:py-24 bg-[#f9f8f5]">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-display text-5xl md:text-6xl font-bold mb-6 text-[#0d2818]">Our Team</h2>
+            <p class="text-xl max-w-4xl mx-auto leading-relaxed text-[#3d5a46]">
+                Meet the passionate individuals behind RawUnwind Safaris, dedicated to delivering verified, intentional,
+                and regenerative travel experiences.
+            </p>
+        </div>
 
-                        
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+            <!-- Team Member -->
+            <div class="p-6 rounded-3xl bg-white shadow-lg text-center card-hover">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="{% static 'images/team/member1.jpeg' %}" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-display text-xl font-bold text-green-700 mb-2">Onesmus Kimanzi</h3>
+                <p class="text-[#3d5a46] text-base">Founder & Safari Lead</p>
+            </div>
+
+            <!-- Team Member -->
+            <div class="p-6 rounded-3xl bg-white shadow-lg text-center card-hover">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="{% static 'images/team/member2.jpeg' %}" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-display text-xl font-bold text-green-700 mb-2">Jane Mwende</h3>
+                <p class="text-[#3d5a46] text-base">Operations Manager</p>
+            </div>
+
+            <!-- Team Member -->
+            <div class="p-6 rounded-3xl bg-white shadow-lg text-center card-hover">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="{% static 'images/team/member3.jpeg' %}" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-display text-xl font-bold text-green-700 mb-2">David Otieno</h3>
+                <p class="text-[#3d5a46] text-base">Conservation & Community Liaison</p>
+            </div>
+
+            <!-- Team Member -->
+            <div class="p-6 rounded-3xl bg-white shadow-lg text-center card-hover">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="{% static 'images/team/member4.jpeg' %}" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-display text-xl font-bold text-green-700 mb-2">Mary Wanjiku</h3>
+                <p class="text-[#3d5a46] text-base">Guest Experience & Logistics</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock content %}
