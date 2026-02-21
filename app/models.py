@@ -21,6 +21,7 @@ class LegacyPortfolio(models.Model):
     currency = models.CharField(max_length=10, default="USD, KES")
 
     price = models.DecimalField(max_digits=10, decimal_places=2, help_text="Price per person")
+    date = models.DateField(null=True, blank=True)
     duration_days = models.PositiveIntegerField(default=0)
     duration_nights = models.PositiveIntegerField(default=0)
     duration_hours = models.PositiveIntegerField(default=0)

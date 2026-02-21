@@ -111,3 +111,59 @@ body {
 .hero-btn.secondary:hover {
     background-color: rgba(250, 248, 243, 0.12);
 }
+
+
+
+/* CKEditor content styling */
+.ck-content img,
+.rich-text img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Image alignment */
+.image-center {
+    display: block;
+    margin: 20px auto;
+}
+
+.image-left {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.image-right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+/* Typography */
+.rich-text p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.rich-text h1,
+.rich-text h2,
+.rich-text h3 {
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+}
+
+/* Fix CKEditor image alignment inside prose */
+.prose .image-center,
+.prose img.image-center {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.prose .image-left {
+    float: left;
+    margin-right: 1.5rem;
+}
+
+.prose .image-right {
+    float: right;
+    margin-left: 1.5rem;
+}

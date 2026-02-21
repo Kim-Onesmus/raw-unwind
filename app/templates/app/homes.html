@@ -21,7 +21,7 @@
                     <a href="{% url 'manifesto' %}" class="hero-btn primary">
                         Our Manifesto
                     </a>
-                    <a href="{% url 'safari' %}" class="hero-btn secondary">
+                    <a href="#" class="hero-btn secondary">
                         Reserve Your Safari
                     </a>
                 </div>
@@ -165,141 +165,22 @@
 <section id="legacy-portfolio" class="w-full px-6 py-20 md:py-24">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="font-display text-5xl md:text-6xl font-bold mb-6" style="color: #0d2818;">Legacy
-                Portfolio</h2>
-            <p class="text-xl max-w-3xl mx-auto" style="color: #3d5a46;">Signature journeys that define Raw
-                Unwind—where luxury meets purpose</p>
+            <h2 class="font-display text-5xl md:text-6xl font-bold mb-6" style="color: #0d2818;">
+                Legacy Portfolio
+            </h2>
+            <p class="text-xl max-w-3xl mx-auto" style="color: #3d5a46;">
+                Signature journeys that define Raw Unwind—where luxury meets purpose
+            </p>
         </div>
-        <div class="grid lg:grid-cols-3 gap-8 mb-12"><!-- Mombasa Port to Tsavo -->
-            <a href="{% url 'mombasa' %}" class="block">
-                <div class="rounded-3xl overflow-hidden card-hover"
-                    style="background-color: #faf8f3; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <div class="relative rounded-2xl overflow-hidden aspect-video">
-                        <img src="{% static 'images/blogs/ship.webp' %}" alt="Helicopter Safari Transfer"
-                            class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-                    </div>
 
+        <!-- Spinner -->
+        <div id="portfolio-spinner" class="flex justify-center mb-8">
+            <div class="loader border-t-4 border-b-4 border-green-700 rounded-full w-12 h-12 animate-spin"></div>
+        </div>
 
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3"><span
-                                class="px-3 py-1 text-xs font-semibold rounded-full"
-                                style="background-color: rgba(26, 77, 46, 0.1); color: #1a4d2e;">Cruise
-                                Exclusive</span>
-                        </div>
-                        <h3 class="font-display text-2xl font-bold mb-3" style="color: #1a4d2e;">Mombasa Port to
-                            Tsavo</h3>
-                        <p class="text-sm mb-4 leading-relaxed" style="color: #3d5a46;">Private helicopter from
-                            cruise terminal to Tsavo East. Witness red elephants, champagne breakfast, sunset
-                            sundowner. Back to ship in 8 hours.</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-center gap-2 text-sm" style="color: #3d5a46;">
-                                <svg class="w-4 h-4 flex-shrink-0" viewbox="0 0 20 20" fill="#1a4d2e">
-                                    <path
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                                </svg> Helicopter transfers included
-                            </li>
-                            <li class="flex items-center gap-2 text-sm" style="color: #3d5a46;">
-                                <svg class="w-4 h-4 flex-shrink-0" viewbox="0 0 20 20" fill="#1a4d2e">
-                                    <path
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                                </svg> 8-hour exclusive experience
-                            </li>
-                        </ul>
-                        <p class="font-display text-3xl font-bold" style="color: #1a4d2e;">$3,500 <span
-                                class="text-base font-normal" style="color: #3d5a46;">ph</span></p>
-                    </div>
-                </div><!-- Maasai Mara Ultimate -->
-            </a>
-            <div class="rounded-3xl overflow-hidden card-hover"
-                style="background-color: #faf8f3; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <div class="relative rounded-2xl overflow-hidden aspect-video">
-                    <img src="{% static 'images/blogs/lions.jpg' %}" alt="Helicopter Safari Transfer"
-                        class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center gap-2 mb-3"><span class="px-3 py-1 text-xs font-semibold rounded-full"
-                            style="background-color: rgba(201, 162, 39, 0.15); color: #1a4d2e;">Ultimate
-                            Safari</span>
-                    </div>
-                    <h3 class="font-display text-2xl font-bold mb-3" style="color: #1a4d2e;">Maasai Mara
-                        Experience</h3>
-                    <p class="text-sm mb-4 leading-relaxed" style="color: #3d5a46;">5-day Great Migration
-                        encounter. Luxury tented camps, hot air balloon safaris, cultural immersion, private
-                        conservancy access.</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center gap-2 text-sm" style="color: #3d5a46;">
-                            <svg class="w-4 h-4 flex-shrink-0" viewbox="0 0 20 20" fill="#1a4d2e">
-                                <path
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                            </svg> 5 days / 4 nights
-                        </li>
-                        <li class="flex items-center gap-2 text-sm" style="color: #3d5a46;">
-                            <svg class="w-4 h-4 flex-shrink-0" viewbox="0 0 20 20" fill="#1a4d2e">
-                                <path
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                            </svg> Hot air balloon included
-                        </li>
-                    </ul>
-                    <p class="font-display text-3xl font-bold" style="color: #1a4d2e;">$12,500 <span
-                            class="text-base font-normal" style="color: #3d5a46;">pp</span></p>
-                </div>
-            </div><!-- WRC Safari Rally VIP -->
-            <a href="{% url 'safari' %}" class="block">
-                <div class="rounded-3xl overflow-hidden card-hover"
-                    style="background-color: #faf8f3; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        <!-- Portfolio grid -->
+        <div id="portfolio-container" class="grid lg:grid-cols-3 gap-8 mb-12"></div>
 
-                    <div class="relative rounded-2xl overflow-hidden aspect-video">
-                        <img src="{% static 'images/hero/safari.jpg' %}" alt="Helicopter Safari Transfer"
-                            class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-                    </div>
-
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-3 py-1 text-xs font-semibold rounded-full"
-                                style="background-color: rgba(201, 162, 39, 0.3); color: #1a4d2e;">
-                                Motorsport Exclusive
-                            </span>
-                        </div>
-
-                        <h3 class="font-display text-2xl font-bold mb-3" style="color: #1a4d2e;">
-                            WRC Safari Rally VIP
-                        </h3>
-
-                        <p class="text-sm mb-4 leading-relaxed" style="color: #3d5a46;">
-                            For automobile enthusiasts. VIP paddock access, driver meet-and-greet,
-                            helicopter stage viewing, exclusive after-parties. June dates.
-                        </p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-center gap-2 text-sm" style="color: #3d5a46;">
-                                <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="#1a4d2e">
-                                    <path
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                                </svg>
-                                VIP paddock access
-                            </li>
-
-                            <li class="flex items-center gap-2 text-sm" style="color: #1a4d2e;">
-                                <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="#1a4d2e">
-                                    <path
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                                </svg>
-                                Helicopter stage transfers
-                            </li>
-                        </ul>
-
-                        <p class="font-display text-3xl font-bold" style="color: #1a4d2e;">
-                            $18,500
-                            <span class="text-base font-normal" style="color: rgba(61, 90, 70, 0.7);">
-                                pp
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </a>
-
-        </div><!-- Additional Destinations -->
-        <!-- View More Link -->
         <div class="text-center mt-12">
             <a href="{% url 'legacy_portfolio' %}"
                 class="inline-flex items-center gap-2 px-8 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105"
@@ -311,7 +192,8 @@
             </a>
         </div>
     </div>
-</section><!-- Cultural Events Blog Section -->
+</section>
+
 
 
 
@@ -1471,5 +1353,77 @@
 
     observer.observe(document.querySelector(".counter"));
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("portfolio-container");
+        const spinner = document.getElementById("portfolio-spinner");
+
+        fetch("{% url 'latest_legacy_portfolio' %}")
+            .then(response => response.json())
+            .then(data => {
+                spinner.style.display = "none"; // hide spinner
+                data.forEach(item => {
+                    const card = document.createElement("a");
+                    card.href = item.url;
+                    card.className = "block";
+                    card.innerHTML = `
+                    <div class="rounded-3xl overflow-hidden card-hover" style="background-color: #faf8f3; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                        <div class="relative rounded-2xl overflow-hidden aspect-video">
+                            <img src="${item.image}" alt="${item.title}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+    <!-- TAG -->
+    <span
+        class="px-3 py-1 text-xs font-semibold rounded-full"
+        style="background-color: rgba(26, 77, 46, 0.1); color: #1a4d2e;"
+    >
+        ${item.tags}
+    </span>
+
+    <!-- DATE -->
+    <span
+        class="text-xs text-gray-500 flex items-center gap-1"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10m-13 9h16a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v11a2 2 0 002 2z"/>
+        </svg>
+        ${item.date}
+    </span>
+</div>
+                            <h3 class="font-display text-2xl font-bold mb-3" style="color: #1a4d2e;">${item.title}</h3>
+                            <p class="text-sm mb-4 leading-relaxed" style="color: #3d5a46;">${item.content}</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center gap-2 text-sm" style="color: #3d5a46;">
+                                    <svg class="w-4 h-4 flex-shrink-0" viewbox="0 0 20 20" fill="#1a4d2e">
+                                        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                    </svg> ${item.includes}
+                                </li>
+                                <li class="flex items-center gap-2 text-sm" style="color: #3d5a46;">
+                                    <svg class="w-4 h-4 flex-shrink-0" viewbox="0 0 20 20" fill="#1a4d2e">
+                                        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                    </svg> ${item.duration_days}-day / ${item.duration_nights}-night / ${item.duration_hours}-hour
+                                </li>
+                            </ul>
+                            <p class="font-display text-3xl font-bold" style="color: #1a4d2e;">
+                                ${item.currency.split(',')[0]} ${item.price} <span class="text-base font-normal" style="color: #3d5a46;">pp</span>
+                            </p>
+                        </div>
+                    </div>
+                `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(err => {
+                spinner.style.display = "none";
+                container.innerHTML = "<p class='text-center text-red-500'>Failed to load portfolios.</p>";
+                console.error(err);
+            });
+    });
+</script>
+
 
 {% endblock content %}

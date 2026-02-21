@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c72ya@s=g6y#ly@p2v4ugiuum_pct+rp^!lbeeof2-=bih_v)f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 
@@ -128,6 +128,94 @@ STATICFILES_DIRS = [
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/ckeditor/"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        # ----------------------------
+        # TOOLBAR
+        # ----------------------------
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Styles', 'Format', 'Font', 'FontSize'],
+            ['Bold', 'Italic', 'Underline', 'Strike'],
+            ['TextColor', 'BGColor'],
+            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['Image', 'Table', 'HorizontalRule'],
+            ['Blockquote', 'CodeSnippet'],
+            ['RemoveFormat', 'Source'],
+            ['Maximize'],
+        ],
+
+        # ----------------------------
+        # PLUGINS
+        # ----------------------------
+        'extraPlugins': ','.join([
+            'image2',
+            'codesnippet',
+            'justify',
+            'autogrow',
+            'uploadimage',
+        ]),
+        'removePlugins': 'image',
+
+        # ----------------------------
+        # IMAGE SETTINGS
+        # ----------------------------
+        'image2_alignClasses': [
+            'image-left',
+            'image-center',
+            'image-right'
+        ],
+        'image2_disableResizer': False,
+
+        # ----------------------------
+        # CONTENT CONTROL
+        # ----------------------------
+        'allowedContent': True,  # Allow clean HTML
+        'disallowedContent': 'script; *[on*]',  # Security
+        'forcePasteAsPlainText': True,
+
+        # ----------------------------
+        # TYPOGRAPHY
+        # ----------------------------
+        'font_names': (
+            'Inter/Inter, sans-serif;'
+            'Playfair Display/Playfair Display, serif;'
+            'Montserrat/Montserrat, sans-serif;'
+            'Arial/Arial, Helvetica, sans-serif;'
+            'Georgia/Georgia, serif'
+        ),
+
+        'fontSize_sizes': '12/12px;14/14px;16/16px;18/18px;20/20px;24/24px;32/32px',
+
+        # ----------------------------
+        # AUTO GROW
+        # ----------------------------
+        'autoGrow_minHeight': 300,
+        'autoGrow_maxHeight': 900,
+        'autoGrow_bottomSpace': 50,
+
+        # ----------------------------
+        # UI
+        # ----------------------------
+        'height': 400,
+        'width': '100%',
+        'skin': 'moono-lisa',
+
+        # ----------------------------
+        # CODE SNIPPET
+        # ----------------------------
+        'codeSnippet_theme': 'monokai',
+
+        # ----------------------------
+        # PASTE CLEANUP
+        # ----------------------------
+        'pasteFromWordRemoveStyles': True,
+        'pasteFromWordRemoveFontStyles': True,
+    }
+}
 
 if DEBUG:
     MEDIA_URL = '/media/'
