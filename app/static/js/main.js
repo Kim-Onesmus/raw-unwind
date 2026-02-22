@@ -374,7 +374,7 @@ function addBotResponse(userMessage) {
     lowerMessage.includes("event")
   ) {
     response =
-      "Our cultural events include the Great Migration (July-Oct), Lamu Cultural Festival (Nov), Turkana Festival (May-June), and Nairobi Culinary Week (March & Sept). 40% of proceeds support local communities!";
+      "Our heritage immersions include the Great Migration (July-Oct), Lamu Cultural Festival (Nov), Turkana Festival (May-June), and Nairobi Culinary Week (March & Sept). 40% of proceeds support local communities!";
   } else if (lowerMessage.includes("cancel")) {
     response =
       "Our cancellation policy: 90+ days = full refund minus 10% fee, 60-89 days = 50% refund, 30-59 days = 25% refund, under 30 days = 2-year credit. Travel insurance is highly recommended!";
