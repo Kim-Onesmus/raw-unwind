@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>{{ portfolio.title }} | Raw Unwind Safaris</title>
+{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="{{ portfolio.content|striptags|truncatechars:160 }}">
+{% endblock %}
+
+{% block og %}
+<meta property="og:title" content="{{ portfolio.title }}">
+<meta property="og:description" content="{{ portfolio.content|striptags|truncatechars:160 }}">
+<meta property="og:image"
+    content="{% if portfolio.main_image %}{{ portfolio.main_image.url }}{% else %}{% static 'images/hero/safari.jpg' %}{% endif %}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="relative h-[70vh] w-full overflow-hidden">
+    <img src="{% if portfolio.main_image %}{{ portfolio.main_image.url }}{% else %}{% static 'images/hero/safari.jpg' %}{% endif %}"
+        alt="{{ portfolio.title }}" class="absolute inset-0 h-full w-full object-cover">
+
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+
+    <div class="relative z-10 h-full flex items-end px-6 pb-20">
+        <div class="max-w-5xl">
+            <p class="uppercase tracking-widest text-sm text-[#c9a227] mb-3">
+                {{ portfolio.season }}
+            </p>
+
+            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-[#faf8f3] mb-4">
+                {{ portfolio.title }}
+            </h1>
+
+            {% if portfolio.subtitle %}
+            <p class="text-lg md:text-xl text-[#e6e0d4] max-w-3xl">
+                {{ portfolio.subtitle }}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- CONTENT -->
+<section class="bg-[#faf8f3] py-24">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16">
+
+        <!-- MAIN -->
+        <div class="lg:col-span-8">
+
+            <!-- TRIP FACTS -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+                <div class="bg-white rounded-xl p-5 shadow-sm">
+                    <p class="text-xs uppercase tracking-wide text-gray-500">Duration</p>
+                    <p class="font-semibold text-lg">
+                        {{ portfolio.duration_days }} Days
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl p-5 shadow-sm">
+                    <p class="text-xs uppercase tracking-wide text-gray-500">Price</p>
+                    <p class="font-semibold text-lg">
+                        {{ portfolio.currency }} {{ portfolio.price }}
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl p-5 shadow-sm">
+                    <p class="text-xs uppercase tracking-wide text-gray-500">Season</p>
+                    <p class="font-semibold text-lg">
+                        {{ portfolio.season }}
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl p-5 shadow-sm">
+                    <p class="text-xs uppercase tracking-wide text-gray-500">Host</p>
+                    <p class="font-semibold text-lg">
+                        RawUnwind Safaris
+                    </p>
+                </div>
+            </div>
+
+            <!-- CKEDITOR CONTENT -->
+            <article class="prose max-w-none bg-white rounded-3xl p-10 shadow-lg ck-content">
+                {{ portfolio.content|safe }}
+            </article>
+
+            <!-- INCLUDES -->
+            {% if portfolio.includes %}
+            <div class="mt-20 bg-white rounded-3xl p-10 shadow-lg">
+                <h3 class="text-2xl font-bold text-[#1a4d2e] mb-6">
+                    What’s Included
+                </h3>
+
+                <ul class="grid sm:grid-cols-2 gap-4 text-[#3d5a46]">
+                    {% for item in portfolio.includes.splitlines %}
+                    <li class="flex items-start gap-3">
+                        <span class="text-[#c9a227] mt-1">•</span>
+                        <span>{{ item }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="lg:col-span-4">
+
+            <div class="sticky top-28 bg-white rounded-3xl p-8 shadow-xl">
+                <h3 class="font-display text-2xl font-bold text-[#1a4d2e] mb-4">
+                    Ready to Experience This Journey?
+                </h3>
+
+                <p class="text-sm text-[#3d5a46] mb-6">
+                    Speak to our travel designers to tailor this experience to your pace,
+                    season, and sustainability goals.
+                </p>
+
+                <a href="{% url 'contact' %}"
+                    class="block text-center bg-[#1a4d2e] hover:bg-[#143d25] text-white py-4 rounded-xl font-semibold transition">
+                    Request This Safari
+                </a>
+            </div>
+
+        </aside>
+
+    </div>
+</section>
+
+{% endblock %}

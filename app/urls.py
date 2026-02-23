@@ -15,5 +15,9 @@ urlpatterns = [
     path('manifesto/', views.Manifesto, name='manifesto'),
     path('api/latest-legacy/', views.latest_legacy_portfolio, name='latest_legacy_portfolio'),
     path("legacy/<slug:slug>/", views.legacy_portfolio_detail, name="legacy_portfolio_detail"),
+    path("cultural-immersions/<slug:slug>/", views.cultural_immersions_detail, name="cultural_immersions_detail"),
+    path("api/featured-cultural-immersions/", views.featured_cultural_immersions, name="featured-cultural-immersions"),
+    path("api/legacy-portfolio/", views.active_legacy_portfolio, name="active-legacy-portfolio"),
+
 
 ]
