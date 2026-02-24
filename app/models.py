@@ -20,12 +20,12 @@ class LegacyPortfolio(models.Model):
     title = models.CharField(max_length=255)
     currency = models.CharField(max_length=10, default="USD, KES")
 
-    price = models.DecimalField(max_digits=10, decimal_places=2, help_text="Price per person")
+    price = models.CharField(help_text="Price per person")
     date = models.DateField(null=True, blank=True)
     duration_days = models.PositiveIntegerField(default=0)
     duration_nights = models.PositiveIntegerField(default=0)
     duration_hours = models.PositiveIntegerField(default=0)
-    includes = models.CharField(max_length=255, help_text="Hot air balloon included")
+    includes = models.TextField(help_text="Hot air balloon included")
     tags = models.CharField(max_length=255, help_text="Ultimate Safari or Cruise Exclusive")
 
     slug = models.SlugField(unique=True, blank=True, max_length=255)
@@ -49,10 +49,10 @@ class CulturalImmersions(models.Model):
     title = models.CharField(max_length=255)
     currency = models.CharField(max_length=10, default="USD")
 
-    price = models.DecimalField(max_digits=10, decimal_places=2, help_text="Price per person")
+    price = models.CharField(help_text="Price per person")
     season = models.CharField(max_length=255, help_text="eg. July - October")
     community_impact = models.CharField(max_length=255, help_text="Supports Swahili artisan cooperatives and heritage preservation")
-    includes = models.CharField(max_length=255, help_text="6 days, luxury mobile camp, Maasai cultural immersion")
+    includes = models.TextField(help_text="6 days, luxury mobile camp, Maasai cultural immersion")
 
     slug = models.SlugField(unique=True, blank=True, max_length=255)
     main_image = models.ImageField(upload_to=upload_image_to)
