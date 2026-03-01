@@ -232,46 +232,46 @@ const flightMultipliers = {
   oceania: 3.0,
 };
 
-document.getElementById("carbon-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+// document.getElementById("carbon-form").addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-  const destination = document.getElementById("destination").value;
-  const travelers = parseInt(document.getElementById("travelers").value) || 1;
-  const origin = document.getElementById("origin").value;
+//   const destination = document.getElementById("destination").value;
+//   const travelers = parseInt(document.getElementById("travelers").value) || 1;
+//   const origin = document.getElementById("origin").value;
 
-  if (!destination || !origin) {
-    return;
-  }
+//   if (!destination || !origin) {
+//     return;
+//   }
 
-  const data = carbonData[destination];
-  const flightMultiplier = flightMultipliers[origin];
+//   const data = carbonData[destination];
+//   const flightMultiplier = flightMultipliers[origin];
 
-  const transportCO2 = Math.round(
-    data.transport * flightMultiplier * travelers,
-  );
-  const accommodationCO2 = Math.round(data.accommodation * travelers);
-  const activitiesCO2 = Math.round(data.activities * travelers);
-  const totalCO2 = transportCO2 + accommodationCO2 + activitiesCO2;
+//   const transportCO2 = Math.round(
+//     data.transport * flightMultiplier * travelers,
+//   );
+//   const accommodationCO2 = Math.round(data.accommodation * travelers);
+//   const activitiesCO2 = Math.round(data.activities * travelers);
+//   const totalCO2 = transportCO2 + accommodationCO2 + activitiesCO2;
 
-  document.getElementById("carbon-amount").textContent =
-    totalCO2.toLocaleString();
-  document.getElementById("transport-co2").textContent =
-    transportCO2.toLocaleString();
-  document.getElementById("accommodation-co2").textContent =
-    accommodationCO2.toLocaleString();
-  document.getElementById("activities-co2").textContent =
-    activitiesCO2.toLocaleString();
-  document.getElementById("offset-amount").textContent =
-    totalCO2.toLocaleString();
-  document.getElementById("mangrove-area").textContent = Math.round(
-    totalCO2 * 0.8,
-  ).toLocaleString();
+//   document.getElementById("carbon-amount").textContent =
+//     totalCO2.toLocaleString();
+//   document.getElementById("transport-co2").textContent =
+//     transportCO2.toLocaleString();
+//   document.getElementById("accommodation-co2").textContent =
+//     accommodationCO2.toLocaleString();
+//   document.getElementById("activities-co2").textContent =
+//     activitiesCO2.toLocaleString();
+//   document.getElementById("offset-amount").textContent =
+//     totalCO2.toLocaleString();
+//   document.getElementById("mangrove-area").textContent = Math.round(
+//     totalCO2 * 0.8,
+//   ).toLocaleString();
 
-  document.getElementById("carbon-result").classList.remove("hidden");
-  document
-    .getElementById("carbon-result")
-    .scrollIntoView({ behavior: "smooth", block: "nearest" });
-});
+//   document.getElementById("carbon-result").classList.remove("hidden");
+//   document
+//     .getElementById("carbon-result")
+//     .scrollIntoView({ behavior: "smooth", block: "nearest" });
+// });
 
 // Form handling
 // document
@@ -374,7 +374,7 @@ function addBotResponse(userMessage) {
     lowerMessage.includes("event")
   ) {
     response =
-      "Our cultural events include the Great Migration (July-Oct), Lamu Cultural Festival (Nov), Turkana Festival (May-June), and Nairobi Culinary Week (March & Sept). 40% of proceeds support local communities!";
+      "Our heritage immersions include the Great Migration (July-Oct), Lamu Cultural Festival (Nov), Turkana Festival (May-June), and Nairobi Culinary Week (March & Sept). 40% of proceeds support local communities!";
   } else if (lowerMessage.includes("cancel")) {
     response =
       "Our cancellation policy: 90+ days = full refund minus 10% fee, 60-89 days = 50% refund, 30-59 days = 25% refund, under 30 days = 2-year credit. Travel insurance is highly recommended!";
