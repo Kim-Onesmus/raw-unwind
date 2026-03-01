@@ -13,6 +13,7 @@ urlpatterns = [
     # path('WRC_Safari_Rally/', views.Safari, name='safari'),
     path('Mombasa_Port_to_Tsavo', views.Mombasa, name='mombasa'),
     path('manifesto/', views.Manifesto, name='manifesto'),
+    path('reviews/', views.Reviews, name='reviews'),
     path('api/latest-legacy/', views.latest_legacy_portfolio, name='latest_legacy_portfolio'),
     path("legacy/<slug:slug>/", views.legacy_portfolio_detail, name="legacy_portfolio_detail"),
     path("cultural-immersions/<slug:slug>/", views.cultural_immersions_detail, name="cultural_immersions_detail"),

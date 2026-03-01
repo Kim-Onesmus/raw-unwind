@@ -41,8 +41,14 @@ def featured_cultural_immersions(request):
             "season": immersion.season,
             "price": str(immersion.price),
             "currency": immersion.currency,
-            "community_impact": immersion.community_impact,
-            "includes": immersion.includes,
+            "community_impact": (
+                immersion.community_impact[:100] + "..."
+                if immersion.community_impact else ""
+            ),
+            "includes": (
+                immersion.includes[:100] + "..."
+                if immersion.includes else ""
+            ),
             "image": immersion.main_image.url if immersion.main_image else "",
         }
         for immersion in immersions
@@ -77,6 +83,9 @@ def Index(request):
 
 def About(request):
     return render(request, 'app/about.html')
+
+def Reviews(request):
+    return render(request, 'app/reviews.html')
 
 def Contact(request):
     return render(request, 'app/contact.html')
