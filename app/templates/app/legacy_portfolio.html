@@ -42,7 +42,7 @@
         </div>
 
         <!-- Dynamic results -->
-        <div id="legacy-portfolio-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+        <div id="legacy-portfolio-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
         </div>
 
     </div>
@@ -58,18 +58,18 @@
             .then(res => res.json())
             .then(data => {
                 spinner.classList.add("hidden");
+                // Force the display to 'grid' when removing 'hidden'
                 container.classList.remove("hidden");
+                container.classList.add("grid");
 
                 if (!data.length) {
-                    container.innerHTML = `
-                    <p class="col-span-3 text-center text-gray-600">
-                        No portfolio items available.
-                    </p>`;
+                    container.innerHTML = `<p class="col-span-full text-center text-gray-600">No portfolio items available.</p>`;
                     return;
                 }
 
                 container.innerHTML = data.map(item => `
-                <div class="p-6 rounded-2xl card-hover bg-[#faf8f3]">
+
+                <div class="flex flex-col h-full p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow bg-[#faf8f3]">
 
                     <img src="${item.image}"
                          alt="${item.title}"
@@ -79,34 +79,30 @@
                         ${item.title}
                     </h4>
 
-                    <p class="text-sm mb-3 text-[#3d5a46]">
+                    <p class="text-sm mb-6 text-[#3d5a46] flex-grow">
                         ${item.content}
                     </p>
 
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-between mt-auto">
                         <p class="font-display text-2xl font-bold text-[#1a4d2e]">
                             ${item.currency} ${item.price}
                             <span class="text-sm font-normal">pp</span>
                         </p>
 
                         <a href="${item.url}"
-                           class="text-sm font-semibold text-[#1a4d2e] underline">
+                           class="text-sm font-semibold text-[#1a4d2e] underline hover:text-[#2a7a48]">
                             View Details
                         </a>
                     </div>
-
                 </div>
             `).join("");
             })
             .catch(err => {
                 spinner.classList.add("hidden");
-                container.innerHTML = `
-                <p class="text-red-600 text-center col-span-3">
-                    Failed to load portfolio.
-                </p>`;
+                container.classList.remove("hidden");
+                container.innerHTML = `<p class="text-red-600 text-center col-span-full">Failed to load portfolio.</p>`;
                 console.error(err);
             });
     });
 </script>
-
 {% endblock content %}
