@@ -463,7 +463,107 @@
             </div>
         </div>
     </div>
-</section><!-- Net-Zero Certificate Section -->
+</section>
+
+<!-- Partners Section -->
+<section id="partners" class="w-full py-16 md:py-20 overflow-hidden"
+    style="background: linear-gradient(180deg, #faf8f3 0%, #f0ebe0 100%);">
+    <div class="max-w-6xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <p class="text-sm font-bold tracking-widest uppercase mb-2" style="color: #1a4d2e;">Trusted By</p>
+            <h2 class="font-display text-4xl font-bold" style="color: #0d2818;">Our Partners</h2>
+            <div class="mx-auto mt-4 w-16 h-1 rounded-full" style="background-color: #c9a227;"></div>
+        </div>
+    </div>
+
+    <!-- Full-width scroll track -->
+    <div class="relative overflow-hidden">
+        <!-- Fade edges -->
+        <div class="absolute left-0 top-0 h-full w-32 z-10 pointer-events-none"
+            style="background: linear-gradient(to right, #faf8f3, transparent);"></div>
+        <div class="absolute right-0 top-0 h-full w-32 z-10 pointer-events-none"
+            style="background: linear-gradient(to left, #f0ebe0, transparent);"></div>
+
+        <!-- Scroll Container -->
+        <div class="flex" id="partnersMarquee">
+
+            <!-- Original set -->
+            <div class="partners-track flex gap-12 items-center flex-shrink-0 px-6" id="trackOriginal">
+
+                <div class="partner-card flex-shrink-0 w-56 h-32 rounded-2xl flex items-center justify-center p-5"
+                    style="background:white; box-shadow:0 4px 16px rgba(26,77,46,0.07); border:1px solid rgba(26,77,46,0.07);">
+                    <img src="{% static 'images/partners/domestic.jpeg' %}" alt="Domestic Tourism"
+                        class="max-w-full max-h-full object-contain">
+                </div>
+
+                <div class="partner-card flex-shrink-0 w-56 h-32 rounded-2xl flex items-center justify-center p-5"
+                    style="background:white; box-shadow:0 4px 16px rgba(26,77,46,0.07); border:1px solid rgba(26,77,46,0.07);">
+                    <img src="{% static 'images/partners/mikoko.jpeg' %}" alt="Mikoko"
+                        class="max-w-full max-h-full object-contain">
+                </div>
+
+                <div class="partner-card flex-shrink-0 w-56 h-32 rounded-2xl flex items-center justify-center p-5"
+                    style="background:white; box-shadow:0 4px 16px rgba(26,77,46,0.07); border:1px solid rgba(26,77,46,0.07);">
+                    <img src="{% static 'images/partners/tropic.jpeg' %}" alt="Tropic"
+                        class="max-w-full max-h-full object-contain">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .partner-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .partner-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(26, 77, 46, 0.13) !important;
+        border-color: rgba(26, 77, 46, 0.2) !important;
+    }
+</style>
+
+<script>
+    (function () {
+        const marquee = document.getElementById('partnersMarquee');
+        const original = document.getElementById('trackOriginal');
+
+        // Clone enough times to always fill the screen
+        for (let i = 0; i < 6; i++) {
+            const clone = original.cloneNode(true);
+            clone.removeAttribute('id');
+            marquee.appendChild(clone);
+        }
+
+        const trackWidth = original.scrollWidth;
+        let currentX = 0;
+        let paused = false;
+        const speed = 0.6;
+
+        marquee.addEventListener('mouseenter', () => paused = true);
+        marquee.addEventListener('mouseleave', () => paused = false);
+
+        function animate() {
+            if (!paused) {
+                currentX -= speed;
+                if (Math.abs(currentX) >= trackWidth) {
+                    currentX = 0;
+                }
+                marquee.style.transform = `translateX(${currentX}px)`;
+            }
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+    })();
+</script>
+
+<!-- Net-Zero Certificate Section -->
+
 <section id="certification" class="w-full px-6 py-20 md:py-24">
     <div class="max-w-6xl mx-auto">
         <div class="p-12 rounded-3xl"
@@ -547,6 +647,7 @@
         </div>
     </div>
 </section><!-- FAQs Section -->
+
 <section id="faqs" class="w-full px-6 py-20 md:py-24"
     style="background: linear-gradient(180deg, rgba(26, 77, 46, 0.03) 0%, rgba(26, 77, 46, 0.06) 100%);">
     <div class="max-w-4xl mx-auto">
@@ -705,6 +806,7 @@
         </div>
     </div>
 </section><!-- Support Conservation Section -->
+
 <section id="donor-support" class="w-full px-6 py-20 md:py-24">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
