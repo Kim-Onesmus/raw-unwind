@@ -19,6 +19,8 @@ urlpatterns = [
     path("cultural-immersions/<slug:slug>/", views.cultural_immersions_detail, name="cultural_immersions_detail"),
     path("api/featured-cultural-immersions/", views.featured_cultural_immersions, name="featured-cultural-immersions"),
     path("api/legacy-portfolio/", views.active_legacy_portfolio, name="active-legacy-portfolio"),
+    path('api/blogs/', views.blog_list_api, name='blog_list_api'),
+    path('blog_details/<slug:slug>/', views.BlogDetails, name='blog_detail'),
 
 
 ]

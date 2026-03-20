@@ -1,0 +1,368 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% block title %}
+<title>{{ blog.title }}</title>
+{% endblock %}
+
+{% block meta_description %}
+<meta name="description"
+    content="{{ blog.excerpt }}">
+{% endblock %}
+
+<section class="relative w-full h-[50vh] overflow-hidden">
+
+    <!-- Background image -->
+    <div class="absolute inset-0">
+        <img src="{{ blog.cover_image.url }}" alt="{{ blog.title }}"
+            class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 h-full flex items-center justify-center px-6 text-center">
+        <div class="max-w-3xl">
+            <h1 class="font-display text-4xl lg:text-6xl font-bold mb-6 text-[#faf8f3]">
+                {{ blog.title }}
+            </h1>
+
+            <p class="text-lg lg:text-xl mb-8 text-[#f0ebe0] leading-relaxed">
+                {{ blog.excerpt }}
+            </p>
+        </div>
+    </div>
+
+</section>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #faf8f3;
+            color: #0d2818;
+        }
+
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        #reading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(to right, #1a4d2e, #c9a227);
+            z-index: 9999;
+            transition: width 0.08s linear;
+        }
+
+        /* Prose styles */
+        .prose-article p {
+            font-size: 1.075rem;
+            line-height: 1.95;
+            color: #2a4a35;
+            margin-bottom: 1.6rem;
+            font-weight: 300;
+        }
+
+        .prose-article h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0d2818;
+            margin: 3rem 0 1rem;
+            line-height: 1.2;
+        }
+
+        .prose-article h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a4d2e;
+            margin: 2.2rem 0 0.8rem;
+        }
+
+        .prose-article blockquote {
+            position: relative;
+            margin: 2.5rem 0;
+            padding: 2rem 2rem 2rem 2.5rem;
+            border-radius: 0 16px 16px 0;
+            background: rgba(201, 162, 39, 0.06);
+            border-left: 3px solid #c9a227;
+        }
+
+        .prose-article blockquote p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-style: italic;
+            color: #1a4d2e;
+            margin: 0;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .prose-article blockquote cite {
+            display: block;
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #c9a227;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+        }
+
+        .prose-article ul {
+            margin-bottom: 1.6rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .prose-article ul li {
+            padding: 0.45rem 0 0.45rem 1.6rem;
+            position: relative;
+            color: #2a4a35;
+            font-size: 1.075rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .prose-article ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #c9a227;
+        }
+
+        /* Sidebar */
+        .sidebar-card {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .author-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a4d2e, #c9a227);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #faf8f3;
+            flex-shrink: 0;
+        }
+
+        .social-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            padding: 6px 12px;
+            border-radius: 50px;
+            transition: all 0.2s;
+        }
+
+        .social-pill:hover {
+            opacity: 0.75;
+        }
+
+        .fact-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .trip-card-bg {
+            background: linear-gradient(155deg, #1a4d2e 0%, #0d2818 100%);
+        }
+
+        .trip-badge {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    </style>
+
+    <!-- ─── ARTICLE BODY ──────────────────────────────── -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-[280px_1fr] gap-16 xl:gap-24 items-start">
+
+            <!-- ══════════════════════════════════════
+             SIDEBAR — single static panel
+        ══════════════════════════════════════ -->
+            <aside class="hidden lg:block" style="position:sticky; top:48px; align-self:start;">
+
+                <div class="rounded-2xl overflow-hidden"
+                    style="background:#0d2818; box-shadow:0 8px 40px rgba(13,40,24,0.18);">
+
+                    <!-- Decorative top image strip -->
+                    <div class="relative overflow-hidden" style="height:130px;">
+                        <img src="{{ blog.cover_image.url }}" alt="{{ blog.title }}"
+                            class="w-full h-full object-cover opacity-60">
+                        <div class="absolute inset-0"
+                            style="background:linear-gradient(to bottom, transparent 30%, #0d2818 100%);"></div>
+                        <span class="absolute bottom-3 left-5 text-[10px] tracking-[0.2em] uppercase font-semibold"
+                            style="color:#c9a227;">Plan Your Journey</span>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="px-6 pb-6">
+                        <h3 class="font-serif text-2xl font-semibold text-white mb-2 leading-snug">
+                            Travel that restores nature
+                        </h3>
+                        <p class="text-xs leading-relaxed mb-6" style="color:rgba(250,248,243,0.5); font-weight:300;">
+                            Every EcoSafari trip is carbon-offset through verified mangrove credits. See the wild — and
+                            leave it better.
+                        </p>
+
+                        <!-- Stats row -->
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="rounded-xl p-3 text-center" style="background:rgba(250,248,243,0.05);">
+                                <p class="font-serif text-2xl font-bold" style="color:#c9a227;">4K+</p>
+                                <p class="text-[10px] mt-0.5" style="color:rgba(250,248,243,0.4);">Ha restored</p>
+                            </div>
+                            <div class="rounded-xl p-3 text-center" style="background:rgba(250,248,243,0.05);">
+                                <p class="font-serif text-2xl font-bold" style="color:#c9a227;">117K</p>
+                                <p class="text-[10px] mt-0.5" style="color:rgba(250,248,243,0.4);">Tonnes CO₂</p>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <a href="{% url 'legacy_portfolio' %}"
+                            class="flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 hover:opacity-90 mb-4"
+                            style="background:#c9a227; color:#0d2818;">
+                            Explore Safaris
+                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+
+                        <!-- Divider -->
+                        <div class="h-px w-full mb-4" style="background:rgba(250,248,243,0.07);"></div>
+
+                        <!-- Newsletter line -->
+                        <p class="text-center text-xs mb-3" style="color:rgba(250,248,243,0.35);">Or stay in the loop
+                        </p>
+                        <div class="flex gap-2">
+                            <input type="email" placeholder="Your email"
+                                class="flex-1 text-xs px-3 py-2.5 rounded-xl outline-none"
+                                style="background:rgba(250,248,243,0.07); color:rgba(250,248,243,0.8); border:1px solid rgba(250,248,243,0.1);">
+                            <button
+                                class="px-4 py-2.5 rounded-xl text-xs font-semibold transition-opacity hover:opacity-80"
+                                style="background:rgba(201,162,39,0.15); color:#c9a227; border:1px solid rgba(201,162,39,0.2); white-space:nowrap;">
+                                Join
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- ── Article ── -->
+            <article class="prose-article min-w-0" id="article-content">
+
+              {{ blog.body|safe }}
+
+                <div class="my-12 rounded-3xl overflow-hidden relative" style="background:#0d2818;">
+                    <div class="absolute inset-0 opacity-10"
+                        style="background-image: radial-gradient(circle at 20% 50%, #c9a227 0%, transparent 60%), radial-gradient(circle at 80% 20%, #1a4d2e 0%, transparent 50%);">
+                    </div>
+                    <div class="relative px-10 py-12 flex flex-col md:flex-row md:items-center gap-8">
+                        <div class="flex-1">
+                            <p class="text-xs tracking-[0.2em] uppercase font-medium mb-3" style="color:#c9a227;">Make a
+                                Difference</p>
+                            <h3 class="font-serif text-3xl font-semibold text-white mb-3">Book a Net-Zero Safari</h3>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(250,248,243,0.6);">Every
+                                journey funds mangrove restoration and community development along Kenya's coast.</p>
+                        </div>
+                        <a href="{% url 'legacy_portfolio' %}"
+                            class="flex-shrink-0 inline-flex items-center gap-3 px-7 py-4 rounded-full font-medium text-sm transition-all duration-300 hover:opacity-90 hover:gap-5"
+                            style="background:#c9a227; color:#0d2818;">
+                            Explore Safaris
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- ── Related Posts ── -->
+        <div class="mt-24 pt-16" style="border-top:1px solid rgba(26,77,46,0.1);">
+            <div class="flex items-center gap-4 mb-3">
+                <div class="h-px w-10" style="background:#c9a227;"></div>
+                <span class="text-xs tracking-[0.25em] uppercase font-medium" style="color:#c9a227;">Keep Reading</span>
+            </div>
+            <h3 class="font-serif text-4xl font-semibold mb-12" style="color:#0d2818;">Related Stories</h3>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                {% for i in related_blogs %}
+                <a href="{% url 'blog_detail' slug=i.slug %}"
+                    class="related-card group flex flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-2"
+                    style="background:white; box-shadow:0 2px 20px rgba(13,40,24,0.07);">
+                
+                    <div class="overflow-hidden" style="height:180px;">
+                        {% if i.cover_image %}
+                        <img src="{{ i.cover_image.url }}" alt="{{ i.title }}"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        {% endif %}
+                    </div>
+                
+                    <div class="p-6 flex flex-col flex-1">
+                        <span class="text-[10px] tracking-[0.2em] uppercase font-semibold mb-3" style="color:#c9a227;">
+                            {{ i.about }}</span>
+                
+                        <h4 class="font-serif text-lg font-semibold leading-snug flex-1 mb-3" style="color:#0d2818;">
+                            {{ i.title }}
+                        </h4>
+                
+                        <p class="text-xs" style="color:#8aaa90;">
+                            {{ i.published_at|date:"M d, Y" }} · {{ i.read_time }}
+                        </p>
+                    </div>
+                </a>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateProgress() {
+            const article = document.getElementById('article-content');
+            const rect = article.getBoundingClientRect();
+            const articleH = article.offsetHeight;
+            const scrolled = Math.max(0, -rect.top);
+            const pct = Math.min(100, Math.round((scrolled / articleH) * 100));
+            document.getElementById('reading-bar').style.width = pct + '%';
+        }
+        window.addEventListener('scroll', updateProgress, { passive: true });
+    </script>
+
+</body>
+
+</html>
+{% endblock content %}

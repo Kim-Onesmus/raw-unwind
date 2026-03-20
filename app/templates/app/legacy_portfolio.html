@@ -53,27 +53,32 @@
         const spinner = document.getElementById("portfolio-spinner");
         const container = document.getElementById("legacy-portfolio-container");
 
+        const placeholder = "{% static 'images/placeholder.png' %}";
+
         fetch("/api/legacy-portfolio/")
             .then(res => res.json())
             .then(data => {
+
+                const items = data.portfolios || data;
+
                 spinner.classList.add("hidden");
                 container.classList.remove("hidden");
+                container.style.display = "grid";
 
-                if (!data.length) {
+                if (!items.length) {
                     container.innerHTML = `
-                    <p class="col-span-full text-center text-gray-600">
-                        No portfolio items available.
-                    </p>`;
+                <p class="col-span-full text-center text-gray-600">
+                    No portfolio items available.
+                </p>`;
                     return;
                 }
 
-                // Limit to 6 items
-                const items = data.slice(0, 6);
+                const limitedItems = items.slice(0, 6);
 
-                container.innerHTML = items.map(item => `
+                container.innerHTML = limitedItems.map(item => `
                 <div class="flex flex-col h-full p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow bg-[#faf8f3]">
 
-                    <img src="${item.image || '{% static "images/placeholder.png" %}'}"
+                    <img src="${item.image || placeholder}"
                          alt="${item.title}"
                          class="w-full h-48 object-cover rounded-2xl mb-4">
 
@@ -82,7 +87,7 @@
                     </h4>
 
                     <p class="text-sm mb-6 text-[#3d5a46] flex-grow">
-                        ${item.content?.substring(0, 100) || ''}...
+                        ${(item.content || "").substring(0, 100)}...
                     </p>
 
                     <div class="flex items-center justify-between mt-auto">
@@ -103,9 +108,9 @@
                 spinner.classList.add("hidden");
                 container.classList.remove("hidden");
                 container.innerHTML = `
-                <p class="text-red-600 text-center col-span-full">
-                    Failed to load portfolio.
-                </p>`;
+            <p class="text-red-600 text-center col-span-full">
+                Failed to load portfolio.
+            </p>`;
                 console.error(err);
             });
     });

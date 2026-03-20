@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import JsonResponse
-from .models import CulturalImmersions, LegacyPortfolio
+from .models import Blog, CulturalImmersions, LegacyPortfolio
 from django.urls import reverse
 
 def latest_legacy_portfolio(request):
@@ -128,3 +128,39 @@ def Mombasa(request):
 
 def Manifesto(request):
     return render(request, 'app/manifesto.html')
+
+
+def blog_list_api(request):
+    blogs = Blog.objects.filter(status='published', is_featured=True).order_by('-published_at')[:3]
+
+    data = []
+    for blog in blogs:
+        data.append({
+            "title": blog.title,
+            "slug": blog.slug,
+            "image": blog.cover_image.url if blog.cover_image else "",
+            "excerpt": blog.excerpt,
+            "about": blog.about,
+            "date": blog.published_at.strftime("%b %d, %Y") if blog.published_at else "",
+            "read_time": blog.read_time,
+            "author": blog.author.username if blog.author else "Admin"
+        })
+
+    return JsonResponse({"blogs": data})
+
+
+def BlogDetails(request, slug):
+    blog = get_object_or_404(Blog, slug=slug, status='published')
+
+    related_blogs = Blog.objects.filter(
+        status='published',
+        about=blog.about
+    ).exclude(id=blog.id)[:3]
+
+    context = {
+        'blog': blog,
+        'related_blogs': related_blogs
+    }
+    return render(request, 'app/blog/blog_detail.html', context)
+
+
