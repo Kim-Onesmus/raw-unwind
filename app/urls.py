@@ -21,6 +21,7 @@ urlpatterns = [
     path("api/legacy-portfolio/", views.active_legacy_portfolio, name="active-legacy-portfolio"),
     path('api/blogs/', views.blog_list_api, name='blog_list_api'),
     path('blog_details/<slug:slug>/', views.BlogDetails, name='blog_detail'),
+    path('qr/', views.QR, name='qr'),
 
 
 ]

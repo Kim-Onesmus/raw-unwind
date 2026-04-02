@@ -164,3 +164,6 @@ def BlogDetails(request, slug):
     return render(request, 'app/blog/blog_detail.html', context)
 
 
+def QR(request):
+    return render(request, 'app/qr.html')
+
