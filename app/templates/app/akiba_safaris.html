@@ -166,6 +166,7 @@
         }
 
         /* ═══════ MOBILE NAV ═══════ */
+        /* ═══════ TABLET (768px) ═══════ */
         @media(max-width:768px) {
             nav {
                 padding: 1rem 1.2rem;
@@ -183,7 +184,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: rgba(5, 10, 5, 0.98);
+                background: rgba(5, 10, 5, 0.99);
                 z-index: 600;
                 align-items: center;
                 justify-content: center;
@@ -196,7 +197,7 @@
             }
 
             .nav-links a {
-                font-size: 0.9rem;
+                font-size: 1rem;
                 letter-spacing: 0.2em;
             }
 
@@ -212,14 +213,14 @@
                 cursor: pointer;
                 background: none;
                 border: none;
-                padding: 0.4rem;
+                padding: 0.5rem;
                 z-index: 700;
                 position: relative;
             }
 
             .nav-hamburger span {
                 display: block;
-                width: 24px;
+                width: 26px;
                 height: 2px;
                 background: var(--gold);
                 transition: all 0.3s;
@@ -245,9 +246,112 @@
                 background: none;
                 border: none;
                 color: var(--ivory-dim);
-                font-size: 1.4rem;
+                font-size: 1.6rem;
                 cursor: pointer;
                 z-index: 700;
+            }
+
+            section {
+                padding: 5rem 1.5rem;
+            }
+
+            .section-inner {
+                padding: 0;
+            }
+
+            .pkg-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2px;
+            }
+
+            .dest-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.2rem;
+            }
+
+            .phil-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cancel-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .chama-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .rate-rows {
+                gap: 0.25rem;
+            }
+
+            .rate-row {
+                flex-direction: column;
+                gap: 0.2rem;
+                align-items: flex-start;
+            }
+
+            .rate-value {
+                font-size: 1rem;
+            }
+
+            .hero {
+                padding: 8rem 1.5rem 5rem;
+            }
+
+            .hero-title {
+                font-size: clamp(3rem, 10vw, 5.5rem);
+            }
+
+            .stats-row {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .stat-pill {
+                min-width: 120px;
+            }
+
+            .itin-tabs {
+                flex-wrap: wrap;
+                gap: 2px;
+            }
+
+            .itin-tab {
+                font-size: 0.55rem;
+                padding: 0.7rem 0.9rem;
+                flex: 1;
+                min-width: 80px;
+                text-align: center;
+            }
+
+            .chat-window {
+                width: calc(100vw - 2.4rem);
+                right: 1.2rem;
+                bottom: 5rem;
+                max-height: 65vh;
+            }
+
+            .chat-bubble {
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .sanctum-bridge {
+                padding: 5rem 1.5rem;
+            }
+
+            .dest-filter-bar {
+                flex-wrap: wrap;
+                gap: 0.4rem;
             }
         }
 
@@ -261,10 +365,12 @@
             }
         }
 
-        /* ═══════ MOBILE GLOBAL FIXES ═══════ */
+        /* ═══════ MOBILE (480px and below) ═══════ */
         @media(max-width:480px) {
+
+            /* === GLOBAL === */
             section {
-                padding: 4rem 1.2rem;
+                padding: 3.5rem 1rem;
             }
 
             .packages-section,
@@ -274,76 +380,366 @@
             .cancel-section,
             .faq-section,
             .reminder-section {
-                padding: 4rem 1.2rem;
+                padding: 3.5rem 1rem;
             }
 
+            .section-inner {
+                padding: 0;
+            }
+
+            .section-title {
+                font-size: clamp(1.7rem, 8vw, 2.8rem);
+                line-height: 1.1;
+            }
+
+            .section-lead {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+            }
+
+            .section-badge {
+                margin-bottom: 1rem;
+            }
+
+            /* === HERO === */
             .hero {
-                padding: 7rem 1.2rem 4rem;
+                padding: 6.5rem 1rem 3.5rem;
+                min-height: auto;
+            }
+
+            .hero-title {
+                font-size: clamp(2.6rem, 13vw, 4.5rem);
+                line-height: 0.95;
+            }
+
+            .hero-swahili {
+                font-size: clamp(1rem, 4.5vw, 1.4rem);
+            }
+
+            .hero-body {
+                font-size: 0.95rem;
+                max-width: 100%;
+            }
+
+            .hero-cta-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.8rem;
+            }
+
+            .btn-gold,
+            .btn-outline {
+                width: 100%;
+                text-align: center;
+                padding: 0.95rem 1rem;
+                font-size: 0.62rem;
+            }
+
+            /* === STATS === */
+            .stats-row {
+                gap: 0;
+                margin-top: 3rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
             }
 
             .stat-pill {
-                padding: 1rem 1.2rem;
+                padding: 0.8rem 0.5rem;
+                border: 1px solid var(--smoke);
+                flex-direction: column;
+                align-items: center;
             }
 
             .stat-num {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
             }
 
-            .dest-grid {
-                grid-template-columns: 1fr;
+            .stat-lbl {
+                font-size: 0.48rem;
+                letter-spacing: 0.12em;
+                text-align: center;
             }
 
+            /* === PACKAGES === */
             .pkg-grid {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+
+            .pkg-card {
+                padding: 1.8rem 1.2rem;
+            }
+
+            .pkg-card.featured::before {
+                font-size: 0.48rem;
+                padding: 0.2rem 0.8rem;
+            }
+
+            .pkg-price {
+                font-size: 1.6rem;
+            }
+
+            .pkg-includes {
+                font-size: 0.78rem;
+            }
+
+            .pkg-lipa {
+                padding: 0.8rem;
+            }
+
+            .pkg-lipa-amount {
+                font-size: 1rem;
+            }
+
+            .pkg-cta {
+                font-size: 0.58rem;
+                padding: 0.85rem 1rem;
+            }
+
+            /* === DESTINATIONS === */
+            .dest-grid {
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
 
-            .pkg-card {
-                padding: 2rem 1.5rem;
+            .dest-card {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .dest-name {
+                font-size: 1.1rem;
+            }
+
+            .dest-filter-bar {
+                gap: 0.3rem;
+                justify-content: flex-start;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 0.4rem;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .dest-filter-bar::-webkit-scrollbar {
+                display: none;
+            }
+
+            .dest-filter {
+                font-size: 0.5rem;
+                padding: 0.35rem 0.65rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            .rate-rows {
+                gap: 0.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .rate-row {
+                flex-direction: column;
+                gap: 0.1rem;
+                align-items: flex-start;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid var(--smoke);
+            }
+
+            .rate-row:last-child {
+                border-bottom: none;
+            }
+
+            .rate-label {
+                font-size: 0.72rem;
+            }
+
+            .rate-note {
+                font-size: 0.6rem;
+            }
+
+            .rate-value {
+                font-size: 1rem;
+                color: var(--gold);
+                font-family: var(--font-display);
+                margin-top: 0.1rem;
+            }
+
+            .dest-lipa-btn {
+                font-size: 0.56rem;
+                padding: 0.7rem 0.8rem;
+            }
+
+            .dest-tags {
+                gap: 0.3rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .fit-tag {
+                font-size: 0.5rem;
+                padding: 0.25rem 0.6rem;
+            }
+
+            /* === PHILOSOPHY === */
+            .phil-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .phil-body {
+                font-size: 0.88rem;
+            }
+
+            /* === CHAMA === */
+            .chama-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .chama-card {
+                padding: 1.5rem 1.2rem;
             }
 
             .chama-targets {
                 grid-template-columns: 1fr 1fr;
+                gap: 0.6rem;
             }
 
-            .cancel-grid {
-                grid-template-columns: 1fr;
+            .chama-target-box {
+                padding: 0.8rem 0.6rem;
             }
 
-            .steps-grid {
-                grid-template-columns: 1fr;
+            .chama-target-num {
+                font-size: 0.95rem;
             }
 
-            .calc-box {
-                padding: 2rem 1.2rem;
+            .chama-mechanics {
+                font-size: 0.78rem;
             }
 
-            .modal-box {
-                padding: 2rem 1.2rem;
+            /* === ITINERARIES === */
+            .itin-tabs {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
             }
 
-            .reminder-box {
-                padding: 2rem 1.2rem;
+            .itin-tab {
+                font-size: 0.5rem;
+                padding: 0.65rem 0.5rem;
+                text-align: center;
             }
 
             .itin-panel {
-                padding: 2rem 1.2rem;
+                padding: 1.5rem 1rem;
             }
 
-            .section-title {
-                font-size: clamp(1.8rem, 7vw, 3rem);
+            .itin-title {
+                font-size: 1.1rem;
             }
 
-            .hero-title {
-                font-size: clamp(2.8rem, 14vw, 5rem);
+            .day-grid {
+                gap: 0;
             }
 
-            .phil-body {
-                font-size: 0.9rem;
+            .day-cell {
+                padding: 0.7rem 0;
+                font-size: 0.78rem;
+            }
+
+            .day-num {
+                padding: 0.7rem 0;
+            }
+
+            .day-number {
+                font-size: 1.2rem;
+            }
+
+            .day-name {
+                font-size: 0.8rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .day-detail {
+                font-size: 0.75rem;
+                line-height: 1.6;
+            }
+
+            .day-price-note {
+                font-size: 0.65rem;
+            }
+
+            .itin-summary {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.6rem;
+            }
+
+            .itin-sum-num {
+                font-size: 1rem;
+            }
+
+            .itin-sum-lbl {
+                font-size: 0.55rem;
+            }
+
+            /* === CALCULATOR === */
+            .calc-box {
+                padding: 1.5rem 1rem;
+            }
+
+            .lpp-input-row {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+
+            .lpp-input,
+            .lpp-select {
+                width: 100%;
+            }
+
+            .calc-result {
+                padding: 1rem;
+            }
+
+            /* === CANCELLATION === */
+            .cancel-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .cancel-card {
+                padding: 1.2rem 1rem;
+            }
+
+            /* === FAQ === */
+            .faq-item {
+                padding: 1rem;
+            }
+
+            .faq-q {
+                font-size: 0.82rem;
+            }
+
+            .faq-a {
+                font-size: 0.78rem;
+            }
+
+            /* === STEPS === */
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .step-card {
+                padding: 1.2rem 1rem;
+            }
+
+            /* === REMINDER === */
+            .reminder-box {
+                padding: 1.5rem 1rem;
             }
 
             .reminder-form-row {
                 flex-direction: column;
+                gap: 0.6rem;
             }
 
             .reminder-input,
@@ -352,70 +748,382 @@
                 width: 100%;
             }
 
-            .lpp-input-row {
-                flex-direction: column;
-            }
-
-            .dest-filter-bar {
-                gap: 0.4rem;
-            }
-
-            .dest-filter {
-                font-size: 0.5rem;
-                padding: 0.35rem 0.7rem;
-            }
-
-            .itin-tabs {
-                gap: 1px;
-            }
-
-            .itin-tab {
-                font-size: 0.5rem;
-                padding: 0.6rem 0.8rem;
-            }
-
-            .stats-row {
-                gap: 0;
-            }
-
-            .hero-cta-row {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-gold,
-            .btn-outline {
-                width: 100%;
-                text-align: center;
-            }
-
+            /* === CHAT === */
             .chat-bubble {
-                bottom: 1.2rem;
-                right: 1.2rem;
-                width: 52px;
-                height: 52px;
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
 
             .chat-window {
-                bottom: 5rem;
-                right: 1rem;
-                width: calc(100vw - 2rem);
+                bottom: 4.5rem;
+                right: 0.8rem;
+                width: calc(100vw - 1.6rem);
+                max-height: 60vh;
+                border-radius: 0;
             }
 
-            .itin-summary {
-                grid-template-columns: 1fr 1fr;
+            .chat-header {
+                padding: 0.8rem 1rem;
             }
 
+            .chat-messages {
+                padding: 0.8rem;
+            }
+
+            .msg-bubble {
+                font-size: 0.82rem;
+                padding: 0.6rem 0.9rem;
+                max-width: 90%;
+            }
+
+            .chat-input-row {
+                padding: 0.6rem 0.8rem;
+                gap: 0.4rem;
+            }
+
+            .chat-quick-btns {
+                padding: 0.4rem 0.8rem;
+                gap: 0.4rem;
+            }
+
+            .chat-quick-btn {
+                font-size: 0.5rem;
+                padding: 0.3rem 0.6rem;
+                white-space: nowrap;
+            }
+
+            /* ═══════ QUICK REPLIES MOBILE ═══════ */
+            .quick-replies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.4rem;
+                margin-top: 0.8rem;
+            }
+
+            .quick-btn {
+                font-family: var(--font-ui);
+                font-size: 0.58rem;
+                font-weight: 300;
+                letter-spacing: 0.08em;
+                padding: 0.4rem 0.8rem;
+                background: rgba(201, 168, 76, 0.08);
+                border: 1px solid rgba(201, 168, 76, 0.25);
+                color: var(--gold-pale);
+                cursor: pointer;
+                transition: all 0.2s;
+                text-align: left;
+                line-height: 1.4;
+            }
+
+            .quick-btn:hover,
+            .quick-btn:active {
+                background: rgba(201, 168, 76, 0.18);
+                border-color: var(--gold);
+                color: var(--gold);
+            }
+
+            @media(max-width:480px) {
+                .quick-replies {
+                    gap: 0.3rem;
+                }
+
+                .quick-btn {
+                    font-size: 0.52rem;
+                    padding: 0.38rem 0.65rem;
+                }
+            }
+
+            /* ═══════ CHAT WINDOW RESPONSIVE ═══════ */
+            @media(max-width:480px) {
+                .chat-window {
+                    border-radius: 0 !important;
+                }
+
+                .chat-avatar {
+                    font-size: 1rem;
+                }
+
+                .chat-header {
+                    padding: 0.75rem 1rem;
+                }
+
+                .chat-header-name {
+                    font-size: 0.72rem;
+                    letter-spacing: 0.18em;
+                }
+
+                .chat-header-status {
+                    font-size: 0.55rem;
+                }
+
+                .chat-messages {
+                    padding: 0.75rem;
+                    gap: 0.6rem;
+                }
+
+                .msg-bubble {
+                    font-size: 0.82rem;
+                    line-height: 1.65;
+                    padding: 0.65rem 0.9rem;
+                }
+
+                .msg-bubble ul {
+                    padding-left: 1rem;
+                    margin: 0.3rem 0;
+                }
+
+                .msg-bubble li {
+                    font-size: 0.8rem;
+                    margin-bottom: 0.2rem;
+                }
+
+                .chat-input-area {
+                    padding: 0.6rem 0.75rem;
+                    gap: 0.4rem;
+                }
+
+                .chat-input {
+                    font-size: 0.88rem;
+                    padding: 0.65rem 0.9rem;
+                    -webkit-appearance: none;
+                }
+
+                .chat-send {
+                    padding: 0.65rem 1rem;
+                    font-size: 0.8rem;
+                    min-width: 44px;
+                    min-height: 44px;
+                }
+            }
+
+            /* ═══════ TOUCH TARGETS (min 44px) ═══════ */
+            @media(max-width:768px) {
+
+                .btn-gold,
+                .btn-outline {
+                    min-height: 44px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .nav-cta {
+                    min-height: 36px;
+                }
+
+                .dest-lipa-btn {
+                    min-height: 44px;
+                }
+
+                .pkg-cta {
+                    min-height: 44px;
+                }
+
+                .faq-toggle {
+                    min-height: 44px;
+                }
+
+                .dest-filter {
+                    min-height: 36px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .chat-send {
+                    min-width: 44px;
+                    min-height: 44px;
+                }
+
+                .chat-bubble {
+                    min-width: 52px;
+                    min-height: 52px;
+                }
+            }
+
+            /* ═══════ PREVENT TEXT OVERFLOW ON SMALL SCREENS ═══════ */
+            @media(max-width:480px) {
+
+                .rate-label,
+                .rate-note {
+                    word-break: break-word;
+                    overflow-wrap: anywhere;
+                }
+
+                .dest-name {
+                    word-break: break-word;
+                }
+
+                .pkg-tier-name {
+                    word-break: break-word;
+                }
+
+                .chama-name {
+                    word-break: break-word;
+                }
+
+                .day-detail {
+                    word-break: break-word;
+                    overflow-wrap: anywhere;
+                }
+            }
+
+            /* ═══════ SCROLL IMPROVEMENTS ═══════ */
+            @media(max-width:768px) {
+                .dest-filter-bar {
+                    -webkit-overflow-scrolling: touch;
+                }
+
+                .chat-messages {
+                    -webkit-overflow-scrolling: touch;
+                    overscroll-behavior: contain;
+                }
+
+                .itin-tabs {
+                    -webkit-overflow-scrolling: touch;
+                }
+            }
+
+            /* ═══════ MODAL FULL-SCREEN MOBILE ═══════ */
+            @media(max-width:480px) {
+                .modal-overlay {
+                    align-items: flex-end;
+                    padding: 0;
+                }
+
+                .modal-box {
+                    margin: 0;
+                    width: 100%;
+                    max-width: 100%;
+                    border-radius: 0;
+                    max-height: 90vh;
+                    overflow-y: auto;
+                    border-bottom: none;
+                    border-left: none;
+                    border-right: none;
+                    border-top: 2px solid var(--gold-dim);
+                    padding: 1.5rem 1rem 2rem;
+                }
+            }
+
+            /* ═══════ SAFE AREA INSETS (iPhone notch/home bar) ═══════ */
+            @supports(padding:max(0px)) {
+                @media(max-width:480px) {
+                    .chat-bubble {
+                        bottom: max(1rem, env(safe-area-inset-bottom, 1rem));
+                    }
+
+                    .chat-window {
+                        bottom: max(4.5rem, calc(4rem + env(safe-area-inset-bottom, 0px)));
+                    }
+
+                    footer {
+                        padding-bottom: max(2rem, calc(1.5rem + env(safe-area-inset-bottom, 0px)));
+                    }
+
+                    nav {
+                        padding-top: max(1rem, env(safe-area-inset-top, 1rem));
+                    }
+                }
+            }
+
+            .chat-input {
+                font-size: 0.82rem;
+                padding: 0.6rem 0.8rem;
+            }
+
+            .chat-send {
+                padding: 0.6rem 0.9rem;
+                font-size: 0.7rem;
+            }
+
+            .quick-action-strip {
+                flex-wrap: wrap;
+                gap: 0.4rem;
+            }
+
+            /* === SANCTUM === */
             .sanctum-bridge {
-                padding: 5rem 1.2rem;
+                padding: 4rem 1rem;
             }
 
+            .sanctum-title {
+                font-size: clamp(1.6rem, 8vw, 2.5rem);
+            }
+
+            .sanctum-body {
+                font-size: 0.88rem;
+            }
+
+            /* === MODAL === */
+            .modal-box {
+                padding: 1.5rem 1rem;
+                margin: 1rem;
+                width: calc(100% - 2rem);
+                max-height: 85vh;
+                overflow-y: auto;
+            }
+
+            .modal-title {
+                font-size: 1rem;
+            }
+
+            /* === FOOTER === */
             footer {
-                padding: 2rem 1.2rem;
+                padding: 2rem 1rem;
             }
 
             .footer-meta {
-                font-size: 0.52rem;
+                font-size: 0.5rem;
+                line-height: 2;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        /* ═══════ EXTRA SMALL (360px — small Androids) ═══════ */
+        @media(max-width:360px) {
+            .hero-title {
+                font-size: clamp(2.2rem, 12vw, 3.5rem);
+            }
+
+            .hero-swahili {
+                font-size: 0.9rem;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pkg-price {
+                font-size: 1.4rem;
+            }
+
+            .rate-value {
+                font-size: 0.95rem;
+            }
+
+            .dest-name {
+                font-size: 1rem;
+            }
+
+            .itin-tabs {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .chat-window {
+                width: calc(100vw - 1.2rem);
+                right: 0.6rem;
+            }
+
+            .section-title {
+                font-size: clamp(1.5rem, 9vw, 2.4rem);
             }
         }
 
@@ -2543,7 +3251,7 @@
                     <div class="pkg-tier-name">Highland Escape</div>
                     <p class="pkg-tagline">Your first journey. Sagana, Embu, Murang'a — Central Kenya's hidden
                         highlands. 2 nights. The savings habit starts here.</p>
-                    <div class="pkg-price">KES 42,000</div>
+                    <div class="pkg-price">KES 58,000</div>
                     <div class="pkg-price-note">2 Adults · 2 Nights · All-Inclusive</div>
                     <ul class="pkg-includes">
                         <li>2 nights at Nokras Riverine Sagana or Nokras Embu/Murang'a</li>
@@ -2555,10 +3263,10 @@
                     </ul>
                     <div class="pkg-lipa">
                         <div class="pkg-lipa-label">Lipa Kidogo Kidogo · 6 Months</div>
-                        <div class="pkg-lipa-amount">KES 7,000 / month</div>
+                        <div class="pkg-lipa-amount">KES 9,700 / month</div>
                         <div class="pkg-lipa-note">Under KES 50K — fast-track 6-month plan applied automatically</div>
                     </div>
-                    <button class="pkg-cta" onclick="openLPP('Highland Escape', 42000, 6)">Start My Plan →</button>
+                    <button class="pkg-cta" onclick="openLPP('Highland Escape', 58000, 6)">Start My Plan →</button>
                 </div>
 
                 <!-- BUSH ESCAPE -->
@@ -2567,7 +3275,7 @@
                     <div class="pkg-tier-name">Bush Escape</div>
                     <p class="pkg-tagline">The real safari. Tsavo East & West — Man Eaters Camp, Manyatta. Red
                         elephants. Lions. Game drives at dawn. This is what you saved for.</p>
-                    <div class="pkg-price">KES 98,000</div>
+                    <div class="pkg-price">KES 135,300</div>
                     <div class="pkg-price-note">2 Adults · 3 Nights · Full Board</div>
                     <ul class="pkg-includes">
                         <li>3 nights at Man Eaters Camp (Tsavo East) or Manyatta Camp (Tsavo West)</li>
@@ -2579,10 +3287,10 @@
                     </ul>
                     <div class="pkg-lipa">
                         <div class="pkg-lipa-label">Lipa Kidogo Kidogo · 12 Months</div>
-                        <div class="pkg-lipa-amount">KES 8,167 / month</div>
-                        <div class="pkg-lipa-note">Or 6 months at KES 16,333 — your choice, your pace</div>
+                        <div class="pkg-lipa-amount">KES 11,400 / month</div>
+                        <div class="pkg-lipa-note">Or 6 months at KES 22,600 — your choice, your pace</div>
                     </div>
-                    <button class="pkg-cta" onclick="openLPP('Bush Escape', 98000, 12)">Start My Plan →</button>
+                    <button class="pkg-cta" onclick="openLPP('Bush Escape', 135300, 12)">Start My Plan →</button>
                 </div>
 
                 <!-- SAVANNA RETREAT -->
@@ -2591,23 +3299,22 @@
                     <div class="pkg-tier-name">Savanna Retreat</div>
                     <p class="pkg-tagline">Severin Safari Camp — the crown jewel of Tsavo West. KENBALI Spa. SGR access
                         from Mtito Andei. A safari that arrives in style.</p>
-                    <div class="pkg-price">KES 192,000</div>
+                    <div class="pkg-price">KES 265,000</div>
                     <div class="pkg-price-note">2 Adults · 3 Nights · Full Board</div>
                     <ul class="pkg-includes">
                         <li>3 nights Severin Safari Camp (SSC01 package)</li>
                         <li>All meals + game drives included in package</li>
                         <li>SGR train connection Nairobi–Mtito Andei</li>
-                        <li>Optional KENBALI Spa upgrade (KES 5,400 pp)</li>
-                        <li>25% Akiba commission = best available rate</li>
+                        <li>Optional KENBALI Spa upgrade (KES 7,500 pp)</li>
                         <li>10% longstay discount on 3+ nights</li>
                         <li>Carbon-zero certificate + journey booklet</li>
                     </ul>
                     <div class="pkg-lipa">
                         <div class="pkg-lipa-label">Lipa Kidogo Kidogo · 12 Months</div>
-                        <div class="pkg-lipa-amount">KES 16,000 / month</div>
+                        <div class="pkg-lipa-amount">KES 22,100 / month</div>
                         <div class="pkg-lipa-note">9–12 month extended plan available</div>
                     </div>
-                    <button class="pkg-cta" onclick="openLPP('Savanna Retreat', 192000, 12)">Start My Plan →</button>
+                    <button class="pkg-cta" onclick="openLPP('Savanna Retreat', 265000, 12)">Start My Plan →</button>
                 </div>
 
                 <!-- COASTAL RETREAT -->
@@ -2616,7 +3323,7 @@
                     <div class="pkg-tier-name">Coastal Retreat</div>
                     <p class="pkg-tagline">Temple Point Watamu or Kendwa Rocks Zanzibar. The reef at your door. The
                         creek at your window. Coast done properly.</p>
-                    <div class="pkg-price">KES 290,000</div>
+                    <div class="pkg-price">KES 400,200</div>
                     <div class="pkg-price-note">2 Adults · 4 Nights · Full Board</div>
                     <ul class="pkg-includes">
                         <li>4 nights Temple Point (Watamu) or Kendwa Rocks (Zanzibar)</li>
@@ -2629,10 +3336,10 @@
                     </ul>
                     <div class="pkg-lipa">
                         <div class="pkg-lipa-label">Lipa Kidogo Kidogo · 12 Months</div>
-                        <div class="pkg-lipa-amount">KES 24,167 / month</div>
+                        <div class="pkg-lipa-amount">KES 33,500 / month</div>
                         <div class="pkg-lipa-note">120-day advance booking activates 15% Kendwa discount</div>
                     </div>
-                    <button class="pkg-cta" onclick="openLPP('Coastal Retreat', 290000, 12)">Start My Plan →</button>
+                    <button class="pkg-cta" onclick="openLPP('Coastal Retreat', 400200, 12)">Start My Plan →</button>
                 </div>
 
                 <!-- MARA & COAST SIGNATURE -->
@@ -2641,7 +3348,7 @@
                     <div class="pkg-tier-name">Mara &amp; Coast Signature</div>
                     <p class="pkg-tagline">Nokras Enkare (Maasai Mara) + Temple Point (Watamu). 7 nights. Two
                         ecosystems. One journey that earns your name in the Akiba Legacy Register.</p>
-                    <div class="pkg-price">KES 380,000</div>
+                    <div class="pkg-price">KES 524,400</div>
                     <div class="pkg-price-note">2 Adults · 7 Nights · Mara + Coast</div>
                     <ul class="pkg-includes">
                         <li>4 nights Nokras Enkare Luxury Tented Camp — Executive Tents All Inclusive</li>
@@ -2655,10 +3362,10 @@
                     </ul>
                     <div class="pkg-lipa">
                         <div class="pkg-lipa-label">Lipa Kidogo Kidogo · 12 Months</div>
-                        <div class="pkg-lipa-amount">KES 31,667 / month</div>
+                        <div class="pkg-lipa-amount">KES 43,900 / month</div>
                         <div class="pkg-lipa-note">Legacy tier — Akiba Register entry confirmed on first journey</div>
                     </div>
-                    <button class="pkg-cta" onclick="openLPP('Mara & Coast Signature', 380000, 12)">Start My Plan
+                    <button class="pkg-cta" onclick="openLPP('Mara & Coast Signature', 524400, 12)">Start My Plan
                         →</button>
                 </div>
 
@@ -2668,7 +3375,7 @@
                     <div class="pkg-tier-name">Corporate &amp; Custom</div>
                     <p class="pkg-tagline">Team building, NGO retreats, Chama group escapes, school trips, conference
                         packages. Custom-built. Custom-priced. Always carbon-zero.</p>
-                    <div class="pkg-price">From KES 4,560</div>
+                    <div class="pkg-price">From KES 6,400</div>
                     <div class="pkg-price-note">Per Delegate · Full Day Conference</div>
                     <ul class="pkg-includes">
                         <li>Conference rooms at Hillpark Nairobi or Nokras properties</li>
@@ -2691,8 +3398,7 @@
                 style="text-align:center;margin-top:2.5rem;font-family:var(--font-ui);font-size:0.62rem;font-weight:200;letter-spacing:0.2em;color:var(--gold-dim);text-transform:uppercase;line-height:2.2">
                 All Akiba packages include a verified carbon-zero certificate · M-Pesa Paybill 522522 Account 7580761 ·
                 KCB 1314843915 Sarit Centre<br>
-                Rates locked at booking date · No hidden charges from Akiba Safaris · 1–8 month plans × 1.20 markup ·
-                9–12 month plans × 1.30 markup
+                Rates locked at booking date · No hidden charges from Akiba Safaris
             </p>
         </div>
     </section>
@@ -2741,32 +3447,32 @@
                                 <div class="rate-label">Deluxe Double · BB</div>
                                 <div class="rate-note">Akiba 2026 Rate</div>
                             </div>
-                            <div class="rate-value">KES 10,200</div>
+                            <div class="rate-value">KES 14,200</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Executive Double · BB</div>
                                 <div class="rate-note">Resident</div>
                             </div>
-                            <div class="rate-value">KES 14,600</div>
+                            <div class="rate-value">KES 20,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Family Room · BB (4 guests)</div>
                             </div>
-                            <div class="rate-value">KES 27,500</div>
+                            <div class="rate-value">KES 38,000</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Conference Full Day pp</div>
                                 <div class="rate-note">Inc. FB + Team Building</div>
                             </div>
-                            <div class="rate-value">KES 5,200</div>
+                            <div class="rate-value">KES 7,300</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-highland">Highland Escape</span><span
                             class="fit-tag fit-bush">Team Build</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Nokras Silveroak Embu', 29200, 6)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Nokras Silveroak Embu', 40400, 6)">Lipa Kidogo
                         Kidogo — 2 Nights</button>
                 </div>
 
@@ -2786,26 +3492,26 @@
                             <div>
                                 <div class="rate-label">Standard PPS · Full Board</div>
                             </div>
-                            <div class="rate-value">KES 8,100</div>
+                            <div class="rate-value">KES 11,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">VIP PPS · Full Board</div>
                                 <div class="rate-note">Resident Premium</div>
                             </div>
-                            <div class="rate-value">KES 13,300</div>
+                            <div class="rate-value">KES 18,400</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Conference Half Day pp</div>
                             </div>
-                            <div class="rate-value">KES 3,500</div>
+                            <div class="rate-value">KES 4,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Conf. with Accommodation PPS</div>
                             </div>
-                            <div class="rate-value">KES 16,500</div>
+                            <div class="rate-value">KES 22,800</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-highland">Highland Escape</span></div>
@@ -2828,32 +3534,32 @@
                             <div>
                                 <div class="rate-label">Standard Single · BB</div>
                             </div>
-                            <div class="rate-value">KES 7,800</div>
+                            <div class="rate-value">KES 10,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Deluxe PPS · BB</div>
                             </div>
-                            <div class="rate-value">KES 9,600</div>
+                            <div class="rate-value">KES 13,400</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Family Room · BB (2A+2C)</div>
                                 <div class="rate-note">Aqua Park included</div>
                             </div>
-                            <div class="rate-value">KES 36,000</div>
+                            <div class="rate-value">KES 49,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Conference Full Day pp</div>
                             </div>
-                            <div class="rate-value">KES 4,800</div>
+                            <div class="rate-value">KES 6,700</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-highland">Highland Escape</span><span
                             class="fit-tag fit-bush">Family Adventure</span><span class="fit-tag fit-savanna">Team
                             Build</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Nokras Riverine Sagana', 42000, 6)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Nokras Riverine Sagana', 58000, 6)">Lipa Kidogo
                         Kidogo — 2 Nights</button>
                 </div>
 
@@ -2866,38 +3572,38 @@
                     </div>
                     <div class="dest-num">04</div>
                     <div class="dest-name">Nokras Enkare<br>Luxury Tented Camp</div>
-                    <div class="dest-tag">Glamping in the bundus. The Mara is not background here — it is the host. At
-                        KES 9,100 pps BB, the most accessible luxury tent in the Mara corridor.</div>
+                    <div class="dest-tag">Glamping in the bundus. The Mara is not background here — it is the host. The
+                        most accessible luxury tent experience in the Mara corridor.</div>
                     <div class="rate-rows">
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Deluxe PPS · BB</div>
                             </div>
-                            <div class="rate-value">KES 9,100</div>
+                            <div class="rate-value">KES 12,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Executive PPS · BB</div>
                             </div>
-                            <div class="rate-value">KES 8,500</div>
+                            <div class="rate-value">KES 11,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Deluxe All Inclusive · Single</div>
                             </div>
-                            <div class="rate-value">KES 16,200</div>
+                            <div class="rate-value">KES 22,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Family Room · Full Board</div>
                                 <div class="rate-note">2 Adults + 3 Children</div>
                             </div>
-                            <div class="rate-value">KES 52,800</div>
+                            <div class="rate-value">KES 73,000</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-savanna">Savanna Retreat</span><span
                             class="fit-tag fit-sanctum">Sanctum Gateway</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Nokras Enkare Mara', 97200, 12)">Lipa Kidogo Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Nokras Enkare Mara', 134300, 12)">Lipa Kidogo Kidogo
                         — 3 Nights Exec AI</button>
                 </div>
 
@@ -2916,31 +3622,31 @@
                             <div>
                                 <div class="rate-label">1BR Low Season (up to 3 guests)</div>
                             </div>
-                            <div class="rate-value">KES 7,600</div>
+                            <div class="rate-value">KES 10,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">2BR Low Season (up to 5 guests)</div>
                             </div>
-                            <div class="rate-value">KES 12,700</div>
+                            <div class="rate-value">KES 17,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">1BR High Season</div>
                                 <div class="rate-note">Apr / Aug / Dec 1–20</div>
                             </div>
-                            <div class="rate-value">KES 11,300</div>
+                            <div class="rate-value">KES 15,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Full Board Supplement pp/day</div>
                             </div>
-                            <div class="rate-value">KES 5,500</div>
+                            <div class="rate-value">KES 7,600</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-coastal">Coastal Retreat</span><span
                             class="fit-tag fit-bush">Family Chama</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Mwembe Resort Malindi', 110000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Mwembe Resort Malindi', 151800, 12)">Lipa Kidogo
                         Kidogo — 4 Nights 2BR</button>
                 </div>
 
@@ -2961,30 +3667,30 @@
                                 <div class="rate-label">Cozy Double · BB</div>
                                 <div class="rate-note">High Season</div>
                             </div>
-                            <div class="rate-value">KES 27,600</div>
+                            <div class="rate-value">KES 38,200</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Boutique Double · BB</div>
                             </div>
-                            <div class="rate-value">KES 33,800</div>
+                            <div class="rate-value">KES 46,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Creek Deluxe Double · Full Board</div>
                             </div>
-                            <div class="rate-value">KES 52,200</div>
+                            <div class="rate-value">KES 72,200</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Transfer from Malindi (per vehicle)</div>
                             </div>
-                            <div class="rate-value">$44</div>
+                            <div class="rate-value">$61</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-coastal">Coastal Retreat</span><span
                             class="fit-tag fit-sanctum">Sanctum Gateway</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Temple Point Watamu', 155200, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Temple Point Watamu', 214300, 12)">Lipa Kidogo
                         Kidogo — 4 Nights FB</button>
                 </div>
 
@@ -3003,25 +3709,25 @@
                                 <div class="rate-label">PPS · Full Board · High Season</div>
                                 <div class="rate-note">16 Dec – 31 Mar</div>
                             </div>
-                            <div class="rate-value">KES 11,500</div>
+                            <div class="rate-value">KES 15,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">PPS · Full Board · Low Season</div>
                                 <div class="rate-note">1 Apr – 15 Dec</div>
                             </div>
-                            <div class="rate-value">KES 10,400</div>
+                            <div class="rate-value">KES 14,400</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Single · Full Board · High Season</div>
                             </div>
-                            <div class="rate-value">KES 15,000</div>
+                            <div class="rate-value">KES 20,700</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-bush">Bush Escape ✓ Primary</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Man Eaters Camp', 87000, 12)">Lipa Kidogo Kidogo — 3
-                        Nights</button>
+                    <button class="dest-lipa-btn" onclick="openLPP('Man Eaters Camp', 120100, 12)">Lipa Kidogo Kidogo —
+                        3 Nights</button>
                 </div>
 
                 <!-- 8. SEVERIN SAFARI CAMP -->
@@ -3038,31 +3744,24 @@
                             <div>
                                 <div class="rate-label">SSC01 · 2 Nights pp · All activities</div>
                             </div>
-                            <div class="rate-value">KES 35,600</div>
+                            <div class="rate-value">KES 49,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Junior Suite DBL · Full Board</div>
                             </div>
-                            <div class="rate-value">KES 32,600</div>
+                            <div class="rate-value">KES 45,100</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">KENBALI Spa · 30 min massage</div>
                             </div>
-                            <div class="rate-value">KES 5,400</div>
-                        </div>
-                        <div class="rate-row">
-                            <div>
-                                <div class="rate-label">25% Akiba Commission</div>
-                                <div class="rate-note">Best available rate guaranteed</div>
-                            </div>
-                            <div class="rate-value">✓</div>
+                            <div class="rate-value">KES 7,500</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-savanna">Savanna Retreat ✓ Primary</span><span
                             class="fit-tag fit-bush">Bush Escape (upgrade)</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Severin Safari Camp', 192000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Severin Safari Camp', 265000, 12)">Lipa Kidogo
                         Kidogo — Savanna Plan</button>
                 </div>
 
@@ -3080,25 +3779,25 @@
                             <div>
                                 <div class="rate-label">PPS · Full Board · Main Season</div>
                             </div>
-                            <div class="rate-value">KES 16,500</div>
+                            <div class="rate-value">KES 22,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Single · Full Board · Main Season</div>
                             </div>
-                            <div class="rate-value">KES 22,000</div>
+                            <div class="rate-value">KES 30,400</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">PPS · Full Board · Low Season</div>
                             </div>
-                            <div class="rate-value">KES 13,200</div>
+                            <div class="rate-value">KES 18,300</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-bush">Bush Escape ✓ Primary</span><span
                             class="fit-tag fit-savanna">Savanna (entry)</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Manyatta Camp Tsavo', 99000, 12)">Lipa Kidogo Kidogo
-                        — 3 Nights</button>
+                    <button class="dest-lipa-btn" onclick="openLPP('Manyatta Camp Tsavo', 136700, 12)">Lipa Kidogo
+                        Kidogo — 3 Nights</button>
                 </div>
 
                 <!-- 10. KENDWA ROCKS ZANZIBAR -->
@@ -3116,31 +3815,25 @@
                             <div>
                                 <div class="rate-label">Superior · All Inclusive · DBL</div>
                             </div>
-                            <div class="rate-value">USD 220 pp</div>
+                            <div class="rate-value">USD 304 pp</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Pool Bungalow · All Inclusive</div>
                                 <div class="rate-note">Sanctum Gateway tier</div>
                             </div>
-                            <div class="rate-value">USD 295 pp</div>
+                            <div class="rate-value">USD 408 pp</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Infrastructure tax at check-in</div>
                             </div>
-                            <div class="rate-value">$5 pp/day</div>
-                        </div>
-                        <div class="rate-row">
-                            <div>
-                                <div class="rate-label">15% Akiba discount (120-day advance)</div>
-                            </div>
-                            <div class="rate-value">✓</div>
+                            <div class="rate-value">$7 pp/day</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-coastal">Coastal Retreat</span><span
                             class="fit-tag fit-sanctum">Sanctum Gateway</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Kendwa Rocks Zanzibar', 290000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Kendwa Rocks Zanzibar', 400200, 12)">Lipa Kidogo
                         Kidogo — 5 Nights AI</button>
                 </div>
 
@@ -3159,23 +3852,23 @@
                                 <div class="rate-label">Full Day Conference pp</div>
                                 <div class="rate-note">Inc. all meals + AV</div>
                             </div>
-                            <div class="rate-value">KES 4,560</div>
+                            <div class="rate-value">KES 6,400</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Half Day Conference pp</div>
                             </div>
-                            <div class="rate-value">KES 2,800</div>
+                            <div class="rate-value">KES 4,000</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Overnight + Conference PPS</div>
                             </div>
-                            <div class="rate-value">KES 9,800</div>
+                            <div class="rate-value">KES 13,600</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-bush">Corporate &amp; NGOs</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Hillpark Nairobi Conference', 45600, 6)">Enquire —
+                    <button class="dest-lipa-btn" onclick="openLPP('Hillpark Nairobi Conference', 63100, 6)">Enquire —
                         Group Rates</button>
                 </div>
 
@@ -3206,7 +3899,7 @@
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-savanna">Corporate</span><span
                             class="fit-tag fit-highland">Conservation</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Lewa Marathon Package', 85000, 6)">Build Your
+                    <button class="dest-lipa-btn" onclick="openLPP('Lewa Marathon Package', 117300, 6)">Build Your
                         Marathon Package</button>
                 </div>
 
@@ -3226,18 +3919,18 @@
                                 <div class="rate-label">3-Day Package · 2 Adults</div>
                                 <div class="rate-note">Cycling + guides + support vehicle + camp</div>
                             </div>
-                            <div class="rate-value">KES 33,600</div>
+                            <div class="rate-value">KES 46,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">5-Day Full Circuit</div>
                             </div>
-                            <div class="rate-value">KES 56,000</div>
+                            <div class="rate-value">KES 77,300</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-bush">Bush Escape</span><span
                             class="fit-tag fit-savanna">Adventure</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Mara Cycling Adventure', 33600, 6)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Mara Cycling Adventure', 46500, 6)">Lipa Kidogo
                         Kidogo — 3 Days</button>
                 </div>
 
@@ -3256,12 +3949,12 @@
                                 <div class="rate-label">3-Night Package · 2 Adults · FB</div>
                                 <div class="rate-note">Camp + game drives + transfers</div>
                             </div>
-                            <div class="rate-value">KES 115,000</div>
+                            <div class="rate-value">KES 158,700</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-bush">Bush Escape</span><span
                             class="fit-tag fit-savanna">Savanna Retreat</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Amboseli Elephant Circuit', 115000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Amboseli Elephant Circuit', 158700, 12)">Lipa Kidogo
                         Kidogo — 3 Nights</button>
                 </div>
 
@@ -3281,12 +3974,12 @@
                                 <div class="rate-label">3-Night Circuit · 2 Adults · All-in</div>
                                 <div class="rate-note">Mwembe Resort base + guided excursions</div>
                             </div>
-                            <div class="rate-value">KES 78,000</div>
+                            <div class="rate-value">KES 107,700</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-coastal">Coastal Retreat</span><span
                             class="fit-tag fit-bush">Heritage</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Malindi Heritage Circuit', 78000, 6)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Malindi Heritage Circuit', 107700, 6)">Lipa Kidogo
                         Kidogo — 3 Nights</button>
                 </div>
 
@@ -3306,12 +3999,12 @@
                                 <div class="rate-label">5-Night Immersive Circuit · 2 Adults</div>
                                 <div class="rate-note">Community-hosted, full board</div>
                             </div>
-                            <div class="rate-value">KES 145,000</div>
+                            <div class="rate-value">KES 200,100</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-coastal">Cultural Retreat</span><span
                             class="fit-tag fit-highland">Heritage</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Rusinga Islands', 145000, 12)">Lipa Kidogo Kidogo —
+                    <button class="dest-lipa-btn" onclick="openLPP('Rusinga Islands', 200100, 12)">Lipa Kidogo Kidogo —
                         5 Nights</button>
                 </div>
 
@@ -3331,12 +4024,12 @@
                                 <div class="rate-label">3-Night Conservation Package · 2 Adults</div>
                                 <div class="rate-note">Conservancy camp + game drives + transfers</div>
                             </div>
-                            <div class="rate-value">KES 165,000</div>
+                            <div class="rate-value">KES 227,700</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-savanna">Savanna Retreat</span><span
                             class="fit-tag fit-highland">Conservation</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Laikipia Wilderness', 165000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Laikipia Wilderness', 227700, 12)">Lipa Kidogo
                         Kidogo — 3 Nights</button>
                 </div>
 
@@ -3356,12 +4049,12 @@
                                 <div class="rate-label">2-Night Package · 2 Adults · FB</div>
                                 <div class="rate-note">Lakeside lodge + game drives</div>
                             </div>
-                            <div class="rate-value">KES 62,000</div>
+                            <div class="rate-value">KES 85,600</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-highland">Highland Escape</span><span
                             class="fit-tag fit-bush">Bush Escape</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Nakuru Flamingo Circuit', 62000, 6)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Nakuru Flamingo Circuit', 85600, 6)">Lipa Kidogo
                         Kidogo — 2 Nights</button>
                 </div>
 
@@ -3381,12 +4074,12 @@
                                 <div class="rate-label">3-Night Package · 2 Adults · All-in</div>
                                 <div class="rate-note">Turtle Bay Resort + marine excursions</div>
                             </div>
-                            <div class="rate-value">KES 98,000</div>
+                            <div class="rate-value">KES 135,300</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-coastal">Coastal Retreat</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Watamu Turtle Bay', 98000, 12)">Lipa Kidogo Kidogo —
-                        3 Nights</button>
+                    <button class="dest-lipa-btn" onclick="openLPP('Watamu Turtle Bay', 135300, 12)">Lipa Kidogo Kidogo
+                        — 3 Nights</button>
                 </div>
 
                 <!-- 20. MAKUENI COUNTY AKAMBA -->
@@ -3404,12 +4097,12 @@
                                 <div class="rate-label">3-Night Heritage Circuit · 2 Adults</div>
                                 <div class="rate-note">Community-hosted + guided + full board</div>
                             </div>
-                            <div class="rate-value">KES 75,000</div>
+                            <div class="rate-value">KES 103,500</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-bush">Heritage</span><span
                             class="fit-tag fit-highland">Cultural</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Makueni Akamba Heritage', 75000, 6)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Makueni Akamba Heritage', 103500, 6)">Lipa Kidogo
                         Kidogo — 3 Nights</button>
                 </div>
 
@@ -3430,33 +4123,33 @@
                                 <div class="rate-label">Double · Low Season</div>
                                 <div class="rate-note">4 Jan – 14 Jun · 15 Sep – 22 Dec</div>
                             </div>
-                            <div class="rate-value">KES 18,000</div>
+                            <div class="rate-value">KES 24,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double · High Season</div>
                                 <div class="rate-note">15 Jun – 14 Sep · 23 Dec – 3 Jan</div>
                             </div>
-                            <div class="rate-value">KES 25,000</div>
+                            <div class="rate-value">KES 34,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Triple · High Season</div>
                             </div>
-                            <div class="rate-value">KES 35,000</div>
+                            <div class="rate-value">KES 48,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Child (under 13) · High Season</div>
-                                <div class="rate-note">Honeymoon pkg KES 8,000/couple</div>
+                                <div class="rate-note">Honeymoon pkg KES 11,100/couple</div>
                             </div>
-                            <div class="rate-value">KES 6,500</div>
+                            <div class="rate-value">KES 9,000</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-bush">Bush Escape ✓ Anchor</span><span
                             class="fit-tag fit-highland">Family</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Eliata Bush Camp', 75000, 6)">Lipa Kidogo Kidogo — 3
-                        Nights</button>
+                    <button class="dest-lipa-btn" onclick="openLPP('Eliata Bush Camp', 103500, 6)">Lipa Kidogo Kidogo —
+                        3 Nights</button>
                 </div>
 
                 <!-- 22. HERITAGE HOTELS — MARA INTREPIDS -->
@@ -3477,32 +4170,32 @@
                                 <div class="rate-label">Double · Full Board · Jul–Oct</div>
                                 <div class="rate-note">Peak resident rate</div>
                             </div>
-                            <div class="rate-value">KES 66,890</div>
+                            <div class="rate-value">KES 92,400</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double · Full Board · Nov–Dec</div>
                                 <div class="rate-note">Low shoulder season</div>
                             </div>
-                            <div class="rate-value">KES 47,220</div>
+                            <div class="rate-value">KES 65,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Flying Pkg · 2 Nights DBL</div>
                                 <div class="rate-note">Wilson return + 3 GDs/day + transfers</div>
                             </div>
-                            <div class="rate-value">KES 131,600</div>
+                            <div class="rate-value">KES 181,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Flying Pkg · Extra Night SRS</div>
                             </div>
-                            <div class="rate-value">KES 18,750</div>
+                            <div class="rate-value">KES 25,900</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-sanctum">Sanctum Gateway</span><span
                             class="fit-tag fit-savanna">Savanna Retreat</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Mara Intrepids Camp', 230000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Mara Intrepids Camp', 317400, 12)">Lipa Kidogo
                         Kidogo — Flying Package</button>
                 </div>
 
@@ -3522,25 +4215,25 @@
                             <div>
                                 <div class="rate-label">Double · Full Board · Jul–Oct</div>
                             </div>
-                            <div class="rate-value">KES 38,000</div>
+                            <div class="rate-value">KES 52,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double · Full Board · Nov–Dec</div>
                             </div>
-                            <div class="rate-value">KES 32,220</div>
+                            <div class="rate-value">KES 44,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Flying Pkg · 2 Nights</div>
                                 <div class="rate-note">Wilson return + 2 GDs/day</div>
                             </div>
-                            <div class="rate-value">KES 113,900</div>
+                            <div class="rate-value">KES 157,300</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-savanna">Savanna Retreat</span><span
                             class="fit-tag fit-highland">Northern Circuit</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Samburu Intrepids Flying', 190000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Samburu Intrepids Flying', 262200, 12)">Lipa Kidogo
                         Kidogo — Flying Package</button>
                 </div>
 
@@ -3553,63 +4246,56 @@
                     <div class="dest-num">24</div>
                     <div class="dest-name">Kibo Safari Camp<br>Amboseli</div>
                     <div class="dest-tag">Kilimanjaro framed in your tent doorway. Club and Deluxe tents. Peak season 15
-                        Jun – 30 Sep. Resident full board rates. 10% operator commission. The Amboseli anchor in the
-                        Akiba portfolio.</div>
+                        Jun – 30 Sep. Resident full board rates. The Amboseli anchor in the Akiba portfolio.</div>
                     <div class="rate-rows">
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Club · Full Board · Green Season</div>
                                 <div class="rate-note">Mar–2 Apr · 7 Apr–31 May · Nov–22 Dec</div>
                             </div>
-                            <div class="rate-value">KES 41,600</div>
+                            <div class="rate-value">KES 57,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Club · Full Board · High Season</div>
                                 <div class="rate-note">Jan–Feb · Jun 1–14 · Oct</div>
                             </div>
-                            <div class="rate-value">KES 45,500</div>
+                            <div class="rate-value">KES 62,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Club · Full Board · Peak Season</div>
                                 <div class="rate-note">15 Jun – 30 Sep · Migration period</div>
                             </div>
-                            <div class="rate-value">KES 57,200</div>
+                            <div class="rate-value">KES 79,100</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Deluxe · Full Board · Peak</div>
                                 <div class="rate-note">15 Jun – 30 Sep</div>
                             </div>
-                            <div class="rate-value">KES 44,000</div>
+                            <div class="rate-value">KES 60,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Club · Full Board · Festive</div>
                                 <div class="rate-note">23 Dec 2026 – 3 Jan 2027</div>
                             </div>
-                            <div class="rate-value">KES 52,000</div>
+                            <div class="rate-value">KES 71,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Child 4–11 · Full Board · Peak (sharing)</div>
                                 <div class="rate-note">12+ years = full adult rate</div>
                             </div>
-                            <div class="rate-value">KES 14,300</div>
+                            <div class="rate-value">KES 19,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Family Club Tent (max 5 pax) · supplement pp/night</div>
-                                <div class="rate-note">Adult/child 12+: KES 6,500 · Under 12: KES 3,250</div>
+                                <div class="rate-note">Adult/child 12+: KES 9,000 · Under 12: KES 4,500</div>
                             </div>
-                            <div class="rate-value">From KES 3,250</div>
-                        </div>
-                        <div class="rate-row">
-                            <div>
-                                <div class="rate-label">Akiba operator commission</div>
-                            </div>
-                            <div class="rate-value">10%</div>
+                            <div class="rate-value">From KES 4,500</div>
                         </div>
                     </div>
                     <div
@@ -3618,18 +4304,18 @@
                             style="color:var(--gold-pale);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase">Akiba
                             Lipa Pole Pole — Kibo Amboseli</strong><br>
                         <strong style="color:var(--ivory)">Bush Escape</strong> · Double Club · 2 nights Peak · KES
-                        114,400 total<br>
-                        Save KES 9,533/mo for 12 months · <strong style="color:var(--gold)">Final payment 50 days before
-                            travel</strong><br>
+                        157,900 total<br>
+                        Save KES 13,300/mo for 12 months · <strong style="color:var(--gold)">Final payment 50 days
+                            before travel</strong><br>
                         <strong style="color:var(--ivory)">Savanna Retreat</strong> · Double Deluxe · 3 nights Peak ·
-                        KES 132,000 total<br>
-                        Save KES 11,000/mo for 12 months · 30% deposit confirms bed<br>
+                        KES 182,200 total<br>
+                        Save KES 15,200/mo for 12 months · 30% deposit confirms bed<br>
                         <em style="color:var(--sage-light)">3-camp circuit (Kibo + Mara Maisha + Sweetwaters) = 10% off
                             all rates</em>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-bush">Bush Escape</span><span
                             class="fit-tag fit-savanna">Sovereign Circuit</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Kibo Safari Camp Amboseli', 171600, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Kibo Safari Camp Amboseli', 236900, 12)">Lipa Kidogo
                         Kidogo — 3 Nights Peak</button>
                 </div>
 
@@ -3650,54 +4336,41 @@
                                 <div class="rate-label">Double Club · Full Board · Green Season</div>
                                 <div class="rate-note">Mar–2 Apr · 7 Apr–31 May · Nov–22 Dec</div>
                             </div>
-                            <div class="rate-value">KES 45,500</div>
+                            <div class="rate-value">KES 62,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Club · Full Board · High Season</div>
                                 <div class="rate-note">Jan–Feb · Jun 1–14 · Oct</div>
                             </div>
-                            <div class="rate-value">KES 49,400</div>
+                            <div class="rate-value">KES 68,200</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Club · Full Board · Peak (Migration)</div>
                                 <div class="rate-note">15 Jun – 30 Sep · Great Migration</div>
                             </div>
-                            <div class="rate-value">KES 79,300</div>
+                            <div class="rate-value">KES 109,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Deluxe · Full Board · Peak</div>
                                 <div class="rate-note">15 Jun – 30 Sep</div>
                             </div>
-                            <div class="rate-value">KES 61,000</div>
+                            <div class="rate-value">KES 84,200</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Club · Full Board · Festive</div>
                                 <div class="rate-note">23 Dec 2026 – 3 Jan 2027</div>
                             </div>
-                            <div class="rate-value">KES 52,000</div>
+                            <div class="rate-value">KES 71,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Child 4–11 · Full Board · Peak (sharing)</div>
                             </div>
-                            <div class="rate-value">KES 19,825</div>
-                        </div>
-                        <div class="rate-row">
-                            <div>
-                                <div class="rate-label">10% circuit discount</div>
-                                <div class="rate-note">3-camp: Kibo + Mara Maisha + Sweetwaters</div>
-                            </div>
-                            <div class="rate-value">✓</div>
-                        </div>
-                        <div class="rate-row">
-                            <div>
-                                <div class="rate-label">Akiba operator commission</div>
-                            </div>
-                            <div class="rate-value">10%</div>
+                            <div class="rate-value">KES 27,400</div>
                         </div>
                     </div>
                     <div
@@ -3706,17 +4379,17 @@
                             style="color:var(--gold-pale);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase">Akiba
                             Lipa Pole Pole — Mara Maisha</strong><br>
                         <strong style="color:var(--ivory)">Savanna Retreat</strong> · Double Club · 3 nights Peak · KES
-                        237,900 total<br>
-                        Save KES 19,825/mo for 12 months · <strong style="color:var(--gold)">Final payment 75 days
+                        328,400 total<br>
+                        Save KES 27,400/mo for 12 months · <strong style="color:var(--gold)">Final payment 75 days
                             before travel (Peak season)</strong><br>
                         <strong style="color:var(--ivory)">Bush Escape</strong> · Double Club · 2 nights Green · KES
-                        91,000 total<br>
-                        Save KES 7,583/mo for 12 months · 30% deposit confirms tent<br>
+                        125,600 total<br>
+                        Save KES 10,500/mo for 12 months · 30% deposit confirms tent<br>
                         <em style="color:var(--sage-light)">Pair with Kibo Amboseli for 10% off both camps</em>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-sanctum">Sanctum Gateway</span><span
                             class="fit-tag fit-savanna">Migration Circuit</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Mara Maisha Camp Migration', 237900, 12)">Lipa
+                    <button class="dest-lipa-btn" onclick="openLPP('Mara Maisha Camp Migration', 328400, 12)">Lipa
                         Kidogo Kidogo — Migration Package</button>
                 </div>
 
@@ -3737,41 +4410,41 @@
                                 <div class="rate-label">Double Morani · Full Board · Green Season</div>
                                 <div class="rate-note">Mar–2 Apr · 7 Apr–31 May · Nov–22 Dec</div>
                             </div>
-                            <div class="rate-value">KES 41,600</div>
+                            <div class="rate-value">KES 57,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Morani · Full Board · High Season</div>
                                 <div class="rate-note">Jan–Feb · Jun 1–14 · Oct</div>
                             </div>
-                            <div class="rate-value">KES 46,800</div>
+                            <div class="rate-value">KES 64,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Morani · Full Board · Peak Season</div>
                                 <div class="rate-note">15 Jun – 30 Sep</div>
                             </div>
-                            <div class="rate-value">KES 58,500</div>
+                            <div class="rate-value">KES 80,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Deluxe · Full Board · Peak</div>
                                 <div class="rate-note">15 Jun – 30 Sep</div>
                             </div>
-                            <div class="rate-value">KES 45,000</div>
+                            <div class="rate-value">KES 62,100</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Morani · Full Board · Festive</div>
                                 <div class="rate-note">23 Dec 2026 – 3 Jan 2027</div>
                             </div>
-                            <div class="rate-value">KES 58,500</div>
+                            <div class="rate-value">KES 80,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Child 4–11 · Full Board · Peak (sharing)</div>
                             </div>
-                            <div class="rate-value">KES 14,625</div>
+                            <div class="rate-value">KES 20,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
@@ -3780,13 +4453,6 @@
                             </div>
                             <div class="rate-value">10% off</div>
                         </div>
-                        <div class="rate-row">
-                            <div>
-                                <div class="rate-label">Akiba operator commission</div>
-                                <div class="rate-note">Best margin in the Kibo circuit</div>
-                            </div>
-                            <div class="rate-value">15%</div>
-                        </div>
                     </div>
                     <div
                         style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);padding:0.8rem;margin-bottom:1rem;font-family:var(--font-ui);font-size:0.72rem;font-weight:300;color:var(--ivory-dim);line-height:1.8">
@@ -3794,18 +4460,16 @@
                             style="color:var(--gold-pale);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase">Akiba
                             Lipa Pole Pole — Maisha Sweetwaters</strong><br>
                         <strong style="color:var(--ivory)">Bush Escape</strong> · Double Morani · 2 nights Green · KES
-                        83,200 total<br>
-                        Save KES 6,933/mo for 12 months · 30% deposit confirms tent<br>
+                        114,900 total<br>
+                        Save KES 9,700/mo for 12 months · 30% deposit confirms tent<br>
                         <strong style="color:var(--ivory)">Savanna Retreat</strong> · Double Morani · 3 nights Peak ·
-                        KES 175,500 total<br>
-                        Save KES 14,625/mo for 12 months · <strong style="color:var(--gold)">Final payment 75 days
+                        KES 242,200 total<br>
+                        Save KES 20,300/mo for 12 months · <strong style="color:var(--gold)">Final payment 75 days
                             before travel (Peak)</strong><br>
-                        <em style="color:var(--sage-light)">15% commission — highest margin in the Kibo Classic
-                            circuit</em>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-savanna">Conservation Circuit</span><span
                             class="fit-tag fit-highland">Laikipia</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Maisha Sweetwaters Ol Pejeta', 175500, 12)">Lipa
+                    <button class="dest-lipa-btn" onclick="openLPP('Maisha Sweetwaters Ol Pejeta', 242200, 12)">Lipa
                         Kidogo Kidogo — 3 Nights Peak</button>
                 </div>
 
@@ -3850,7 +4514,7 @@
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-coastal">Coastal Retreat</span><span
                             class="fit-tag fit-sanctum">Boutique Sanctum</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('La Perla Beach Zanzibar', 280000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('La Perla Beach Zanzibar', 386400, 12)">Lipa Kidogo
                         Kidogo — 5 Nights</button>
                 </div>
 
@@ -3871,32 +4535,32 @@
                                 <div class="rate-label">Comfort Cove · Jul–Aug</div>
                                 <div class="rate-note">Peak season, excl. breakfast</div>
                             </div>
-                            <div class="rate-value">USD 63.70</div>
+                            <div class="rate-value">USD 89</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Dual Delight · Jul–Aug</div>
                             </div>
-                            <div class="rate-value">USD 71.40</div>
+                            <div class="rate-value">USD 99</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double Loft · Dec</div>
                                 <div class="rate-note">Highest season per room</div>
                             </div>
-                            <div class="rate-value">USD 90.30</div>
+                            <div class="rate-value">USD 126</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Breakfast add-on</div>
-                                <div class="rate-note">À la carte from USD 10</div>
+                                <div class="rate-note">À la carte from USD 14</div>
                             </div>
-                            <div class="rate-value">USD 10+</div>
+                            <div class="rate-value">USD 14+</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-coastal">Coastal Retreat</span><span
                             class="fit-tag fit-bush">Budget Zanzibar</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('YASA Boutique Nungwi', 185000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('YASA Boutique Nungwi', 255300, 12)">Lipa Kidogo
                         Kidogo — 5 Nights</button>
                 </div>
 
@@ -3910,40 +4574,40 @@
                     <div class="dest-num">29</div>
                     <div class="dest-name">Awali Serengeti<br>Camp</div>
                     <div class="dest-tag">Serengeti National Park — Seronera zone, Rongai 12 campsite. Full board. No
-                        park fees included — but the netto rates make the maths sing. Valid 2026–2028.</div>
+                        park fees included — but the rates make the calculations work. Valid 2026–2028.</div>
                     <div class="rate-rows">
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double/Twin · High Season</div>
-                                <div class="rate-note">Jul–Aug + 20–31 Dec · Netto</div>
+                                <div class="rate-note">Jul–Aug + 20–31 Dec</div>
                             </div>
-                            <div class="rate-value">USD 350 pp</div>
+                            <div class="rate-value">USD 483 pp</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double/Twin · Shoulder Season</div>
                                 <div class="rate-note">Jan–Feb · Jun · Sep–Oct</div>
                             </div>
-                            <div class="rate-value">USD 280 pp</div>
+                            <div class="rate-value">USD 387 pp</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Double/Twin · Green Season</div>
                                 <div class="rate-note">Mar–May · Nov–19 Dec</div>
                             </div>
-                            <div class="rate-value">USD 210 pp</div>
+                            <div class="rate-value">USD 290 pp</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">All Inclusive supplement</div>
                                 <div class="rate-note">Drinks + spirits + sundowner</div>
                             </div>
-                            <div class="rate-value">USD 42 netto</div>
+                            <div class="rate-value">USD 59</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-sanctum">East Africa Circuit</span><span
                             class="fit-tag fit-savanna">Wildebeest Migration</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Awali Serengeti Camp', 350000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Awali Serengeti Camp', 483000, 12)">Lipa Kidogo
                         Kidogo — Serengeti Package</button>
                 </div>
 
@@ -3964,31 +4628,31 @@
                                 <div class="rate-label">Superior Sea View · DBL · July AI</div>
                                 <div class="rate-note">Resident all-inclusive</div>
                             </div>
-                            <div class="rate-value">KES 30,365</div>
+                            <div class="rate-value">KES 42,000</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Executive Sea View · July AI</div>
                             </div>
-                            <div class="rate-value">KES 34,265</div>
+                            <div class="rate-value">KES 47,400</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Superior Deluxe · Festive AI</div>
                                 <div class="rate-note">23 Dec–2 Jan 2027</div>
                             </div>
-                            <div class="rate-value">KES 68,235</div>
+                            <div class="rate-value">KES 94,200</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Executive Sea View · Festive</div>
                             </div>
-                            <div class="rate-value">KES 70,850</div>
+                            <div class="rate-value">KES 97,900</div>
                         </div>
                     </div>
                     <div class="dest-tags"><span class="fit-tag fit-coastal">Coastal Retreat</span><span
                             class="fit-tag fit-bush">Family Festive</span></div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Voyager Beach Mombasa', 200000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Voyager Beach Mombasa', 276000, 12)">Lipa Kidogo
                         Kidogo — Mombasa Package</button>
                 </div>
 
@@ -4007,59 +4671,59 @@
                     <div class="rate-rows">
                         <div class="rate-row">
                             <div>
-                                <div class="rate-label">Executive Double · BB · Tour Op Nett</div>
+                                <div class="rate-label">Executive Double · BB</div>
                                 <div class="rate-note">Resident 2026 · Non-peak</div>
                             </div>
-                            <div class="rate-value">KES 10,000</div>
+                            <div class="rate-value">KES 13,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
-                                <div class="rate-label">Executive Cottage · Half Board · Nett</div>
+                                <div class="rate-label">Executive Cottage · Half Board</div>
                                 <div class="rate-note">Resident 2026 · Non-peak</div>
                             </div>
-                            <div class="rate-value">KES 20,000</div>
+                            <div class="rate-value">KES 27,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Executive Double · Half Board · Peak</div>
                                 <div class="rate-note">Apr · Aug · Dec · Resident</div>
                             </div>
-                            <div class="rate-value">KES 20,000</div>
+                            <div class="rate-value">KES 27,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Executive Cottage · Full Board · Peak</div>
                                 <div class="rate-note">Apr · Aug · Dec · Resident</div>
                             </div>
-                            <div class="rate-value">KES 41,000</div>
+                            <div class="rate-value">KES 56,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Executive Double · BB · Non-Resident</div>
                                 <div class="rate-note">Off-peak · USD pricing</div>
                             </div>
-                            <div class="rate-value">USD 110</div>
+                            <div class="rate-value">USD 152</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Executive Cottage · FB · Non-Resident</div>
                                 <div class="rate-note">Peak season (Apr/Aug/Dec)</div>
                             </div>
-                            <div class="rate-value">USD 410</div>
+                            <div class="rate-value">USD 566</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Conference Full Day pp</div>
                                 <div class="rate-note">Team building · Ksh 4,000 pp</div>
                             </div>
-                            <div class="rate-value">KES 3,500</div>
+                            <div class="rate-value">KES 4,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Family Room · BB · Resident</div>
                                 <div class="rate-note">Child policy: 4–11yrs 50% · Under 4 free</div>
                             </div>
-                            <div class="rate-value">KES 18,000</div>
+                            <div class="rate-value">KES 24,900</div>
                         </div>
                     </div>
                     <div class="dest-tags">
@@ -4067,17 +4731,9 @@
                         <span class="fit-tag fit-bush">Corporate &amp; Retreat</span>
                         <span class="fit-tag fit-highland">Central Highlands</span>
                     </div>
-                    <div
-                        style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);padding:0.8rem;margin-bottom:1rem;font-family:var(--font-ui);font-size:0.72rem;font-weight:300;color:var(--ivory-dim);line-height:1.7">
-                        <strong
-                            style="color:var(--gold-pale);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase">Akiba
-                            Tour Operator Nett Rates Applied</strong><br>
-                        Executive Single BB: <strong style="color:var(--ivory)">KES 8,000</strong> · Executive Twin HB:
-                        <strong style="color:var(--ivory)">KES 17,000</strong><br>
-                        Conference packages from KES 3,000–4,000 pp · M-Pesa Till: <strong
-                            style="color:var(--ivory)">5847161</strong>
-                    </div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Esiankiki Resort Central Kenya', 60000, 6)">Lipa
+
+
+                    <button class="dest-lipa-btn" onclick="openLPP('Esiankiki Resort Central Kenya', 82800, 6)">Lipa
                         Kidogo Kidogo — 3 Nights Executive</button>
                 </div>
 
@@ -4100,57 +4756,51 @@
                                 <div class="rate-label">Premium Garden Dbl · BB · 1st &amp; 2nd Season</div>
                                 <div class="rate-note">5 Jan–30 Jun &amp; 1 Jul–19 Dec 2026</div>
                             </div>
-                            <div class="rate-value">KES 22,000</div>
+                            <div class="rate-value">KES 30,400</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Premium Sea Room Dbl · BB · 1st &amp; 2nd Season</div>
                             </div>
-                            <div class="rate-value">KES 25,000</div>
+                            <div class="rate-value">KES 34,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Deluxe Room Dbl · Full Board · 1st &amp; 2nd Season</div>
                             </div>
-                            <div class="rate-value">KES 33,000</div>
+                            <div class="rate-value">KES 45,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Zuri Suite Dbl · All Inclusive · 1st &amp; 2nd Season</div>
                             </div>
-                            <div class="rate-value">KES 56,000</div>
+                            <div class="rate-value">KES 77,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Premium Garden Dbl · All Inclusive · Festive</div>
                                 <div class="rate-note">20 Dec 2026 – 3 Jan 2027 · Min 3 nights</div>
                             </div>
-                            <div class="rate-value">KES 73,000</div>
+                            <div class="rate-value">KES 100,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Penthouse · All Inclusive · Festive</div>
                             </div>
-                            <div class="rate-value">KES 169,000</div>
+                            <div class="rate-value">KES 233,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Easter Period (1–5 Apr) Premium Garden Dbl · BB</div>
                             </div>
-                            <div class="rate-value">KES 26,000</div>
+                            <div class="rate-value">KES 35,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Child 5–11 sharing · BB / HB / FB / AI</div>
                                 <div class="rate-note">0–5 years free · 6–12 own room = 75% adult dbl</div>
                             </div>
-                            <div class="rate-value">From KES 4,000</div>
-                        </div>
-                        <div class="rate-row">
-                            <div>
-                                <div class="rate-label">Akiba operator commission</div>
-                            </div>
-                            <div class="rate-value">10%</div>
+                            <div class="rate-value">From KES 5,600</div>
                         </div>
                     </div>
                     <div
@@ -4159,11 +4809,11 @@
                             style="color:var(--gold-pale);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase">Akiba
                             Lipa Pole Pole — Diani Reef</strong><br>
                         <strong style="color:var(--ivory)">Coastal Retreat</strong> · Premium Sea Dbl FB · 3 nights =
-                        KES 93,000<br>
-                        Save KES 7,750/mo for 12 months · No check-out 24th &amp; 31st Dec<br>
+                        KES 128,400<br>
+                        Save KES 10,700/mo for 12 months · No check-out 24th &amp; 31st Dec<br>
                         <strong style="color:var(--ivory)">Bush Escape</strong> · Premium Garden Dbl BB · 2 nights = KES
-                        44,000<br>
-                        Save KES 3,667/mo for 12 months · 30% deposit confirms room<br>
+                        60,800<br>
+                        Save KES 5,200/mo for 12 months · 30% deposit confirms room<br>
                         <em style="color:var(--ocean-light)">M-Pesa Paybill: 583053 · Acc: Guest Name · Min 3 nights
                             festive</em>
                     </div>
@@ -4172,7 +4822,7 @@
                         <span class="fit-tag fit-bush">Family Festive</span>
                         <span class="fit-tag fit-savanna">Spa &amp; Wellness</span>
                     </div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Diani Reef Beach Resort', 93000, 12)">Lipa Kidogo
+                    <button class="dest-lipa-btn" onclick="openLPP('Diani Reef Beach Resort', 128400, 12)">Lipa Kidogo
                         Kidogo — 3 Nights Coast</button>
                 </div>
 
@@ -4186,55 +4836,54 @@
                     <div class="dest-num">33</div>
                     <div class="dest-name">Diani Sea<br>Resort</div>
                     <div class="dest-tag">Full all-inclusive on Diani Beach. Comfort and Bahari rooms. Closed 20 Apr – 8
-                        Jun 2026 for renovation. Re-opens peak season July. 12.5% agent commission — highest on the
-                        South Coast.</div>
+                        Jun 2026 for renovation. Re-opens peak season July. An Akiba favourite on the South Coast.</div>
                     <div class="rate-rows">
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Dbl · All Inclusive · 9 Jun–8 Jul 2026</div>
                                 <div class="rate-note">All-inclusive · Per person sharing</div>
                             </div>
-                            <div class="rate-value">KES 11,500</div>
+                            <div class="rate-value">KES 15,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Dbl · All Inclusive · 9 Jul–30 Sep 2026</div>
                                 <div class="rate-note">Peak season · Per person sharing</div>
                             </div>
-                            <div class="rate-value">KES 13,400</div>
+                            <div class="rate-value">KES 18,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Dbl · All Inclusive · 1 Oct–20 Dec 2026</div>
                             </div>
-                            <div class="rate-value">KES 15,000</div>
+                            <div class="rate-value">KES 20,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Dbl · All Inclusive · Festive</div>
                                 <div class="rate-note">21 Dec 2026–4 Jan 2027 · Min 5 nights</div>
                             </div>
-                            <div class="rate-value">KES 22,700</div>
+                            <div class="rate-value">KES 31,400</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Single · All Inclusive · Peak</div>
                             </div>
-                            <div class="rate-value">KES 18,500</div>
+                            <div class="rate-value">KES 25,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Bahari Room Upgrade · Per Room/Night</div>
                                 <div class="rate-note">Supplement on top of base rate</div>
                             </div>
-                            <div class="rate-value">KES 2,500</div>
+                            <div class="rate-value">KES 3,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">April Special (until 20 Apr) · All Inclusive</div>
                                 <div class="rate-note">Per person sharing · Limited availability</div>
                             </div>
-                            <div class="rate-value">KES 13,500</div>
+                            <div class="rate-value">KES 18,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
@@ -4244,12 +4893,6 @@
                             </div>
                             <div class="rate-value">50% adult rate</div>
                         </div>
-                        <div class="rate-row">
-                            <div>
-                                <div class="rate-label">Akiba agent commission</div>
-                            </div>
-                            <div class="rate-value">12.5%</div>
-                        </div>
                     </div>
                     <div
                         style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);padding:0.8rem;margin-bottom:1rem;font-family:var(--font-ui);font-size:0.72rem;font-weight:300;color:var(--ivory-dim);line-height:1.8">
@@ -4257,20 +4900,20 @@
                             style="color:var(--gold-pale);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase">Akiba
                             Lipa Pole Pole — Diani Sea Resort</strong><br>
                         <strong style="color:var(--ivory)">Coastal Retreat</strong> · Comfort Dbl · 3 nights Peak · KES
-                        80,400 total (2 pax)<br>
-                        Save KES 6,700/mo for 12 months · Full payment required for festive<br>
+                        111,000 total (2 pax)<br>
+                        Save KES 9,400/mo for 12 months · Full payment required for festive<br>
                         <strong style="color:var(--ivory)">Bush Escape</strong> · Comfort Dbl · 2 nights Oct = KES
-                        60,000 total (2 pax)<br>
-                        Save KES 5,000/mo for 12 months · M-Pesa Paybill: 800644 · Acc: Booking No.<br>
+                        82,800 total (2 pax)<br>
+                        Save KES 6,900/mo for 12 months · M-Pesa Paybill: 800644 · Acc: Booking No.<br>
                         <em style="color:var(--ocean-light)">Closed 20 Apr–8 Jun 2026 · Minimum stay 2 nights · 5 nights
                             festive</em>
                     </div>
                     <div class="dest-tags">
                         <span class="fit-tag fit-coastal">Coastal Retreat</span>
                         <span class="fit-tag fit-bush">All-Inclusive</span>
-                        <span class="fit-tag fit-savanna">Best Commission</span>
+
                     </div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Diani Sea Resort All Inclusive', 80400, 12)">Lipa
+                    <button class="dest-lipa-btn" onclick="openLPP('Diani Sea Resort All Inclusive', 111000, 12)">Lipa
                         Kidogo Kidogo — 3 Nights Peak</button>
                 </div>
 
@@ -4284,61 +4927,61 @@
                     <div class="dest-num">34</div>
                     <div class="dest-name">Diani Sea<br>Lodge</div>
                     <div class="dest-tag">The value all-inclusive sibling to Diani Sea Resort. Family Suites, Bahari
-                        Family Rooms, and a relaxed beachfront setting. Slightly lower rates, same 12.5% agent
-                        commission. A strong Akiba family package property.</div>
+                        Family Rooms, and a relaxed beachfront setting. A strong Akiba family package property — best
+                        value all-inclusive on Diani.</div>
                     <div class="rate-rows">
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Dbl · All Inclusive · 1 May–8 Jul 2026</div>
                                 <div class="rate-note">Per person sharing · All-inclusive</div>
                             </div>
-                            <div class="rate-value">KES 11,000</div>
+                            <div class="rate-value">KES 15,200</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Dbl · All Inclusive · 9 Jul–30 Sep 2026</div>
                                 <div class="rate-note">Peak season · Per person sharing</div>
                             </div>
-                            <div class="rate-value">KES 13,000</div>
+                            <div class="rate-value">KES 18,000</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Dbl · All Inclusive · 1 Oct–20 Dec 2026</div>
                             </div>
-                            <div class="rate-value">KES 14,300</div>
+                            <div class="rate-value">KES 19,800</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Dbl · All Inclusive · Festive</div>
                                 <div class="rate-note">21 Dec 2026–4 Jan 2027 · Min 5 nights</div>
                             </div>
-                            <div class="rate-value">KES 22,100</div>
+                            <div class="rate-value">KES 30,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Comfort Single · All Inclusive · Peak</div>
                             </div>
-                            <div class="rate-value">KES 18,000</div>
+                            <div class="rate-value">KES 24,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Family Suite Upgrade · Per Night</div>
                                 <div class="rate-note">Min 3 occ · Max 2–3 adults + 3 children + 1 infant</div>
                             </div>
-                            <div class="rate-value">KES 3,500</div>
+                            <div class="rate-value">KES 4,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Bahari Block Upgrade · Per Night</div>
                             </div>
-                            <div class="rate-value">KES 2,300</div>
+                            <div class="rate-value">KES 3,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">April Special (until 30 Apr) · All Inclusive</div>
                                 <div class="rate-note">Per person sharing</div>
                             </div>
-                            <div class="rate-value">KES 13,200</div>
+                            <div class="rate-value">KES 18,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
@@ -4347,12 +4990,6 @@
                             </div>
                             <div class="rate-value">50% adult rate</div>
                         </div>
-                        <div class="rate-row">
-                            <div>
-                                <div class="rate-label">Akiba agent commission</div>
-                            </div>
-                            <div class="rate-value">12.5%</div>
-                        </div>
                     </div>
                     <div
                         style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);padding:0.8rem;margin-bottom:1rem;font-family:var(--font-ui);font-size:0.72rem;font-weight:300;color:var(--ivory-dim);line-height:1.8">
@@ -4360,11 +4997,11 @@
                             style="color:var(--gold-pale);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase">Akiba
                             Lipa Pole Pole — Diani Sea Lodge</strong><br>
                         <strong style="color:var(--ivory)">Coastal Retreat</strong> · Comfort Dbl · 3 nights Peak · KES
-                        78,000 total (2 pax)<br>
-                        Save KES 6,500/mo for 12 months · Full payment at booking for festive<br>
+                        107,700 total (2 pax)<br>
+                        Save KES 9,000/mo for 12 months · Full payment at booking for festive<br>
                         <strong style="color:var(--ivory)">Family Package</strong> · Family Suite · 3 nights Peak · from
-                        KES 88,500 (2 adults + children)<br>
-                        Save KES 7,375/mo for 12 months · M-Pesa Paybill: 800645 · Acc: Booking No.<br>
+                        KES 122,200 (2 adults + children)<br>
+                        Save KES 10,300/mo for 12 months · M-Pesa Paybill: 800645 · Acc: Booking No.<br>
                         <em style="color:var(--ocean-light)">Best value all-inclusive on South Coast · Min 2 nights · 5
                             nights festive</em>
                     </div>
@@ -4373,7 +5010,7 @@
                         <span class="fit-tag fit-bush">Family Package</span>
                         <span class="fit-tag fit-savanna">Best Value Coast</span>
                     </div>
-                    <button class="dest-lipa-btn" onclick="openLPP('Diani Sea Lodge All Inclusive', 78000, 12)">Lipa
+                    <button class="dest-lipa-btn" onclick="openLPP('Diani Sea Lodge All Inclusive', 107700, 12)">Lipa
                         Kidogo Kidogo — 3 Nights Peak</button>
                 </div>
 
@@ -4395,47 +5032,47 @@
                                 <div class="rate-label">Studio / 1-Bed Apartment · BB · Single Occ</div>
                                 <div class="rate-note">7 Jan–30 Sep 2026 · Resident rate</div>
                             </div>
-                            <div class="rate-value">KES 7,750</div>
+                            <div class="rate-value">KES 10,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Studio / 1-Bed Apartment · BB · Double Occ</div>
                             </div>
-                            <div class="rate-value">KES 11,250</div>
+                            <div class="rate-value">KES 15,600</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">2-Bedroom Apartment · BB · Double Occ</div>
-                                <div class="rate-note">Each extra person KES 4,500</div>
+                                <div class="rate-note">Each extra person KES 6,300</div>
                             </div>
-                            <div class="rate-value">KES 16,950</div>
+                            <div class="rate-value">KES 23,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">4-Bedroom Villa · Room Only · Up to 8 Adults</div>
                                 <div class="rate-note">Private villa · Power/water charged separately</div>
                             </div>
-                            <div class="rate-value">KES 48,000</div>
+                            <div class="rate-value">KES 66,300</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Half Board add-on · Per Person/Day</div>
                                 <div class="rate-note">On top of BB rate</div>
                             </div>
-                            <div class="rate-value">KES 2,500</div>
+                            <div class="rate-value">KES 3,500</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Full Board add-on · Per Person/Day</div>
                             </div>
-                            <div class="rate-value">KES 4,800</div>
+                            <div class="rate-value">KES 6,700</div>
                         </div>
                         <div class="rate-row">
                             <div>
                                 <div class="rate-label">Child 4–11 · Per Night</div>
                                 <div class="rate-note">Under 4 years free</div>
                             </div>
-                            <div class="rate-value">KES 3,500</div>
+                            <div class="rate-value">KES 4,900</div>
                         </div>
                         <div class="rate-row">
                             <div>
@@ -4451,11 +5088,11 @@
                             style="color:var(--gold-pale);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase">Akiba
                             Lipa Pole Pole — Morning Star Diani</strong><br>
                         <strong style="color:var(--ivory)">Coastal Retreat</strong> · 1-Bed Apt Dbl BB · 3 nights = KES
-                        33,750<br>
-                        Save KES 2,813/mo for 12 months · Most affordable Diani overnight in portfolio<br>
+                        46,600<br>
+                        Save KES 4,000/mo for 12 months · Most affordable Diani overnight in portfolio<br>
                         <strong style="color:var(--ivory)">Group / Family</strong> · 4-Bed Villa RO · 3 nights = KES
-                        144,000 (up to 8 adults)<br>
-                        Save KES 12,000/mo for 12 months · Per person: KES 18,000 for 3 nights<br>
+                        198,800 (up to 8 adults)<br>
+                        Save KES 16,600/mo for 12 months · Per person: KES 24,900 for 3 nights<br>
                         <em style="color:var(--ocean-light)">Self-catering freedom · Long-stay rates available ·
                             Check-in 14:00</em>
                     </div>
@@ -4465,7 +5102,7 @@
                         <span class="fit-tag fit-highland">Long Stay</span>
                     </div>
                     <button class="dest-lipa-btn"
-                        onclick="openLPP('Morning Star Diani Apartment Hotel', 33750, 12)">Lipa Kidogo Kidogo — 3 Nights
+                        onclick="openLPP('Morning Star Diani Apartment Hotel', 46600, 12)">Lipa Kidogo Kidogo — 3 Nights
                         Diani</button>
                 </div>
 
@@ -4490,20 +5127,20 @@
                     <div class="chama-tier">Chama Tier 1 · Starter</div>
                     <div class="chama-name">The Twende Chama</div>
                     <p class="chama-desc">The group that's been talking about a trip for two years. Six members. KES
-                        1,500 each. Six months. And you are at Nokras Riverine — with change to spare.</p>
+                        2,100 each. Six months. And you are at Nokras Riverine — with change to spare.</p>
                     <div class="chama-targets">
                         <div class="chama-target-box"><span class="chama-target-num">6</span><span
                                 class="chama-target-lbl">Members</span></div>
-                        <div class="chama-target-box"><span class="chama-target-num">KES 1,500</span><span
+                        <div class="chama-target-box"><span class="chama-target-num">KES 2,100</span><span
                                 class="chama-target-lbl">Per Person/Month</span></div>
                         <div class="chama-target-box"><span class="chama-target-num">6</span><span
                                 class="chama-target-lbl">Months to Travel</span></div>
                         <div class="chama-target-box"><span class="chama-target-num">Highland Escape</span><span
                                 class="chama-target-lbl">Target Package</span></div>
                     </div>
-                    <div class="chama-mechanics"><strong>How it works:</strong> Chama of 6 contributes KES 1,500/month.
-                        After 6 months: KES 54,000 pooled. 4 people book Highland Escape (KES 42,000). Surplus KES
-                        12,000 rolls to next journey or a Bush Escape upgrade. Monthly reminder sent on the 5th to all
+                    <div class="chama-mechanics"><strong>How it works:</strong> Chama of 6 contributes KES 2,100/month.
+                        After 6 months: KES 74,600 pooled. 4 people book Highland Escape (KES 58,000). Surplus KES
+                        16,600 rolls to next journey or a Bush Escape upgrade. Monthly reminder sent on the 5th to all
                         members.</div>
                 </div>
                 <div class="chama-card reveal">
@@ -4514,15 +5151,15 @@
                     <div class="chama-targets">
                         <div class="chama-target-box"><span class="chama-target-num">8</span><span
                                 class="chama-target-lbl">Members</span></div>
-                        <div class="chama-target-box"><span class="chama-target-num">KES 2,400</span><span
+                        <div class="chama-target-box"><span class="chama-target-num">KES 3,400</span><span
                                 class="chama-target-lbl">Per Person/Month</span></div>
                         <div class="chama-target-box"><span class="chama-target-num">12</span><span
                                 class="chama-target-lbl">Months to Travel</span></div>
                         <div class="chama-target-box"><span class="chama-target-num">Bush Escape</span><span
                                 class="chama-target-lbl">Target Package</span></div>
                     </div>
-                    <div class="chama-mechanics"><strong>How it works:</strong> 8 members × KES 2,400/month = KES
-                        19,200/month. Year 1: KES 230,400 pooled. Severin 1-in-15 group benefit activated for rosters of
+                    <div class="chama-mechanics"><strong>How it works:</strong> 8 members × KES 3,400/month = KES
+                        26,600/month. Year 1: KES 318,000 pooled. Severin 1-in-15 group benefit activated for rosters of
                         15+. Surpluses roll to the Coastal Retreat.</div>
                 </div>
                 <div class="chama-card reveal">
@@ -4534,15 +5171,15 @@
                     <div class="chama-targets">
                         <div class="chama-target-box"><span class="chama-target-num">10</span><span
                                 class="chama-target-lbl">Members</span></div>
-                        <div class="chama-target-box"><span class="chama-target-num">KES 3,800</span><span
+                        <div class="chama-target-box"><span class="chama-target-num">KES 5,300</span><span
                                 class="chama-target-lbl">Per Person/Month</span></div>
                         <div class="chama-target-box"><span class="chama-target-num">12</span><span
                                 class="chama-target-lbl">Months to Travel</span></div>
                         <div class="chama-target-box"><span class="chama-target-num">Mara &amp; Coast</span><span
                                 class="chama-target-lbl">Target Package</span></div>
                     </div>
-                    <div class="chama-mechanics"><strong>How it works:</strong> 10 members × KES 3,800/month = KES
-                        38,000/month. Year 1: KES 456,000 pooled. Kendwa 10-room group discount triggered. Akiba Legacy
+                    <div class="chama-mechanics"><strong>How it works:</strong> 10 members × KES 5,300/month = KES
+                        52,500/month. Year 1: KES 629,300 pooled. Kendwa 10-room group discount triggered. Akiba Legacy
                         Register entry confirmed. Year 3: Invisible Invitation to Raw Unwind Private.</div>
                 </div>
                 <div class="chama-card reveal">
@@ -4554,16 +5191,16 @@
                     <div class="chama-targets">
                         <div class="chama-target-box"><span class="chama-target-num">15</span><span
                                 class="chama-target-lbl">Members</span></div>
-                        <div class="chama-target-box"><span class="chama-target-num">KES 2,000</span><span
+                        <div class="chama-target-box"><span class="chama-target-num">KES 2,800</span><span
                                 class="chama-target-lbl">Per Person/Month</span></div>
                         <div class="chama-target-box"><span class="chama-target-num">12</span><span
                                 class="chama-target-lbl">Months to Travel</span></div>
                         <div class="chama-target-box"><span class="chama-target-num">Family Coastal</span><span
                                 class="chama-target-lbl">Target Package</span></div>
                     </div>
-                    <div class="chama-mechanics"><strong>How it works:</strong> 15 × KES 2,000/month = KES 30,000/month.
-                        Year 1: KES 360,000. Two Mwembe 2BR units (5 persons each) for 7 nights = KES 184,800. Nokras
-                        Riverine Family Rooms = KES 72,000. Remaining funds transport, activities, and memories. Every
+                    <div class="chama-mechanics"><strong>How it works:</strong> 15 × KES 2,800/month = KES 41,400/month.
+                        Year 1: KES 496,800. Two Mwembe 2BR units (5 persons each) for 7 nights = KES 255,100. Nokras
+                        Riverine Family Rooms = KES 99,400. Remaining funds transport, activities, and memories. Every
                         family member's carbon certificate issued.</div>
                 </div>
             </div>
@@ -4600,7 +5237,7 @@
                         <div class="day-detail">Depart Nairobi 14:00. Arrive Sagana 16:00. Check in Nokras Riverine
                             Deluxe. Quick orientation. Aqua Park session 17:00–18:30 (included). Dinner at property.
                             Pool evening.</div>
-                        <div class="day-price-note">Day cost: 1 night Deluxe BB pps KES 9,600 × 2 + dinner ≈ KES 24,200
+                        <div class="day-price-note">Day cost: 1 night Deluxe BB pps KES 13,400 × 2 + dinner ≈ KES 33,500
                         </div>
                     </div>
                     <div class="day-cell day-num"><span class="day-number">02</span><span
@@ -4608,9 +5245,9 @@
                     <div class="day-cell">
                         <div class="day-name">Tana River Whitewater</div>
                         <div class="day-detail">Breakfast. Rafting on the Tana River 09:00–13:00 (at-fee, KES
-                            4,000–6,000 pp). Return to camp, lunch. Afternoon: Ziplining or Kayaking (optional).
+                            5,600–6,000 pp). Return to camp, lunch. Afternoon: Ziplining or Kayaking (optional).
                             Sundowner poolside.</div>
-                        <div class="day-price-note">Activities: est. KES 8,000–12,000 per couple additional</div>
+                        <div class="day-price-note">Activities: est. KES 11,100–12,000 per couple additional</div>
                     </div>
                     <div class="day-cell day-num"><span class="day-number">03</span><span
                             class="day-label">Sunday</span></div>
@@ -4622,9 +5259,9 @@
                     </div>
                 </div>
                 <div class="itin-summary">
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 42,000</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 58,000</span><span
                             class="itin-sum-lbl">Package · 2 Adults</span></div>
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 7,000</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 9,700</span><span
                             class="itin-sum-lbl">Monthly · 6 Months</span></div>
                     <div class="itin-sum-item"><span class="itin-sum-num">6 Months</span><span class="itin-sum-lbl">Fast
                             Track Plan</span></div>
@@ -4663,12 +5300,10 @@
                     </div>
                 </div>
                 <div class="itin-summary">
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 98,000</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 135,300</span><span
                             class="itin-sum-lbl">Package · 2 Adults</span></div>
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 8,167</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 11,400</span><span
                             class="itin-sum-lbl">Monthly · 12 Months</span></div>
-                    <div class="itin-sum-item"><span class="itin-sum-num">10%</span><span class="itin-sum-lbl">Akiba
-                            Commission</span></div>
                 </div>
             </div>
             <div class="itin-panel reveal">
@@ -4689,9 +5324,9 @@
                     <div class="day-cell">
                         <div class="day-name">Red Dust Game Circuit</div>
                         <div class="day-detail">Bush breakfast 06:30 (included). Two 2.5-hour game drives — morning and
-                            late afternoon. Midday: optional KENBALI Spa massage (KES 5,400 pp, strongly recommended).
+                            late afternoon. Midday: optional KENBALI Spa massage (KES 7,500 pp, strongly recommended).
                             Pool. Bonfire dinner.</div>
-                        <div class="day-price-note">KENBALI 30-min massage: KES 5,400 pp (upgrade)</div>
+                        <div class="day-price-note">KENBALI 30-min massage: KES 7,500 pp (upgrade)</div>
                     </div>
                     <div class="day-cell day-num"><span class="day-number">03</span><span
                             class="day-label">Sunday</span></div>
@@ -4703,12 +5338,10 @@
                     </div>
                 </div>
                 <div class="itin-summary">
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 71,200</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 98,400</span><span
                             class="itin-sum-lbl">SSC01 · 2 Adults</span></div>
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 16,000</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 22,100</span><span
                             class="itin-sum-lbl">Monthly · Savanna Plan</span></div>
-                    <div class="itin-sum-item"><span class="itin-sum-num">25%</span><span class="itin-sum-lbl">Akiba
-                            Commission</span></div>
                 </div>
             </div>
             <div class="itin-panel reveal">
@@ -4720,10 +5353,10 @@
                             class="day-label">Arrival</span></div>
                     <div class="day-cell">
                         <div class="day-name">Nairobi → Malindi → Watamu</div>
-                        <div class="day-detail">Fly Nairobi to Malindi (1hr). Temple Point transfer from Malindi ($44
+                        <div class="day-detail">Fly Nairobi to Malindi (1hr). Temple Point transfer from Malindi ($61
                             one-way, pre-booked by Akiba). Check in Boutique Double. Creek view orientation. Welcome
                             dinner — 3-course.</div>
-                        <div class="day-price-note">Transfer included. Room: KES 33,800 BB per night</div>
+                        <div class="day-price-note">Transfer included. Room: KES 46,700 BB per night</div>
                     </div>
                     <div class="day-cell day-num"><span class="day-number">02–03</span><span
                             class="day-label">Ocean</span></div>
@@ -4732,7 +5365,7 @@
                         <div class="day-detail">Day 2: Watamu Marine National Park snorkelling — sea turtles, coral
                             gardens. Day 3: Sunset dhow cruise on the creek. Gede Ruins half-day optional. Full board
                             dinners at resort.</div>
-                        <div class="day-price-note">Excursions: est. KES 6,000–9,000 pp additional</div>
+                        <div class="day-price-note">Excursions: est. KES 8,300–9,000 pp additional</div>
                     </div>
                     <div class="day-cell day-num"><span class="day-number">04</span><span
                             class="day-label">Departure</span></div>
@@ -4745,9 +5378,9 @@
                     </div>
                 </div>
                 <div class="itin-summary">
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 155,200</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 214,300</span><span
                             class="itin-sum-lbl">Accommodation · 4 Nights FB</span></div>
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 24,167</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 33,500</span><span
                             class="itin-sum-lbl">Monthly · Coastal Plan</span></div>
                     <div class="itin-sum-item"><span class="itin-sum-num">45 Days</span><span class="itin-sum-lbl">Free
                             Cancellation Window</span></div>
@@ -4765,7 +5398,7 @@
                         <div class="day-detail">Fly or drive Nairobi–Mara. Arrive Enkare. 4 nights Executive Tents All
                             Inclusive: game drives, cultural Maasai walks, entertainment, all meals and drinks. 1 bungee
                             jump or ziplining activity (at-fee upgrade).</div>
-                        <div class="day-price-note">4 nights AI Executive Tents pps: KES 64,800 × 2 = KES 129,600</div>
+                        <div class="day-price-note">4 nights AI Executive Tents pps: KES 89,500 × 2 = KES 179,000</div>
                     </div>
                     <div class="day-cell day-num"><span class="day-number">05</span><span
                             class="day-label">Transit</span></div>
@@ -4773,7 +5406,7 @@
                         <div class="day-name">Mara → Nairobi → Malindi</div>
                         <div class="day-detail">Early morning game drive at Enkare. Transfer to Mara airstrip. Nairobi
                             connection to Malindi. Temple Point transfer. Arrive Watamu for sunset dinner.</div>
-                        <div class="day-price-note">Internal flights est. KES 18,000–28,000 pp both legs</div>
+                        <div class="day-price-note">Internal flights est. KES 24,900–28,000 pp both legs</div>
                     </div>
                     <div class="day-cell day-num"><span class="day-number">06–08</span><span
                             class="day-label">Coast</span></div>
@@ -4782,13 +5415,13 @@
                         <div class="day-detail">3 nights Creek Deluxe Full Board. Marine park snorkel day. Sunset
                             cruise. Optional Arabuko-Sokoke Forest birding walk. Final dinner — 3-course. Return Nairobi
                             via Malindi.</div>
-                        <div class="day-price-note">3 nights Creek Deluxe FB: KES 52,200/night × 3 = KES 156,600</div>
+                        <div class="day-price-note">3 nights Creek Deluxe FB: KES 72,200/night × 3 = KES 216,200</div>
                     </div>
                 </div>
                 <div class="itin-summary">
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 380,000</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 524,400</span><span
                             class="itin-sum-lbl">Package · 2 Adults</span></div>
-                    <div class="itin-sum-item"><span class="itin-sum-num">KES 31,667</span><span
+                    <div class="itin-sum-item"><span class="itin-sum-num">KES 43,900</span><span
                             class="itin-sum-lbl">Monthly · 12 Months</span></div>
                     <div class="itin-sum-item"><span class="itin-sum-num">Legacy</span><span class="itin-sum-lbl">Akiba
                             Register · Year 1</span></div>
@@ -4815,13 +5448,13 @@
                 <div style="margin-bottom:2rem">
                     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.8rem">
                         <span class="calc-label">Package Total (KES)</span>
-                        <span class="calc-value" id="price-display">KES 98,000</span>
+                        <span class="calc-value" id="price-display">KES 135,300</span>
                     </div>
                     <input type="range" id="price-slider" min="11940" max="600000" step="1000" value="98000"
                         oninput="calcUpdate()">
                     <div
                         style="display:flex;justify-content:space-between;margin-top:0.4rem;font-family:var(--font-ui);font-size:0.55rem;font-weight:200;letter-spacing:0.15em;color:rgba(181,169,138,0.4);text-transform:uppercase">
-                        <span>KES 11,940</span><span>KES 600,000</span>
+                        <span>KES 16,600</span><span>KES 828,000</span>
                     </div>
                 </div>
                 <div style="margin-bottom:2rem">
@@ -4843,15 +5476,15 @@
                 <div class="calc-grid">
                     <div class="calc-cell">
                         <div class="calc-cell-label">Total Price</div>
-                        <div class="calc-cell-val" id="calc-total" style="font-size:1rem">KES 98,000</div>
+                        <div class="calc-cell-val" id="calc-total" style="font-size:1rem">KES 135,300</div>
                     </div>
                     <div class="calc-cell">
                         <div class="calc-cell-label">Deposit (20%)</div>
-                        <div class="calc-cell-val" id="calc-deposit">KES 19,600</div>
+                        <div class="calc-cell-val" id="calc-deposit">KES 27,200</div>
                     </div>
                     <div class="calc-cell highlight">
                         <div class="calc-cell-label">Monthly</div>
-                        <div class="calc-cell-val" id="calc-monthly" style="color:var(--gold)">KES 8,167</div>
+                        <div class="calc-cell-val" id="calc-monthly" style="color:var(--gold)">KES 11,400</div>
                     </div>
                     <div class="calc-cell">
                         <div class="calc-cell-label">Remaining Months</div>
@@ -4957,7 +5590,7 @@
                     <div class="cancel-row"><span class="cancel-key">Chama group withdrawal (&lt;30%)</span><span
                             class="cancel-val safe">Group booking remains active</span></div>
                     <div class="cancel-row"><span class="cancel-key">Lipa Kidogo Kidogo early exit</span><span
-                            class="cancel-val safe">All payments returned minus KES 1,500 admin</span></div>
+                            class="cancel-val safe">All payments returned minus KES 2,100 admin</span></div>
                     <div class="cancel-row"><span class="cancel-key">Price lock on confirmed booking</span><span
                             class="cancel-val safe">Rate frozen at booking date ✓</span></div>
                     <div class="cancel-row"><span class="cancel-key">Carbon cert on cancellation</span><span
@@ -5002,7 +5635,7 @@
                     <div class="cancel-row"><span class="cancel-key">14 days or less</span><span
                             class="cancel-val danger">100% of total invoice</span></div>
                     <div class="cancel-row"><span class="cancel-key">Infrastructure tax at check-in</span><span
-                            class="cancel-val danger">$5 pp/day · payable at property</span></div>
+                            class="cancel-val danger">$7 pp/day · payable at property</span></div>
                     <div class="cancel-row"><span class="cancel-key">Group discount (10+ rooms)</span><span
                             class="cancel-val safe">Special rates — enquire with Akiba</span></div>
                     <div class="cancel-row"><span class="cancel-key">Chama partial withdrawal</span><span
@@ -5049,7 +5682,7 @@
                                 Account 1314843915</strong> (Sarit Centre Branch, SWIFT KCBLKENX). We maintain a savings
                             ledger in your name or your Chama's name. Your money is not transferred to any hotel until
                             you confirm your travel dates. Until then, it is fully refundable (with the sole deduction
-                            of a KES 1,500 admin fee if you exit before travel). Nothing is locked away. You own your
+                            of a KES 2,100 admin fee if you exit before travel). Nothing is locked away. You own your
                             savings. We are the vehicle that gets you there.</div>
                     </div>
                 </div>
@@ -5084,7 +5717,7 @@
                     <div class="faq-answer">
                         <div class="faq-answer-inner">The Akiba Curated Rates shown are <strong>all-inclusive of taxes
                                 and our carbon certification contribution.</strong> There are no hidden surcharges from
-                            Akiba Safaris. However: Kendwa Rocks charges a <strong>$5 pp/day infrastructure tax</strong>
+                            Akiba Safaris. However: Kendwa Rocks charges a <strong>$7 pp/day infrastructure tax</strong>
                             at check-in — we always tell you this in advance. Temple Point and Severin rates are all-in.
                             Nokras properties have activity costs (rafting, ziplining, bungee) that are at-fee — clearly
                             marked. We will never send you to a property with a bill you didn't know about.</div>
@@ -5118,9 +5751,9 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)"><span class="faq-q-text">My package is under
-                            KES 50,000. Why is the plan only 6 months?</span><span class="faq-icon">+</span></button>
+                            KES 69,000. Why is the plan only 6 months?</span><span class="faq-icon">+</span></button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">Packages below KES 50,000 are close enough to reach in half a year
+                        <div class="faq-answer-inner">Packages below KES 69,000 are close enough to reach in half a year
                             without strain. Stretching a short-distance save over 12 months creates savings fatigue —
                             people lose motivation when the destination feels far away. A 6-month plan keeps the goal
                             vivid and the commitment active. If your circumstances require longer, simply tell us — we
@@ -5183,15 +5816,15 @@
                     <div class="reminder-form-row">
                         <select class="reminder-select" id="rem-package">
                             <option value="">Select your package</option>
-                            <option value="Highland Escape|42000|6|7000">Highland Escape · KES 42,000 · 6 months
+                            <option value="Highland Escape|42000|6|7000">Highland Escape · KES 58,000 · 6 months
                             </option>
-                            <option value="Bush Escape|98000|12|8167">Bush Escape · KES 98,000 · 12 months</option>
-                            <option value="Savanna Retreat|192000|12|16000">Savanna Retreat · KES 192,000 · 12 months
+                            <option value="Bush Escape|98000|12|8167">Bush Escape · KES 135,300 · 12 months</option>
+                            <option value="Savanna Retreat|192000|12|16000">Savanna Retreat · KES 265,000 · 12 months
                             </option>
-                            <option value="Coastal Retreat|290000|12|24167">Coastal Retreat · KES 290,000 · 12 months
+                            <option value="Coastal Retreat|290000|12|24167">Coastal Retreat · KES 400,200 · 12 months
                             </option>
                             <option value="Mara & Coast Signature|380000|12|31667">Mara &amp; Coast Signature · KES
-                                380,000 · 12 months</option>
+                                524,400 · 12 months</option>
                             <option value="Custom|0|12|0">Custom package — I'll enter my own amount</option>
                         </select>
                         <input class="reminder-input" type="number" id="rem-custom"
@@ -5264,7 +5897,7 @@
                 </div>
                 <div
                     style="font-family:var(--font-ui);font-size:0.6rem;font-weight:200;color:var(--ivory-dim);margin-bottom:1rem">
-                    Packages under KES 50,000 → 6-month fast-track plan applied automatically</div>
+                    Packages under KES 69,000 → 6-month fast-track plan applied automatically</div>
                 <button class="lpp-btn" onclick="calcLPP()">Calculate</button>
                 <div class="lpp-result" id="lpp-result" style="margin-top:1.2rem;display:none"></div>
             </div>
@@ -5273,7 +5906,7 @@
                 <p>KCB Bank: <strong>1314843915</strong> · Sarit Centre · SWIFT KCBLKENX</p>
                 <p>WhatsApp to activate: <strong>+254 714 203 338</strong></p>
                 <p style="font-size:0.75rem;margin-top:1rem">Your savings are fully redeemable against any Akiba Safaris
-                    package. No penalty for early completion. KES 1,500 admin fee only on full exit before travel.</p>
+                    package. No penalty for early completion. KES 2,100 admin fee only on full exit before travel.</p>
             </div>
             <a href="https://wa.me/254712420338?text=Hello%20Akiba%20Safaris%2C%20I%27d%20like%20to%20start%20a%20Lipa%20Kidogo%20Kidogo%20savings%20plan."
                 target="_blank" class="btn-gold"
@@ -5291,35 +5924,48 @@
     <div class="chat-window" id="chat-window">
         <div class="chat-header">
             <div class="chat-header-info">
-                <div class="chat-avatar">A</div>
+                <div class="chat-avatar">🌿</div>
                 <div>
-                    <div class="chat-header-name">Akiba Assistant</div>
+                    <div class="chat-header-name">Akiba · Safari Advisor</div>
                     <div class="chat-header-status">
                         <div class="chat-status-dot"></div>Online · Powered by AI
                     </div>
                 </div>
             </div>
-            <button class="chat-close" onclick="toggleChat()">✕</button>
+            <button class="chat-close" onclick="toggleChat()" aria-label="Close chat">✕</button>
         </div>
         <div class="chat-messages" id="chat-messages">
             <div class="msg msg-bot">
-                <div class="msg-bubble">Habari! 👋 I'm the Akiba Safaris assistant. I can help you with our packages,
-                    payment plans, destinations, cancellation policy, and more. What would you like to know?</div>
+                <div class="msg-bubble">Karibu sana! 🌍 I'm Akiba — your safari advisor. I know Kenya, I know the
+                    properties, and I know how to get you there affordably.<br><br>Tell me your budget, travel dates, or
+                    what kind of trip you have in mind — I'll build the path for you.</div>
                 <div class="quick-replies">
-                    <button class="quick-btn" onclick="sendQuick('How does Lipa Kidogo Kidogo work?')">How does LKK
-                        work?</button>
-                    <button class="quick-btn" onclick="sendQuick('What packages do you offer?')">Packages &
+                    <button class="quick-btn"
+                        onclick="sendQuick('I can save KES 8,000 per month. What can I afford?')">I save KES
+                        8K/month</button>
+                    <button class="quick-btn"
+                        onclick="sendQuick('Show me all 5 packages with prices and monthly savings')">All packages &
                         prices</button>
-                    <button class="quick-btn" onclick="sendQuick('What is the cancellation policy?')">Cancellation
-                        policy</button>
-                    <button class="quick-btn" onclick="sendQuick('How do I pay via M-Pesa?')">M-Pesa payments</button>
+                    <button class="quick-btn"
+                        onclick="sendQuick('When is the best time to visit the Maasai Mara?')">Best time for
+                        Mara?</button>
+                    <button class="quick-btn"
+                        onclick="sendQuick('How does Lipa Kidogo Kidogo work? Walk me through it step by step.')">How
+                        LKK works</button>
+                    <button class="quick-btn"
+                        onclick="sendQuick('My Chama has 8 members. Which package fits us?')">Chama group plan</button>
+                    <button class="quick-btn"
+                        onclick="sendQuick('What is the cheapest way to go on a real safari in Kenya?')">Cheapest real
+                        safari</button>
                 </div>
             </div>
         </div>
         <div class="chat-input-area">
-            <input class="chat-input" type="text" id="chat-input" placeholder="Type your question..."
-                onkeydown="if(event.key==='Enter')sendMessage()">
-            <button class="chat-send" onclick="sendMessage()">→</button>
+            <input class="chat-input" type="text" id="chat-input"
+                placeholder="Ask me anything — budget, dates, destinations..."
+                onkeydown="if(event.key==='Enter' && !event.shiftKey){event.preventDefault();sendMessage();}"
+                autocomplete="off" autocorrect="off" spellcheck="false">
+            <button class="chat-send" onclick="sendMessage()" aria-label="Send message">→</button>
         </div>
     </div>
 
@@ -5424,7 +6070,7 @@
             const el = document.getElementById('lpp-result');
             el.style.display = 'block';
             el.innerHTML = `
-    ${total < 50000 ? '<em style="color:var(--sage-light);font-size:0.8rem;display:block;margin-bottom:0.5rem">📌 Under KES 50,000 — 6-month fast-track plan applied.</em>' : ''}
+    ${total < 50000 ? '<em style="color:var(--sage-light);font-size:0.8rem;display:block;margin-bottom:0.5rem">📌 Under KES 69,000 — 6-month fast-track plan applied.</em>' : ''}
     Monthly payment (total): <strong style="color:var(--ivory)">KES ${monthly.toLocaleString()}</strong><br>
     ${group > 1 ? `Per person in group of ${group}: <strong style="color:var(--ivory)">KES ${perPerson.toLocaleString()}/month</strong><br>` : ''}
     Complete in ${months} months · Total: <strong style="color:var(--ivory)">KES ${(monthly * months).toLocaleString()}</strong><br><br>
@@ -5478,75 +6124,268 @@
         let chatOpen = false;
         let chatHistory = [];
 
-        const SYSTEM_PROMPT = `You are the Akiba Safaris customer assistant — warm, knowledgeable, and direct. You speak in a friendly but professional tone, occasionally using Swahili phrases naturally. You help customers understand Akiba Safaris packages, payment plans, and policies.
+        const SYSTEM_PROMPT = `You are Akiba — the intelligent safari planning assistant for Akiba Safaris and Raw Unwind Safaris. You are not a generic chatbot. You are a knowledgeable, sharp, and warm safari advisor who thinks like a seasoned travel consultant. You speak Swahili naturally, you know Kenya deeply, and you help Kenyans get to places they deserve to be.
 
-KEY FACTS YOU MUST KNOW:
+Your personality: warm but not sycophantic, direct but never cold, intelligent but never condescending. You give real answers, real prices, and real advice. You never say "I'm just an AI" — you are Akiba, you are here to help.
 
-BRAND: Akiba Safaris is a sub-brand of Raw Unwind Safaris, Kenya's first carbon-zero regenerative tour operator. Tagline: "Lipa Kidogo Kidogo, Safiri Kama Tajiri" (Pay little by little, travel like royalty).
+══════════════════════════════════════════
+BRAND INTELLIGENCE
+══════════════════════════════════════════
 
-PAYMENT:
-- "Lipa Kidogo Kidogo" = monthly instalment savings plan
+AKIBA SAFARIS: Kenya's resident market safari brand. Sub-brand of Raw Unwind Safaris — Kenya's first carbon-zero regenerative tour operator. Tagline: "Lipa Kidogo Kidogo, Safiri Kama Tajiri" (Pay little by little, travel like royalty). Every booking is carbon-zero verified through Mikoko Pamoja mangrove restoration. After 3 completed Akiba journeys, guests receive an Invisible Invitation to the Raw Unwind Private Sanctum (ultra-luxury tier).
+
+RAW UNWIND SAFARIS: The premium/international parent brand. Ultra-premium regenerative safaris. Not discussed in detail unless customer specifically asks.
+
+══════════════════════════════════════════
+PAYMENT SYSTEM — LIPA KIDOGO KIDOGO
+══════════════════════════════════════════
+
+How it works:
+- Pay a 20% deposit to confirm your booking immediately
+- Save monthly in instalments over 1–12 months
+- Your rate is FROZEN at booking date — no price increases
+- On the 5th of every month, personalised WhatsApp reminder sent
+- No penalties for missed payments — just adjust the timeline
+- Early exit: All payments returned minus KES 1,800 admin fee
+- Packages under KES 60,000 → automatically 6-month plan
+
+Payment channels:
 - M-Pesa Paybill: 522522, Account: 7580761
-- KCB Bank: 1314843915 (Sarit Centre Branch, SWIFT KCBLKENX)
-- 1-8 month plans: rack rate × 1.20 markup
-- 9-12 month plans: rack rate × 1.30 markup
-- 20% deposit confirms booking immediately
-- Packages under KES 50,000 → automatically 6-month plan
-- No penalties for missed monthly payments, just adjust timeline
+- KCB Bank: Account 1314843915 (Sarit Centre Branch, SWIFT KCBLKENX)
 - WhatsApp: +254 714 203 338
 
-PACKAGE TIERS:
-1. Highland Escape: KES 42,000 (2 adults, 2 nights) - Sagana/Embu/Murang'a - KES 7,000/month × 6 months
-2. Bush Escape: KES 98,000 (2 adults, 3 nights Full Board) - Tsavo Mara - KES 8,167/month × 12 months
-3. Savanna Retreat: KES 192,000 (2 adults, 3 nights) - Severin Safari Camp - KES 16,000/month × 12 months
-4. Coastal Retreat: KES 290,000 (2 adults, 4 nights Full Board) - Temple Point Watamu or Kendwa Zanzibar - KES 24,167/month × 12 months
-5. Mara & Coast Signature: KES 380,000 (2 adults, 7 nights) - Nokras Enkare Mara + Temple Point - KES 31,667/month × 12 months
+Instalment multipliers (internal reference only — never share with customers):
+- 1–8 month plans: standard rate
+- 9–12 month plans: slight premium applies
 
-PARTNER PROPERTIES (15+):
-- Nokras Silver Oak Embu, Nokras Hotel Murang'a, Nokras Riverine Sagana, Nokras Enkare Maasai Mara, Mwembe Resort Malindi, Temple Point Watamu, Man Eaters Camp Tsavo East, Severin Safari Camp Tsavo West (KENBALI Spa), Kendwa Rocks Zanzibar, Eliata Bush Camp (STO anchor), Heritage Hotels (Mara Intrepids KES 66890 Jul-Oct / KES 47220 Nov-Dec double FB; flying pkg KES 131600/2nights from Wilson; Samburu Intrepids, Voyager Beach Mombasa all-inclusive from KES 30365), Kibo Safari Camp Amboseli (Resident KES rates: Club double FB KES 41,600 green / KES 45,500 high / KES 57,200 peak / KES 52,000 festive; Deluxe double FB KES 32,000 green / KES 35,000 high / KES 44,000 peak; Child 4-11 peak KES 14,300; 10% commission), Mara Maisha Camp (Resident KES rates: Club double FB KES 45,500 green / KES 49,400 high / KES 79,300 peak migration / KES 52,000 festive; Deluxe double FB KES 35,000 green / KES 38,000 high / KES 61,000 peak; Child 4-11 peak KES 19,825; 10% commission), Maisha Sweetwaters Ol Pejeta (Resident KES rates: Morani double FB KES 41,600 green / KES 46,800 high / KES 58,500 peak / KES 58,500 festive; Deluxe double FB KES 32,000 green / KES 36,000 high / KES 45,000 peak; Child 4-11 peak KES 14,625; 15% commission — highest in circuit), La Perla Beach Resort Zanzibar (19 rooms, boutique NE coast), YASA Boutique Hotel Nungwi (10 rooms, Comfort Cove from USD 29-75/month depending on season), Esiankiki Resort & Spa Central Kenya (CORRECTED: Central Kenya, not Rift Valley) (tour op nett: Executive Double BB KES 10,000 / HB KES 15,000; Executive Cottage FB KES 25,000; peak season Apr/Aug/Dec; conference KES 3,500 pp full day; M-Pesa Till 5847161), Diani Reef Beach Resort & Spa (KES resident: Premium Garden Dbl BB KES 22,000 / Deluxe FB KES 33,000 / Zuri Suite AI KES 56,000; Festive Premium Garden AI KES 73,000; Easter 1-5 Apr; 10% commission; M-Pesa Paybill 583053), Diani Sea Resort All-Inclusive (KES resident pp sharing: Jun KES 11,500 / Peak Jul-Sep KES 13,400 / Oct-Dec KES 15,000 / Festive KES 22,700; closed 20 Apr-8 Jun; 12.5% commission; M-Pesa Paybill 800644), Diani Sea Lodge All-Inclusive (KES resident pp sharing: May-Jul KES 11,000 / Peak Jul-Sep KES 13,000 / Oct-Dec KES 14,300 / Festive KES 22,100; Family Suite supplement KES 3,500/night; 12.5% commission; M-Pesa Paybill 800645), Morning Star Diani Apartment Hotel (Resident KES: Studio/1-Bed Sgl BB KES 7,750 / Dbl BB KES 11,250 / 2-Bed Dbl BB KES 16,950 / 4-Bed Villa RO KES 48,000; HB add-on KES 2,500pp / FB add-on KES 4,800pp; long-stay discounts available), Awali Serengeti Camp Tanzania (double netto USD 350 high / USD 280 shoulder / USD 210 green)
+══════════════════════════════════════════
+PACKAGE TIERS — 2026 PRICES
+══════════════════════════════════════════
 
-CANCELLATION POLICY:
-- 60+ days before: Full deposit refund (minus bank charges)
-- 59-45 days: 50% refund OR full reschedule credit
-- 44-30 days: Deposit forfeited, balance waived
-- 29-15 days: 50% of total invoice
-- 14 days or less: 100% of total invoice
-- Force majeure: Full reschedule credit, no forfeiture
-- Chama groups: Individual member withdrawal (<30%) does NOT cancel the group booking
-- Lipa Kidogo Kidogo early exit: All payments returned minus KES 1,500 admin fee
-- Temple Point: 45-day free cancellation window
-- Price locked at booking date always
+1. HIGHLAND ESCAPE — KES 58,000
+   For 2 adults · 2 nights · BB or Full Board
+   Properties: Nokras Riverine Sagana, Nokras Silver Oak Embu, Nokras Hotel Murang'a
+   Highlights: Aqua Park, Tana River rafting, highland nature, team building
+   Monthly: KES 9,700/month × 6 months (or KES 4,850 × 12)
+   Best for: First-time savers, weekend escapes, Chama starters, families within 2hrs of Nairobi
+   
+2. BUSH ESCAPE — KES 135,300
+   For 2 adults · 3 nights · Full Board
+   Properties: Man Eaters Camp (Tsavo East), Manyatta Camp (Tsavo West), Eliata Bush Camp
+   Highlights: Game drives, red elephants, raw wilderness, SGR or road transfer
+   Monthly: KES 11,300/month × 12 months (or KES 22,600 × 6)
+   Best for: First real safari, couples, bush lovers, affordable wildlife immersion
 
-CHAMA GROUPS:
-- 4+ members needed to open group plan
-- Registration preferred but not required to start saving
-- 1-in-15 complimentary for Severin/Kendwa at 15+ pax
-- Monthly WhatsApp reminders sent 5th of each month
+3. SAVANNA RETREAT — KES 265,000
+   For 2 adults · 3 nights · Full Board
+   Properties: Severin Safari Camp (Tsavo West, KENBALI Spa), Heritage Hotels, Kibo Safari Amboseli
+   Highlights: SGR train access, spa, game drives, Kilimanjaro views at Amboseli
+   Monthly: KES 22,100/month × 12 months
+   Best for: Anniversary/honeymoon, upgrade safari, spa-seekers, Amboseli circuit
 
-CARBON: Every booking includes Mikoko Pamoja blue carbon offset. Certificate issued even if trip is cancelled (offset already made). Kenya's first verified carbon-zero tour operator.
+4. COASTAL RETREAT — KES 400,200
+   For 2 adults · 4 nights · Full Board
+   Properties: Temple Point Resort Watamu, Kendwa Rocks Zanzibar, Diani Reef Beach Resort
+   Highlights: Marine National Park snorkelling, dhow cruise, creek views, reef at your door
+   Monthly: KES 33,400/month × 12 months
+   Best for: Beach lovers, Zanzibar dreamers, anniversary escapes, coast families
+   Note: Temple Point has a 45-day free cancellation window
 
-SANCTUM: After 3 completed Akiba journeys, guests receive Invisible Invitation to Raw Unwind Sanctum (ultra-luxury tier).
+5. MARA & COAST SIGNATURE — KES 524,400
+   For 2 adults · 7 nights · Mara + Coast combined
+   Properties: Nokras Enkare Luxury Tented Camp (Mara) + Temple Point (Watamu)
+   Highlights: 4 nights Mara, 3 nights coast, internal flights, game drives, cultural walks, ziplining
+   Monthly: KES 43,700/month × 12 months
+   Best for: Legacy travellers, Chama Tembo tier, milestone celebrations, Akiba Legacy Register entry
+   Special: Completes Journey 1 — 2 more and you receive the Invisible Invitation to Raw Unwind Sanctum
 
-Contact: koome@rawunwindsafaris.com, +254 714 203 338, rawunwindsafaris.com
+══════════════════════════════════════════
+PARTNER PROPERTIES — FULL RATE CARD
+══════════════════════════════════════════
 
-Always be helpful, warm, and honest. If you don't know something specific, direct them to WhatsApp +254 714 203 338 or email koome@rawunwindsafaris.com. Keep responses concise (2-4 paragraphs max unless a detailed breakdown is needed). Use Swahili naturally: "Karibu!" (Welcome), "Asante" (Thank you), "Sawa sawa" (Okay/alright), "Hakuna matata" (No problem).`;
+CENTRAL HIGHLANDS:
+• Nokras Silver Oak Embu: Deluxe Dbl BB KES 12,300 / Executive Dbl BB KES 17,600 / Family (4 guests) KES 33,000
+• Nokras Hotel Murang'a: Standard PPS FB KES 9,300 / VIP PPS FB KES 15,300 / Conf+Accom PPS KES 19,000
+• Nokras Riverine Sagana: Standard Sgl BB KES 9,000 / Deluxe PPS BB KES 11,100 / Family Room (2A+2C) KES 41,500 / Conf Full Day KES 5,600
+• Esiankiki Resort & Spa (Central Kenya): Executive Double BB and Cottage rates on request — premium retreat property
+
+TSAVO REGION:
+• Man Eaters Camp (Tsavo East): High Season PPS FB KES 13,800 / Low Season PPS FB KES 12,500 / Single FB KES 18,000
+• Manyatta Camp (Tsavo West): Main Season PPS FB KES 19,000 / Single FB KES 25,300 / Low Season PPS KES 15,200
+• Severin Safari Camp (Tsavo West, KENBALI Spa): SSC01 2-night package PPS KES 42,800 / Junior Suite Dbl FB KES 39,200 / KENBALI Spa 30min KES 6,500
+• Eliata Bush Camp (STO Anchor — Amboseli area): Low Season Dbl KES 20,700 / High Season Dbl KES 28,800 / Triple High KES 40,300 / Honeymoon pkg KES 9,200/couple
+
+MAASAI MARA:
+• Nokras Enkare Luxury Tented Camp: Deluxe PPS BB KES 10,500 / Executive PPS BB KES 9,800 / Deluxe AI Single KES 18,700 / Family FB (2A+3C) KES 60,800
+• Mara Intrepids Camp (Heritage): Jul–Oct Dbl FB KES 80,300 / Nov–Dec Dbl FB KES 56,700 / Flying Pkg 2 nights KES 158,000
+• Samburu Intrepids Camp (Heritage): Jul–Oct Dbl FB KES 43,700 / Nov–Dec KES 37,100 / Flying Pkg 2 nights KES 131,000
+• Kibo Safari Camp Amboseli: Club Dbl FB — Green KES 50,000 / High KES 54,600 / Peak KES 68,700 / Festive KES 62,400; Deluxe Dbl FB — Green KES 38,400 / High KES 42,000 / Peak KES 52,800; Child 4–11 Peak KES 17,200
+• Mara Maisha Camp: Club Dbl FB — Green KES 54,600 / High KES 59,300 / Peak (Migration) KES 95,200 / Festive KES 62,400; Deluxe Dbl FB — Peak KES 73,200; Child 4–11 Peak KES 23,800
+• Maisha Sweetwaters Ol Pejeta (Rhino & Chimp sanctuary): Morani Dbl FB — Green KES 50,000 / High KES 56,200 / Peak KES 70,200 / Festive KES 70,200; Deluxe Dbl FB Peak KES 54,000; Child 4–11 Peak KES 17,600
+
+KENYA COAST:
+• Temple Point Resort Watamu: Cozy Dbl BB KES 33,200 / Boutique Dbl BB KES 40,600 / Creek Deluxe Dbl FB KES 62,700; 45-day free cancellation
+• Mwembe Resort Malindi: 1BR Low Season KES 8,800 / 2BR Low Season KES 14,600 / 1BR High Season KES 13,000 / FB supplement pp/day KES 6,300
+• Watamu Turtle Bay Circuit: 3-night package 2 adults all-in KES 98,000 (turtle conservation experience)
+• Diani Reef Beach Resort & Spa: Premium Garden Dbl BB KES 26,400 / Deluxe FB KES 39,600 / Zuri Suite AI KES 67,200 / Festive Premium AI KES 87,600 / Easter KES 29,900
+• Diani Sea Resort (All-Inclusive): Jun KES 13,800 / Peak Jul–Sep KES 16,100 / Oct–Dec KES 18,000 / Festive KES 27,300 pp sharing; Closed 20 Apr–8 Jun 2026
+• Diani Sea Lodge (All-Inclusive): May–Jul KES 13,200 / Peak Jul–Sep KES 15,600 / Oct–Dec KES 17,200 / Festive KES 26,600 pp sharing
+• Morning Star Diani Apartment Hotel: Studio/1-Bed Sgl BB KES 9,300 / Dbl BB KES 13,500 / 2-Bed Dbl KES 20,400 / 4-Bed Villa KES 57,600
+• Voyager Beach Resort Mombasa (Heritage, All-Inclusive): Superior Sea View Jul KES 30,400 / Executive Sea View Jul KES 39,400 / Festive Superior AI KES 78,500 / Festive Executive KES 81,500
+
+ZANZIBAR & TANZANIA:
+• Kendwa Rocks Resort (Zanzibar): Superior AI Dbl USD 264 pp / Pool Bungalow AI USD 354 pp; 120-day advance booking = 15% discount
+• YASA Boutique Hotel Nungwi (10 rooms): Comfort Cove Jul–Aug USD 74 / Dual Delight Jul–Aug USD 83 / Double Loft Dec USD 104 / Breakfast add-on USD 12+
+• La Perla Beach Resort (Zanzibar NE Coast, 19 rooms): Deluxe Ocean View, romantic dining, snorkelling, yoga, spa — rates on request
+• Awali Serengeti Camp (Tanzania, Seronera zone): High Season (Jul–Aug, 20–31 Dec) USD 420 pp / Shoulder (Jan–Feb, Jun, Sep–Oct) USD 336 pp / Green (Mar–May, Nov–19 Dec) USD 252 pp; All-Inclusive supplement USD 51 pp
+
+NAIROBI:
+• Hillpark Hotel: Full Day Conference KES 5,300 pp / Half Day KES 3,200 pp / Overnight + Conf KES 11,300 pp
+
+══════════════════════════════════════════
+CHAMA GROUP PLANS
+══════════════════════════════════════════
+
+4+ members needed to open a group Lipa Kidogo Kidogo plan.
+Registration preferred but not required to start saving.
+Monthly WhatsApp reminders sent 5th of each month to all members.
+1-in-15 complimentary rule: For groups of 15+ pax at Severin or Kendwa, one member travels free.
+
+Chama Tiers:
+- TWENDE CHAMA (6 members, KES 1,500/pp/month × 6 months) → Highland Escape
+- SIMBA CHAMA (8 members, KES 2,400/pp/month × 12 months) → Bush Escape or Savanna Retreat
+- TEMBO CHAMA (10 members, KES 3,800/pp/month × 12 months) → Mara & Coast Signature
+- UZITO CHAMA (15 members, KES 2,000/pp/month × 12 months) → Family Coastal multi-unit
+
+══════════════════════════════════════════
+CANCELLATION POLICY
+══════════════════════════════════════════
+
+- 60+ days before travel: Full deposit refund (minus bank charges)
+- 59–45 days: 50% refund OR full reschedule credit (your choice)
+- 44–30 days: Deposit forfeited, remaining balance waived
+- 29–15 days: 50% of total invoice charged
+- 14 days or less: 100% of total invoice charged
+- Force majeure (floods, political unrest, etc.): Full reschedule credit, no forfeiture
+- Chama groups: One member withdrawing (under 30% of group) does NOT cancel the group booking
+- Lipa Kidogo Kidogo early exit: All payments returned minus KES 1,800 admin fee
+- Temple Point exception: 45-day free cancellation window
+- CRITICAL: Price is always locked at booking date — no adjustments ever
+
+══════════════════════════════════════════
+CONVERSATION INTELLIGENCE RULES
+══════════════════════════════════════════
+
+1. ALWAYS RECOMMEND A PACKAGE: When someone describes what they want, match them to a specific package and explain why. Don't just list options.
+
+2. CALCULATE ON THE FLY: If someone says "I can save KES 5,000 a month", calculate exactly which package they can reach and in how many months. Show the maths.
+   Formula: Monthly saving × months = total. Recommend the best package they can afford.
+
+3. HANDLE OBJECTIONS DIRECTLY:
+   - "Too expensive" → Break it into monthly amounts. "That's KES X per month — less than a monthly airtime top-up."
+   - "I don't trust saving plans" → Explain price-lock and early exit policy.
+   - "Can I go solo?" → Adjust pricing: most packages are quoted for 2 adults. Solo travellers pay a single supplement (typically 150% of pp rate).
+
+4. SPEAK IN SWAHILI WHEN NATURAL — do not force it but use:
+   - "Karibu sana" (very welcome)
+   - "Asante" (thank you)
+   - "Sawa sawa" (okay/alright)
+   - "Hakuna matata" (no problem)
+   - "Safari njema" (safe journey / have a good trip)
+   - "Poa" (cool/great — casual)
+   - "Mambo?" / "Poa, mambo?" (casual greetings)
+   - "Tutasaidia" (we'll help you)
+
+5. DESTINATION EXPERTISE: You know Kenya. If someone asks "where should I go in October?", tell them. October is shoulder season — great for Amboseli (Kilimanjaro views clear), reasonable Mara rates, and Diani coast.
+
+6. SEASONAL GUIDANCE:
+   - JAN–FEB: Dry, good wildlife. Shoulder season rates. Great Amboseli.
+   - MAR–MAY: Long rains. Green season — low rates, lush landscapes, fewer crowds.
+   - JUN–JUL: Dry season begins. Migration starts building. Rates rise.
+   - AUG–SEP: PEAK. Great Migration in Mara. Highest rates. Book 6+ months ahead.
+   - OCT: Short rains start. Good rates. Amboseli excellent. Diani still good.
+   - NOV–DEC: Green season. Great value. Festive rates kick in 20–23 Dec.
+
+7. RESPONSE FORMAT: 
+   - Conversational, warm, direct. 
+   - Use line breaks and bullet points for lists of properties or prices.
+   - Max 3–4 short paragraphs unless they ask for a full breakdown.
+   - NEVER use hollow phrases like "Great question!" or "Certainly!" — just answer.
+   - If you calculate monthly payments, show the working clearly.
+
+8. WHAT YOU NEVER DO:
+   - Never reveal Akiba's commission or markup structure
+   - Never promise specific availability without directing to confirmation via WhatsApp
+   - Never give visa advice or medical advice — direct to relevant authorities
+   - Never compare Akiba unfavourably to other operators
+
+9. ESCALATION: For any booking confirmation, group enquiries over 8 pax, custom itineraries, or corporate packages — always direct to:
+   WhatsApp: +254 714 203 338
+   Email: koome@rawunwindsafaris.com
+   Website: rawunwindsafaris.com
+
+══════════════════════════════════════════
+SAMPLE INTERACTIONS (how to respond)
+══════════════════════════════════════════
+
+Q: "Niko na budget ya KES 8,000 kwa mwezi — naweza kwenda wapi?"
+A: Calculate: KES 8,000 × 12 months = KES 96,000. That gets you close to the Bush Escape (KES 135,300). In 12 months you'd have KES 96,000 — short by about KES 39,300. Two options: 1) Save KES 11,300/month for 12 months and hit it exactly. 2) Start with the Highland Escape (KES 58,000 — only KES 9,700/month × 6 months) and use the experience to plan your next journey. Which direction feels right?
+
+Q: "How many months to save for Zanzibar?"
+A: The Coastal Retreat (Kendwa Rocks Zanzibar) is KES 400,200 for 2 adults. At KES 33,400/month that's exactly 12 months. You confirm your booking with a 20% deposit (KES 80,040) and your rate is frozen from day one. Or save faster — KES 50,000/month for 8 months. Zanzibar in August — the water is perfect.
+
+Q: "What's the cheapest way to try a real safari?"
+A: Man Eaters Camp, Tsavo East. Named for the lions that stopped the Uganda Railway in 1898 — the legend alone is worth the trip. Bush Escape package: KES 135,300 total, KES 11,300/month for 12 months. 3 nights full board, game drives at dawn, red elephants. That is a real safari.
+
+Contact: koome@rawunwindsafaris.com | +254 714 203 338 | rawunwindsafaris.com`;
 
         function toggleChat() {
             chatOpen = !chatOpen;
-            document.getElementById('chat-window').classList.toggle('open', chatOpen);
-            if (chatOpen) document.getElementById('chat-input').focus();
+            const win = document.getElementById('chat-window');
+            const bubble = document.querySelector('.chat-bubble');
+            win.classList.toggle('open', chatOpen);
+            if (chatOpen) {
+                setTimeout(() => document.getElementById('chat-input').focus(), 100);
+                if (bubble) bubble.setAttribute('aria-expanded', 'true');
+            } else {
+                if (bubble) bubble.setAttribute('aria-expanded', 'false');
+            }
         }
+
+        // Close chat when clicking outside on mobile
+        document.addEventListener('click', function (e) {
+            const win = document.getElementById('chat-window');
+            const bubble = document.querySelector('.chat-bubble');
+            if (chatOpen && win && !win.contains(e.target) && bubble && !bubble.contains(e.target)) {
+                if (window.innerWidth <= 768) {
+                    toggleChat();
+                }
+            }
+        });
 
         function sendQuick(text) {
             document.getElementById('chat-input').value = text;
             sendMessage();
         }
 
+        function formatBotText(text) {
+            // Convert markdown-style formatting to HTML
+            return text
+                .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+                .replace(/^- (.+)$/gm, '<li>$1</li>')
+                .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/\n/g, '<br>')
+                .replace(/^(.+)$/, '<p>$1</p>');
+        }
+
         function addMessage(text, isUser) {
             const messages = document.getElementById('chat-messages');
             const msg = document.createElement('div');
             msg.className = `msg msg-${isUser ? 'user' : 'bot'}`;
-            msg.innerHTML = `<div class="msg-bubble">${text.replace(/\n/g, '<br>')}</div>`;
+            const formatted = isUser ? text.replace(/\n/g, '<br>') : formatBotText(text);
+            msg.innerHTML = `<div class="msg-bubble">${formatted}</div>`;
             messages.appendChild(msg);
             messages.scrollTop = messages.scrollHeight;
         }
@@ -5570,7 +6409,11 @@ Always be helpful, warm, and honest. If you don't know something specific, direc
             const input = document.getElementById('chat-input');
             const text = input.value.trim();
             if (!text) return;
+            // Disable input during processing
             input.value = '';
+            input.disabled = true;
+            const sendBtn = document.querySelector('.chat-send');
+            if (sendBtn) sendBtn.disabled = true;
             addMessage(text, true);
             chatHistory.push({ role: 'user', content: text });
             addTyping();
@@ -5580,19 +6423,33 @@ Always be helpful, warm, and honest. If you don't know something specific, direc
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         model: 'claude-sonnet-4-20250514',
-                        max_tokens: 1000,
+                        max_tokens: 1500,
                         system: SYSTEM_PROMPT,
                         messages: chatHistory
                     })
                 });
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
                 const data = await response.json();
                 removeTyping();
-                const reply = data.content?.[0]?.text || "Samahani — something went wrong. Please WhatsApp us directly at +254 714 203 338.";
+                const reply = data.content?.[0]?.text || "Samahani — something went wrong. Please WhatsApp us at +254 714 203 338.";
                 chatHistory.push({ role: 'assistant', content: reply });
                 addMessage(reply, false);
+                // Keep history manageable — trim to last 20 exchanges (40 messages)
+                if (chatHistory.length > 40) {
+                    chatHistory = chatHistory.slice(-40);
+                }
             } catch (err) {
                 removeTyping();
-                addMessage("Samahani — I'm having trouble connecting right now. Please WhatsApp us directly at +254 714 203 338 or email koome@rawunwindsafaris.com.", false);
+                const errMsg = err.message && err.message.includes('401')
+                    ? "The AI assistant needs configuration. Please WhatsApp us directly at +254 714 203 338."
+                    : "Samahani — connection issue. Please WhatsApp us at +254 714 203 338 or email koome@rawunwindsafaris.com.";
+                addMessage(errMsg, false);
+            } finally {
+                input.disabled = false;
+                if (sendBtn) sendBtn.disabled = false;
+                input.focus();
             }
         }
     </script>
