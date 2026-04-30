@@ -42,8 +42,8 @@
             <div class="w-12 h-12 border-4 border-green-700 border-t-transparent rounded-full animate-spin"></div>
         </div>
 
-        <!-- GRID -->
-        <div id="grid" class="hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- GRID — ✅ FIXED: removed "grid" class from here, added via JS after hidden is removed -->
+        <div id="grid" class="hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         </div>
 
     </div>
@@ -63,71 +63,75 @@
                 const items = data.portfolios || data;
 
                 spinner.style.display = "none";
+
+                // ✅ FIXED: explicitly add "grid" display class when revealing
                 grid.classList.remove("hidden");
+                grid.classList.add("grid");
 
                 if (!items.length) {
                     grid.innerHTML = `
-                    <p class="col-span-full text-center text-gray-500">
-                        No portfolio available.
-                    </p>
-                `;
+                        <p class="col-span-full text-center text-gray-500">
+                            No portfolio available.
+                        </p>
+                    `;
                     return;
                 }
 
                 grid.innerHTML = items.map(item => `
-                
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col">
 
-                    <!-- IMAGE -->
-                    <div class="overflow-hidden">
-                        <img src="${item.image || placeholder}"
-                             class="w-full h-44 object-cover hover:scale-105 transition duration-500">
-                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col">
 
-                    <!-- CONTENT -->
-                    <div class="p-5 flex flex-col flex-1">
+                        <!-- IMAGE -->
+                        <div class="overflow-hidden">
+                            <img src="${item.image || placeholder}"
+                                 class="w-full h-44 object-cover hover:scale-105 transition duration-500">
+                        </div>
 
-                        <h3 class="text-lg font-bold text-[#1a4d2e] mb-2">
-                            ${item.title}
-                        </h3>
+                        <!-- CONTENT -->
+                        <div class="p-5 flex flex-col flex-1">
 
-                        <p class="text-sm text-gray-600 mb-4 flex-grow">
-                            ${(item.content || "").substring(0, 90)}...
-                        </p>
+                            <h3 class="text-lg font-bold text-[#1a4d2e] mb-2">
+                                ${item.title}
+                            </h3>
 
-                        <!-- FOOTER -->
-                        <div class="flex items-center justify-between mt-auto">
+                            <p class="text-sm text-gray-600 mb-4 flex-grow">
+                                ${(item.content || "").substring(0, 90)}...
+                            </p>
 
-                            <span class="text-lg font-bold text-[#1a4d2e]">
-                                ${item.currency} ${item.price}
-                            </span>
+                            <!-- FOOTER -->
+                            <div class="flex items-center justify-between mt-auto">
 
-                            <a href="${item.url}"
-                               class="text-sm font-semibold text-green-800 flex items-center gap-1 hover:gap-2 transition-all">
-                                View
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                                     viewBox="0 0 24 24">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
+                                <span class="text-lg font-bold text-[#1a4d2e]">
+                                    ${item.currency} ${item.price}
+                                </span>
+
+                                <a href="${item.url}"
+                                   class="text-sm font-semibold text-green-800 flex items-center gap-1 hover:gap-2 transition-all">
+                                    View
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                         viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                </div>
-
-            `).join("");
+                `).join("");
 
             })
             .catch(err => {
                 spinner.style.display = "none";
                 grid.classList.remove("hidden");
+                grid.classList.add("grid");
                 grid.innerHTML = `
-                <p class="col-span-full text-center text-red-500">
-                    Failed to load data.
-                </p>
-            `;
+                    <p class="col-span-full text-center text-red-500">
+                        Failed to load data.
+                    </p>
+                `;
                 console.error(err);
             });
 
