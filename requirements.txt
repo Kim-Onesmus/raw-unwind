@@ -1,10 +1,11 @@
 asgiref==3.11.0
-Django==4.2.30
+dj-database-url==3.1.1
+Django==6.0.2
 django-ckeditor==6.7.3
-django-jazzmin==3.0.1
-django-js-asset==2.2.0
+django-jazzmin==3.0.2
+django-js-asset==3.1.2
 jmespath==1.1.0
-pillow==11.3.0
+pillow==12.1.1
 psycopg2-binary==2.9.11
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.1
@@ -14,5 +15,3 @@ typing_extensions==4.15.0
 tzdata==2025.3
 urllib3==2.6.3
 whitenoise==6.11.0
-
-
