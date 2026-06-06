@@ -22,7 +22,7 @@ class LegacyPortfolio(models.Model):
     title = models.CharField(max_length=255)
     currency = models.CharField(max_length=10, default="USD, KES")
 
-    price = models.CharField(help_text="Price per person")
+    price = models.CharField(max_length=100, help_text="Price per person")
     date = models.DateField(null=True, blank=True)
     duration_days = models.PositiveIntegerField(default=0)
     duration_nights = models.PositiveIntegerField(default=0)
@@ -51,7 +51,7 @@ class CulturalImmersions(models.Model):
     title = models.CharField(max_length=255)
     currency = models.CharField(max_length=10, default="USD")
 
-    price = models.CharField(help_text="Price per person")
+    price = models.CharField(max_length=100, help_text="Price per person")
     season = models.CharField(max_length=255, help_text="eg. July - October")
     community_impact = models.CharField(max_length=255, help_text="Supports Swahili artisan cooperatives and heritage preservation")
     includes = models.TextField(help_text="6 days, luxury mobile camp, Maasai cultural immersion")
