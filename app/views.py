@@ -167,3 +167,6 @@ def BlogDetails(request, slug):
 def QR(request):
     return render(request, 'app/qr.html')
 
+def CarbonCredits(request):
+    return render(request, 'app/carbon.html')
+

@@ -91,11 +91,6 @@
                                 Manifesto
                             </a>
 
-                            <a href="{% url 'akiba_safaris' %}"
-                                class="block px-5 py-3 text-sm hover:bg-black/5 transition" style="color:#1a4d2e;">
-                                Akiba Safaris
-                            </a>
-
                             <a href="{% url 'contact' %}" class="block px-5 py-3 text-sm hover:bg-black/5 transition"
                                 style="color:#1a4d2e;">
                                 Contact Us
@@ -106,11 +101,13 @@
                         class="font-body text-sm font-medium hover:opacity-70 transition-opacity"
                         style="color: #1a4d2e;">Legacy Portfolio</a> <a href="{% url 'index' %}#cultural-events"
                         class="font-body text-sm font-medium hover:opacity-70 transition-opacity"
-                        style="color: #1a4d2e;">Cultural Events</a> <a href="{% url 'index' %}#healing-journeys"
+                        style="color: #1a4d2e;">Cultural Immersion</a> <a href="{% url 'index' %}#healing-journeys"
                         class="font-body text-sm font-medium hover:opacity-70 transition-opacity"
-                        style="color: #1a4d2e;">Healing Journeys</a> <a href="{% url 'index' %}#carbon-calculator"
+                        style="color: #1a4d2e;">Digital Detox</a> <a href="{% url 'carbon_credits' %}"
                         class="font-body text-sm font-medium hover:opacity-70 transition-opacity"
-                        style="color: #1a4d2e;">Carbon Calculator</a>
+                        style="color: #1a4d2e;">Carbon Credits</a>
+                        <a href="{% url 'akiba_safaris' %}#carbon-calculator" class="font-body text-sm font-medium hover:opacity-70 transition-opacity"
+                            style="color: #1a4d2e;">Akiba Safaris</a>
                 </div>
                 <button id="nav-cta"
                     class="px-6 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-xl rounded-full"
@@ -174,10 +171,6 @@
                                     Manifesto
                                 </a>
 
-                                <a href="{% url 'akiba_safaris' %}" class="menu-link block px-4 py-2 rounded-lg text-sm"
-                                    style="color:#1a4d2e;">
-                                    Akiba Safaris
-                                </a>
 
                                 <a href="{% url 'contact' %}" class="menu-link block px-4 py-2 rounded-lg text-sm"
                                     style="color:#1a4d2e;">
@@ -194,17 +187,21 @@
 
                         <a href="#cultural-events" class="menu-link block px-4 py-3 rounded-xl font-medium"
                             style="color:#1a4d2e;">
-                            Cultural Events
+                            Cultural Immersion
                         </a>
 
                         <a href="#healing-journeys" class="menu-link block px-4 py-3 rounded-xl font-medium"
                             style="color:#1a4d2e;">
-                            Healing Journeys
+                            Digital Detox
                         </a>
 
-                        <a href="#carbon-calculator" class="menu-link block px-4 py-3 rounded-xl font-medium"
+                        <a href="{% url 'carbon_credits' %}" class="menu-link block px-4 py-3 rounded-xl font-medium"
                             style="color:#1a4d2e;">
-                            Carbon Calculator
+                            Carbon Credits
+                        </a>
+
+                        <a href="{% url 'akiba_safaris' %}" class="menu-link block px-4 py-3 rounded-xl font-medium" style="color:#1a4d2e;">
+                            Akiba Safaris
                         </a>
 
                         <a href="#faqs" class="menu-link block px-4 py-3 rounded-xl font-medium" style="color:#1a4d2e;">
