@@ -1,0 +1,1838 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Raw Unwind Safaris | Purpose-Driven Luxury Travel in Kenya</title>
+    <meta name="description"
+        content="Raw Unwind Safaris is a regenerative luxury operator rooted in Nyeri, Kenya — built on the conviction that travel's highest purpose is to heal the land, the community, and the traveller.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ═══════════════════════════════════════════════════════════ */
+        /*  DESIGN TOKENS                                             */
+        /* ═══════════════════════════════════════════════════════════ */
+        :root {
+            --rw-black: #0D1109;
+            --rw-green: #1C2B1A;
+            --rw-green-mid: #2E4A2C;
+            --rw-muted: #5A7357;
+            --rw-ochre: #C4872A;
+            --rw-ochre-lt: #D9A355;
+            --rw-cream: #F2E8D5;
+            --rw-cream-dk: #E4D5BC;
+            --rw-sand: #B8A48A;
+            --rw-white: #FAFAF7;
+
+            --font-display: 'Cinzel', serif;
+            --font-body: 'Cormorant Garamond', serif;
+            --font-ui: 'Jost', sans-serif;
+
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--rw-white);
+            color: var(--rw-black);
+            font-family: var(--font-ui);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--rw-ochre);
+            outline-offset: 3px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* ─── SCROLL REVEAL ────────────────────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+        }
+
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        .section-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        @media (max-width: 768px) {
+            .section-wrap {
+                padding: 0 24px;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════ */
+        /*  1. HERO                                                   */
+        /* ═══════════════════════════════════════════════════════════ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: var(--rw-green);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+        }
+
+        .hero__bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 60% at 30% 20%, rgba(196, 135, 42, 0.18) 0%, transparent 55%),
+                radial-gradient(ellipse 80% 70% at 80% 80%, rgba(46, 74, 44, 0.6) 0%, transparent 60%),
+                linear-gradient(160deg, #14200F 0%, #1C2B1A 45%, #233520 100%);
+        }
+
+        /* Hand-drawn horizon line silhouette using layered SVG-like shapes */
+        .hero__horizon {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 45%;
+            opacity: 0.5;
+        }
+
+        .hero__horizon svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    transparent 25%,
+                    rgba(13, 17, 9, 0.55) 72%,
+                    rgba(13, 17, 9, 0.92) 100%);
+            pointer-events: none;
+        }
+
+        .hero__rule {
+            position: absolute;
+            top: 80px;
+            left: 40px;
+            width: 1px;
+            height: 0;
+            background: var(--rw-ochre);
+            opacity: 0.6;
+            transition: height 1.2s 0.3s var(--ease-out);
+            z-index: 2;
+        }
+
+        .hero__rule.in-view {
+            height: 120px;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            padding: 0 40px 80px;
+            max-width: 860px;
+        }
+
+        .hero__eyebrow {
+            font-family: var(--font-display);
+            font-size: 10px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--rw-ochre);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.6s 0.2s var(--ease-out), transform 0.6s 0.2s var(--ease-out);
+        }
+
+        .hero__eyebrow.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero__eyebrow::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: var(--rw-ochre);
+            opacity: 0.5;
+        }
+
+        .hero__headline {
+            font-family: var(--font-body);
+            font-size: clamp(38px, 6vw, 76px);
+            font-weight: 300;
+            line-height: 1.05;
+            color: var(--rw-cream);
+            margin-bottom: 32px;
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s 0.35s var(--ease-out), transform 0.8s 0.35s var(--ease-out);
+        }
+
+        .hero__headline em {
+            font-style: italic;
+            color: var(--rw-ochre-lt);
+        }
+
+        .hero__headline.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero__sub {
+            font-family: var(--font-ui);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.75;
+            color: rgba(242, 232, 213, 0.65);
+            max-width: 520px;
+            margin-bottom: 56px;
+            opacity: 0;
+            transition: opacity 0.8s 0.5s var(--ease-out);
+        }
+
+        .hero__sub.in-view {
+            opacity: 1;
+        }
+
+        .hero__metrics {
+            display: flex;
+            gap: 56px;
+            flex-wrap: wrap;
+            opacity: 0;
+            transition: opacity 0.8s 0.65s var(--ease-out);
+        }
+
+        .hero__metrics.in-view {
+            opacity: 1;
+        }
+
+        .metric__num {
+            font-family: var(--font-body);
+            font-size: 38px;
+            font-weight: 400;
+            color: var(--rw-ochre-lt);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .metric__label {
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: rgba(242, 232, 213, 0.45);
+        }
+
+        .hero__scroll {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.4;
+            animation: scrollPulse 2.5s ease-in-out infinite;
+        }
+
+        .hero__scroll span {
+            font-family: var(--font-display);
+            font-size: 8px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--rw-cream);
+            writing-mode: vertical-rl;
+        }
+
+        .hero__scroll-line {
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, var(--rw-ochre), transparent);
+        }
+
+        @keyframes scrollPulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: translateY(0);
+            }
+
+            50% {
+                opacity: 0.6;
+                transform: translateY(6px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero__content {
+                padding: 0 24px 64px;
+            }
+
+            .hero__metrics {
+                gap: 32px;
+            }
+
+            .hero__rule {
+                left: 24px;
+            }
+
+            .hero__scroll {
+                right: 24px;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════ */
+        /*  2. STATEMENT BAND (marquee)                               */
+        /* ═══════════════════════════════════════════════════════════ */
+        .statement-band {
+            background: var(--rw-ochre);
+            padding: 28px 0;
+            overflow: hidden;
+        }
+
+        .statement-band__inner {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            white-space: nowrap;
+            animation: marquee 32s linear infinite;
+            width: max-content;
+        }
+
+        .statement-band__item {
+            font-family: var(--font-display);
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--rw-green);
+            flex-shrink: 0;
+        }
+
+        .statement-band__sep {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--rw-green);
+            opacity: 0.4;
+            flex-shrink: 0;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════ */
+        /*  3. ORIGIN STORY                                           */
+        /* ═══════════════════════════════════════════════════════════ */
+        .origin {
+            padding: 120px 0;
+            background: var(--rw-white);
+        }
+
+        .origin__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .origin__image-frame {
+            position: relative;
+            aspect-ratio: 3/4;
+            border-radius: 2px;
+            overflow: hidden;
+            background: linear-gradient(155deg, #1C2B1A 0%, #2E4A2C 55%, #3A4F33 100%);
+        }
+
+        /* Decorative SVG figure silhouette as placeholder art */
+        .origin__image-frame .placeholder-art {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .origin__image-frame::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 80px;
+            height: 80px;
+            border: 1px solid var(--rw-ochre);
+            opacity: 0.35;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .origin__caption {
+            margin-top: 16px;
+            font-family: var(--font-display);
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--rw-sand);
+            padding-left: 2px;
+        }
+
+        .origin__eyebrow {
+            font-family: var(--font-display);
+            font-size: 9px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--rw-ochre);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .origin__eyebrow::before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 1px;
+            background: var(--rw-ochre);
+            opacity: 0.6;
+        }
+
+        .origin__headline {
+            font-family: var(--font-body);
+            font-size: clamp(28px, 3.5vw, 44px);
+            font-weight: 400;
+            line-height: 1.15;
+            color: var(--rw-black);
+            margin-bottom: 36px;
+        }
+
+        .origin__headline em {
+            font-style: italic;
+            color: var(--rw-muted);
+        }
+
+        .origin__quote {
+            border-left: 2px solid var(--rw-ochre);
+            padding: 4px 0 4px 24px;
+            margin-bottom: 36px;
+        }
+
+        .origin__quote p {
+            font-family: var(--font-body);
+            font-size: 22px;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.5;
+            color: var(--rw-green);
+        }
+
+        .origin__quote cite {
+            display: block;
+            margin-top: 12px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--rw-sand);
+        }
+
+        .origin__body {
+            font-family: var(--font-ui);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.85;
+            color: #3D3D38;
+            margin-bottom: 18px;
+        }
+
+        .origin__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 32px;
+        }
+
+        .origin__tag {
+            border: 0.5px solid rgba(196, 135, 42, 0.3);
+            border-radius: 20px;
+            padding: 5px 16px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            color: var(--rw-muted);
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        .origin__tag:hover {
+            border-color: var(--rw-ochre);
+            color: var(--rw-ochre);
+        }
+
+        @media (max-width: 900px) {
+            .origin__grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .origin__image-frame {
+                aspect-ratio: 16/9;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════ */
+        /*  4. DUAL BRAND ARCHITECTURE                                */
+        /* ═══════════════════════════════════════════════════════════ */
+        .brands {
+            padding: 120px 0;
+            background: var(--rw-black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brands::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(28, 43, 26, 0.8) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 50%, rgba(196, 135, 42, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .brands__header {
+            max-width: 600px;
+            margin-bottom: 72px;
+            position: relative;
+        }
+
+        .brands__eyebrow {
+            font-family: var(--font-display);
+            font-size: 9px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--rw-ochre);
+            margin-bottom: 20px;
+        }
+
+        .brands__headline {
+            font-family: var(--font-body);
+            font-size: clamp(28px, 3.2vw, 40px);
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--rw-cream);
+            margin-bottom: 20px;
+        }
+
+        .brands__sub {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.75;
+            color: rgba(242, 232, 213, 0.5);
+        }
+
+        .brands__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            position: relative;
+        }
+
+        .brand-card {
+            padding: 52px 44px;
+            position: relative;
+            transition: background 0.4s var(--ease-out);
+        }
+
+        .brand-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--rw-ochre);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .brand-card:hover::before {
+            opacity: 0.6;
+        }
+
+        .brand-card--sovereign {
+            background: rgba(28, 43, 26, 0.5);
+            border-top: 1px solid rgba(196, 135, 42, 0.4);
+        }
+
+        .brand-card--akiba {
+            background: rgba(28, 43, 26, 0.2);
+            border-top: 1px solid rgba(90, 115, 87, 0.3);
+        }
+
+        .brand-card:hover {
+            background: rgba(28, 43, 26, 0.7);
+        }
+
+        .brand-card__num {
+            font-family: var(--font-body);
+            font-size: 80px;
+            font-weight: 300;
+            color: rgba(196, 135, 42, 0.08);
+            line-height: 1;
+            position: absolute;
+            top: 32px;
+            right: 32px;
+        }
+
+        .brand-card__label {
+            font-family: var(--font-display);
+            font-size: 9px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--rw-ochre);
+            margin-bottom: 20px;
+        }
+
+        .brand-card--akiba .brand-card__label {
+            color: var(--rw-muted);
+        }
+
+        .brand-card__name {
+            font-family: var(--font-body);
+            font-size: 34px;
+            font-weight: 300;
+            color: var(--rw-cream);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .brand-card__desc {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(242, 232, 213, 0.55);
+            margin-bottom: 32px;
+        }
+
+        .brand-card__attrs {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .brand-card__attrs li {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(242, 232, 213, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-card__attrs li::before {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 1px;
+            background: var(--rw-ochre);
+            opacity: 0.5;
+            flex-shrink: 0;
+        }
+
+        .brand-card--akiba .brand-card__attrs li::before {
+            background: var(--rw-muted);
+        }
+
+        @media (max-width: 768px) {
+            .brands__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-card {
+                padding: 40px 28px;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════ */
+        /*  5. REGENERATIVE FRAMEWORK                                 */
+        /* ═══════════════════════════════════════════════════════════ */
+        .framework {
+            padding: 120px 0;
+            background: var(--rw-cream);
+            position: relative;
+        }
+
+        .framework__header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: end;
+            margin-bottom: 80px;
+        }
+
+        .framework__eyebrow {
+            font-family: var(--font-display);
+            font-size: 9px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--rw-ochre);
+            margin-bottom: 20px;
+        }
+
+        .framework__headline {
+            font-family: var(--font-body);
+            font-size: clamp(28px, 3.2vw, 42px);
+            font-weight: 300;
+            line-height: 1.18;
+            color: var(--rw-black);
+        }
+
+        .framework__intro {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #5A5A52;
+            align-self: end;
+        }
+
+        .framework__pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .pillar {
+            background: var(--rw-white);
+            padding: 48px 36px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .pillar::after {
+            content: attr(data-pillar);
+            position: absolute;
+            bottom: -8px;
+            right: 20px;
+            font-family: var(--font-body);
+            font-size: 100px;
+            font-weight: 300;
+            color: rgba(28, 43, 26, 0.04);
+            line-height: 1;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .pillar:hover {
+            background: var(--rw-green);
+        }
+
+        .pillar:hover .pillar__title,
+        .pillar:hover .pillar__body {
+            color: var(--rw-cream);
+        }
+
+        .pillar:hover .pillar__icon {
+            color: var(--rw-ochre);
+        }
+
+        .pillar:hover .pillar__metric-num {
+            color: var(--rw-ochre-lt);
+        }
+
+        .pillar:hover .pillar__metric-label {
+            color: rgba(242, 232, 213, 0.45);
+        }
+
+        .pillar:hover::after {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        .pillar__icon {
+            font-size: 28px;
+            color: var(--rw-green);
+            margin-bottom: 24px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .pillar__title {
+            font-family: var(--font-body);
+            font-size: 26px;
+            font-weight: 400;
+            color: var(--rw-black);
+            margin-bottom: 16px;
+            transition: color 0.3s;
+        }
+
+        .pillar__body {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.75;
+            color: #5A5A52;
+            margin-bottom: 28px;
+            transition: color 0.3s;
+        }
+
+        .pillar__metric {
+            border-top: 1px solid rgba(28, 43, 26, 0.1);
+            padding-top: 20px;
+        }
+
+        .pillar:hover .pillar__metric {
+            border-top-color: rgba(242, 232, 213, 0.1);
+        }
+
+        .pillar__metric-num {
+            font-family: var(--font-body);
+            font-size: 32px;
+            font-weight: 400;
+            color: var(--rw-ochre);
+            line-height: 1;
+            margin-bottom: 4px;
+            transition: color 0.3s;
+        }
+
+        .pillar__metric-label {
+            font-family: var(--font-display);
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--rw-sand);
+            transition: color 0.3s;
+        }
+
+        @media (max-width: 900px) {
+            .framework__header {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .framework__pillars {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════ */
+        /*  6. IMAGE MOSAIC                                           */
+        /* ═══════════════════════════════════════════════════════════ */
+        
+    .mosaic {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 280px 280px;
+        gap: 4px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .mosaic__cell {
+        position: relative;
+        overflow: hidden;
+        background: #111;
+    }
+
+    .mosaic__cell--span-v {
+        grid-row: span 2;
+    }
+
+    .mosaic__cell--span-h {
+        grid-column: span 2;
+    }
+
+    .mosaic__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.7s ease, filter 0.5s ease;
+        filter: brightness(0.9);
+    }
+
+    .mosaic__cell:hover .mosaic__image {
+        transform: scale(1.08);
+        filter: brightness(1);
+    }
+
+    .mosaic__cell::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.3) 35%,
+            rgba(0, 0, 0, 0) 70%
+        );
+        pointer-events: none;
+    }
+
+    .mosaic__label {
+        position: absolute;
+        bottom: 18px;
+        left: 18px;
+        z-index: 2;
+        color: #f2e8d5;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.35s ease;
+    }
+
+    .mosaic__cell:hover .mosaic__label {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @media (max-width: 992px) {
+        .mosaic {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
+
+        .mosaic__cell {
+            aspect-ratio: 1;
+        }
+
+        .mosaic__cell--span-v,
+        .mosaic__cell--span-h {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .mosaic {
+            grid-template-columns: 1fr;
+        }
+
+        .mosaic__cell {
+            aspect-ratio: 4/3;
+        }
+    }
+
+
+        /* ═══════════════════════════════════════════════════════════ */
+        /*  7. NOW & NEXT — PIPELINE                                  */
+        /* ═══════════════════════════════════════════════════════════ */
+        .pipeline {
+            padding: 120px 0;
+            background: var(--rw-white);
+        }
+
+        .pipeline__header {
+            margin-bottom: 72px;
+        }
+
+        .pipeline__eyebrow {
+            font-family: var(--font-display);
+            font-size: 9px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--rw-ochre);
+            margin-bottom: 20px;
+        }
+
+        .pipeline__headline {
+            font-family: var(--font-body);
+            font-size: clamp(28px, 3.2vw, 42px);
+            font-weight: 300;
+            line-height: 1.18;
+            color: var(--rw-black);
+            max-width: 500px;
+        }
+
+        .pipeline__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pipeline__item {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 40px;
+            padding: 40px 0;
+            border-top: 1px solid rgba(28, 43, 26, 0.08);
+            align-items: start;
+        }
+
+        .pipeline__item:last-child {
+            border-bottom: 1px solid rgba(28, 43, 26, 0.08);
+        }
+
+        .pipeline__time {
+            font-family: var(--font-display);
+            font-size: 9px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--rw-ochre);
+            margin-bottom: 10px;
+        }
+
+        .pipeline__status {
+            display: inline-block;
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .pipeline__status--live {
+            background: rgba(59, 109, 17, 0.1);
+            color: #3B6D11;
+        }
+
+        .pipeline__status--active {
+            background: rgba(196, 135, 42, 0.1);
+            color: #854F0B;
+        }
+
+        .pipeline__status--building {
+            background: rgba(90, 115, 87, 0.08);
+            color: var(--rw-muted);
+        }
+
+        .pipeline__status--vision {
+            background: rgba(28, 43, 26, 0.06);
+            color: var(--rw-sand);
+        }
+
+        .pipeline__title {
+            font-family: var(--font-body);
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--rw-black);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .pipeline__desc {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #5A5A52;
+        }
+
+        @media (max-width: 768px) {
+            .pipeline__item {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════ */
+        /*  8. CTA                                                    */
+        /* ═══════════════════════════════════════════════════════════ */
+        .cta-section {
+            padding: 140px 0 120px;
+            background: var(--rw-green);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            border: 1px solid rgba(196, 135, 42, 0.08);
+            pointer-events: none;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            height: 900px;
+            border-radius: 50%;
+            border: 1px solid rgba(196, 135, 42, 0.04);
+            pointer-events: none;
+        }
+
+        .cta-section__eyebrow {
+            font-family: var(--font-display);
+            font-size: 9px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--rw-ochre);
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .cta-section__headline {
+            font-family: var(--font-body);
+            font-size: clamp(30px, 4vw, 54px);
+            font-weight: 300;
+            line-height: 1.15;
+            color: var(--rw-cream);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .cta-section__headline em {
+            font-style: italic;
+            color: var(--rw-ochre-lt);
+        }
+
+        .cta-section__sub {
+            font-family: var(--font-ui);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+            color: rgba(242, 232, 213, 0.5);
+            max-width: 480px;
+            margin: 0 auto 52px;
+            position: relative;
+        }
+
+        .cta-section__actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            font-family: var(--font-display);
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.35s var(--ease-out);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn--primary {
+            background: var(--rw-ochre);
+            color: var(--rw-black);
+        }
+
+        .btn--primary:hover {
+            background: var(--rw-ochre-lt);
+            transform: translateY(-2px);
+        }
+
+        .btn--outline {
+            background: transparent;
+            color: var(--rw-cream);
+            border: 1px solid rgba(242, 232, 213, 0.25);
+        }
+
+        .btn--outline:hover {
+            border-color: var(--rw-ochre);
+            color: var(--rw-ochre-lt);
+            transform: translateY(-2px);
+        }
+
+        .btn__arrow {
+            font-size: 16px;
+            transition: transform 0.3s var(--ease-out);
+        }
+
+        .btn:hover .btn__arrow {
+            transform: translateX(4px);
+        }
+
+        .cta-section__contact {
+            margin-top: 52px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .cta-section__contact a {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.04em;
+            color: rgba(242, 232, 213, 0.35);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .cta-section__contact a:hover {
+            color: var(--rw-ochre-lt);
+        }
+
+        /* Mosaic placeholder gradients (stand-ins for real photography) */
+        .ph-1 {
+            background: linear-gradient(165deg, #2E4A2C 0%, #C4872A 120%);
+        }
+
+        .ph-2 {
+            background: linear-gradient(195deg, #1C2B1A 0%, #5A7357 110%);
+        }
+
+        .ph-3 {
+            background: linear-gradient(140deg, #3A2A18 0%, #B8A48A 100%);
+        }
+
+        .ph-4 {
+            background: linear-gradient(110deg, #0D1109 0%, #2E4A2C 60%, #C4872A 130%);
+        }
+
+        .ph-5 {
+            background: linear-gradient(200deg, #233520 0%, #D9A355 130%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══ 1. HERO ══════════════════════════════════════════════ -->
+    <section class="hero" aria-label="About Raw Unwind Safaris">
+        <div class="hero__bg"></div>
+        <div class="hero__horizon">
+            <svg viewBox="0 0 1200 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,300 L0,180 Q150,150 280,170 T560,150 Q700,130 850,160 T1200,140 L1200,300 Z" fill="#0D1109"
+                    opacity="0.7" />
+                <path d="M0,300 L0,220 Q200,200 400,215 T800,200 Q950,190 1200,210 L1200,300 Z" fill="#0D1109"
+                    opacity="0.9" />
+            </svg>
+        </div>
+        <div class="hero__rule js-animate"></div>
+
+        <div class="hero__content">
+            <p class="hero__eyebrow js-animate">Nyeri, Kenya &middot; Founded 2024 &middot; TRA Licensed Operator</p>
+
+            <h1 class="hero__headline js-animate">
+                Travel that heals <em>land,</em><br>
+                communities,<br>
+                and the traveller.
+            </h1>
+
+            <p class="hero__sub js-animate">
+                Raw Unwind Safaris is a regenerative luxury operator rooted in Kenya,
+                built on the conviction that travel's highest purpose is to leave
+                the place &mdash; and the person &mdash; more whole than before.
+            </p>
+
+            <div class="hero__metrics js-animate">
+                <div class="metric">
+                    <div class="metric__num">30%</div>
+                    <div class="metric__label">Community revenue floor</div>
+                </div>
+                <div class="metric">
+                    <div class="metric__num">200%</div>
+                    <div class="metric__label">Domestic flight offsets</div>
+                </div>
+                <div class="metric">
+                    <div class="metric__num">~50t</div>
+                    <div class="metric__label">Blue carbon / year</div>
+                </div>
+                <div class="metric">
+                    <div class="metric__num">2</div>
+                    <div class="metric__label">Markets. One mission.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__scroll" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ══ 2. STATEMENT BAND ════════════════════════════════════ -->
+    <div class="statement-band" aria-hidden="true">
+        <div class="statement-band__inner">
+            <span class="statement-band__item">Regenerative Luxury</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">Mikoko Pamoja Partner</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">Net-Zero Architecture</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">Nyeri, Kenya</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">30% Community Floor</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">Lewa Safari Marathon Partner</span><span
+                class="statement-band__sep"></span>
+            <span class="statement-band__item">Eco-Tourism Kenya Member</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">TRA Licensed Operator</span><span class="statement-band__sep"></span>
+            <!-- repeated for seamless loop -->
+            <span class="statement-band__item">Regenerative Luxury</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">Mikoko Pamoja Partner</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">Net-Zero Architecture</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">Nyeri, Kenya</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">30% Community Floor</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">Lewa Safari Marathon Partner</span><span
+                class="statement-band__sep"></span>
+            <span class="statement-band__item">Eco-Tourism Kenya Member</span><span class="statement-band__sep"></span>
+            <span class="statement-band__item">TRA Licensed Operator</span><span class="statement-band__sep"></span>
+        </div>
+    </div>
+
+    <!-- ══ 3. ORIGIN STORY ══════════════════════════════════════ -->
+    <section class="origin" id="origin">
+        <div class="section-wrap">
+            <div class="origin__grid">
+
+                <div class="reveal">
+                    <div class="origin__image-frame">
+                        <!-- IMAGE SLOT: founder.jpg — replace gradient div with <img> -->
+                        <div class="placeholder-art w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
+                            <img src="{% static 'images/about/founder.jpeg' %}" alt="Founder Portrait" class="w-full h-full object-cover">
+                                <defs>
+                                    <linearGradient id="founderGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#1C2B1A" />
+                                        <stop offset="60%" stop-color="#2E4A2C" />
+                                        <stop offset="100%" stop-color="#3A4F33" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="400" height="530" fill="url(#founderGrad)" />
+                                <circle cx="200" cy="200" r="3" fill="#C4872A" opacity="0.5" />
+                                <path d="M0,420 Q100,380 200,400 T400,390 L400,530 L0,530 Z" fill="#0D1109"
+                                    opacity="0.5" />
+                                <path d="M0,460 Q120,430 240,450 T400,435 L400,530 L0,530 Z" fill="#0D1109"
+                                    opacity="0.7" />
+                                <text x="200" y="270" text-anchor="middle" fill="#C4872A" opacity="0.4"
+                                    font-family="Cinzel, serif" font-size="9" letter-spacing="3">IMAGE SLOT 01</text>
+                                <text x="200" y="290" text-anchor="middle" fill="#F2E8D5" opacity="0.3"
+                                    font-family="Jost, sans-serif" font-size="10">Founder portrait &middot; 3:4</text>
+                        </div>
+                    </div>
+                    <p class="origin__caption">Eric Koome &mdash; Nyeri highlands</p>
+                </div>
+
+                <div>
+                    <p class="origin__eyebrow reveal">The founder</p>
+
+                    <h2 class="origin__headline reveal reveal-delay-1">
+                        A Kenyan operator,<br>
+                        <em>rooted in the land.</em>
+                    </h2>
+
+                    <blockquote class="origin__quote reveal reveal-delay-2">
+                        <p>&ldquo;I didn't start a safari company. I started a proof &mdash; that a Kenyan operator,
+                            rooted in the land, can out-think, out-feel, and out-last anyone else in this market.&rdquo;
+                        </p>
+                        <cite>Eric Koome &middot; Founder &amp; Director</cite>
+                    </blockquote>
+
+                    <p class="origin__body reveal reveal-delay-3">
+                        Eric Koome was raised in the shadow of Mount Kenya in Nyeri, with ancestral roots deep in
+                        Makueni County &mdash; Akamba land. Before founding Raw Unwind, he spent years in financial
+                        services, learning how capital moves and how institutions serve &mdash; and fail &mdash; their
+                        communities.
+                    </p>
+
+                    <p class="origin__body reveal reveal-delay-3">
+                        That background lives in every pricing decision, every partnership clause, and every instalment
+                        plan designed to let a Kenyan teacher afford the same wilderness their ancestors walked. Raw
+                        Unwind is not managed from a city desk. It is managed from inside the story.
+                    </p>
+
+                    <div class="origin__tags reveal reveal-delay-4">
+                        <span class="origin__tag">Nyeri, Kenya</span>
+                        <span class="origin__tag">Makueni roots</span>
+                        <span class="origin__tag">TRA Licensed Operator</span>
+                        <span class="origin__tag">Eco-Tourism Kenya</span>
+                        <span class="origin__tag">Travelife in progress</span>
+                        <span class="origin__tag">GSTC-recognised track</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ 4. DUAL BRAND ARCHITECTURE ══════════════════════════ -->
+    <section class="brands" id="brands">
+        <div class="section-wrap">
+            <div class="brands__header reveal">
+                <p class="brands__eyebrow">Two markets. One operator of record.</p>
+                <h2 class="brands__headline">How Raw Unwind is structured</h2>
+                <p class="brands__sub">
+                    Raw Unwind Safaris is the licensed parent brand. We serve two distinct markets through two fluent
+                    registers &mdash; not two companies, not two missions, but two expressions of the same underlying
+                    conviction.
+                </p>
+            </div>
+
+            <div class="brands__grid">
+
+                <div class="brand-card brand-card--sovereign reveal">
+                    <span class="brand-card__num">I</span>
+                    <p class="brand-card__label">Ultra-luxury &middot; USD-priced &middot; International &amp; Kenyan
+                        UHNW</p>
+                    <h3 class="brand-card__name">Sovereign Safari</h3>
+                    <p class="brand-card__desc">
+                        Private itineraries for guests who have seen the world and want to understand Africa. Maximum 8
+                        guests per journey. Every detail considered. The Passage &mdash; our flagship seven-night
+                        digital detox wilderness immersion &mdash; is the purest expression of this register.
+                    </p>
+                    <ul class="brand-card__attrs">
+                        <li>Priced from USD 7,900 per person</li>
+                        <li>Private conservancy access</li>
+                        <li>Carbon-neutral by design</li>
+                        <li>International DMC network</li>
+                        <li>Maximum 8 guests</li>
+                    </ul>
+                </div>
+
+                <div class="brand-card brand-card--akiba reveal reveal-delay-2">
+                    <span class="brand-card__num">II</span>
+                    <p class="brand-card__label">Domestic sub-brand &middot; KES-priced &middot; Wanachi market</p>
+                    <h3 class="brand-card__name">Akiba Safaris</h3>
+                    <p class="brand-card__desc">
+                        Safari ni nyumbani. Built for the Kenyan middle class &mdash; teachers, chamas, young
+                        professionals &mdash; through instalment plans, WhatsApp group booking, and experiences designed
+                        to feel like a homecoming, not a performance of wealth.
+                    </p>
+                    <ul class="brand-card__attrs">
+                        <li>1&ndash;12 month instalment model</li>
+                        <li>Chama economy distribution</li>
+                        <li>Self-drive coast packages</li>
+                        <li>M-Pesa integrated booking</li>
+                        <li>KES-priced</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ 5. REGENERATIVE FRAMEWORK ════════════════════════════ -->
+    <section class="framework" id="framework">
+        <div class="section-wrap">
+            <div class="framework__header">
+                <div class="reveal">
+                    <p class="framework__eyebrow">The regenerative framework</p>
+                    <h2 class="framework__headline">How every booking<br>heals</h2>
+                </div>
+                <p class="framework__intro reveal reveal-delay-2">
+                    Our regenerative model is not a certification we are chasing or a page in a sustainability report.
+                    It is the structural logic of how we price, how we select partners, and how we measure a good trip.
+                    Zero is not the target &mdash; net positive is.
+                </p>
+            </div>
+
+            <div class="framework__pillars">
+                <div class="pillar reveal" data-pillar="Land">
+                    <span class="pillar__icon">&#127807;</span>
+                    <h3 class="pillar__title">Land</h3>
+                    <p class="pillar__body">
+                        GPS-tracked tree planting in Laikipia. Mikoko Pamoja mangrove protection along Kenya's coast.
+                        200% domestic flight carbon offsets. Every journey starts with an accounting, not an apology.
+                    </p>
+                    <div class="pillar__metric">
+                        <div class="pillar__metric-num">~50t</div>
+                        <div class="pillar__metric-label">Blue carbon per year target</div>
+                    </div>
+                </div>
+
+                <div class="pillar reveal reveal-delay-2" data-pillar="People">
+                    <span class="pillar__icon">&#128106;</span>
+                    <h3 class="pillar__title">Community</h3>
+                    <p class="pillar__body">
+                        30% community revenue floor per booking &mdash; not a policy ceiling, a structural floor. Amba
+                        Cultural Village in Makueni as cultural employment anchor. Chama economy as distribution
+                        infrastructure, not charity.
+                    </p>
+                    <div class="pillar__metric">
+                        <div class="pillar__metric-num">30%</div>
+                        <div class="pillar__metric-label">Community revenue per booking</div>
+                    </div>
+                </div>
+
+                <div class="pillar reveal reveal-delay-3" data-pillar="Self">
+                    <span class="pillar__icon">&#129504;</span>
+                    <h3 class="pillar__title">Traveller</h3>
+                    <p class="pillar__body">
+                        We design experiences that leave guests changed, not just rested. The Passage is the purest
+                        expression &mdash; seven nights without a phone, without performance, without escape from
+                        presence.
+                    </p>
+                    <div class="pillar__metric">
+                        <div class="pillar__metric-num">7</div>
+                        <div class="pillar__metric-label">Nights, no connectivity, The Passage</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ 6. IMAGE MOSAIC ═══════════════════════════════════════ -->
+    <!-- IMAGE SLOTS: replace each .ph div with <img src="..."> when photography is ready -->
+
+<style>
+    .mosaic {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 280px 280px;
+        gap: 4px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .mosaic__cell {
+        position: relative;
+        overflow: hidden;
+        background: #111;
+    }
+
+    .mosaic__cell--span-v {
+        grid-row: span 2;
+    }
+
+    .mosaic__cell--span-h {
+        grid-column: span 2;
+    }
+
+    .mosaic__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.7s ease, filter 0.5s ease;
+        filter: brightness(0.9);
+    }
+
+    .mosaic__cell:hover .mosaic__image {
+        transform: scale(1.08);
+        filter: brightness(1);
+    }
+
+    .mosaic__cell::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top,
+                rgba(0, 0, 0, 0.75) 0%,
+                rgba(0, 0, 0, 0.3) 35%,
+                rgba(0, 0, 0, 0) 70%);
+        pointer-events: none;
+    }
+
+    .mosaic__label {
+        position: absolute;
+        bottom: 18px;
+        left: 18px;
+        z-index: 2;
+        color: #f2e8d5;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.35s ease;
+    }
+
+    .mosaic__cell:hover .mosaic__label {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @media (max-width: 992px) {
+        .mosaic {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
+
+        .mosaic__cell {
+            aspect-ratio: 1;
+        }
+
+        .mosaic__cell--span-v,
+        .mosaic__cell--span-h {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .mosaic {
+            grid-template-columns: 1fr;
+        }
+
+        .mosaic__cell {
+            aspect-ratio: 4/3;
+        }
+    }
+</style>
+
+<div class="mosaic" role="img" aria-label="Raw Unwind Safaris — Kenya landscape and safari experiences">
+
+    <div class="mosaic__cell mosaic__cell--span-v">
+        <img src="{% static 'images/about/LP_General_5.jpg' %}" alt="Laikipia Plateau" class="mosaic__image">
+        <span class="mosaic__label">Laikipia Plateau</span>
+    </div>
+
+    <div class="mosaic__cell">
+        <img src="{% static 'images/about/Luxe-Adventure.jpg' %}" alt="Luxury Adventure Safari" class="mosaic__image">
+        <span class="mosaic__label">Luxury Adventure</span>
+    </div>
+
+    <div class="mosaic__cell">
+        <img src="{% static 'images/about/maasai.jpg' %}" alt="Maasai Cultural Experience" class="mosaic__image">
+        <span class="mosaic__label">Maasai Experience</span>
+    </div>
+
+    <div class="mosaic__cell mosaic__cell--span-h">
+        <img src="{% static 'images/about/TAASASafari.jpg' %}" alt="TAASA Safari" class="mosaic__image">
+        <span class="mosaic__label">TAASA Safari</span>
+    </div>
+
+    <div class="mosaic__cell">
+        <img src="{% static 'images/about/TAASASafari.jpg' %}" alt="Safari Experience" class="mosaic__image">
+        <span class="mosaic__label">Safari Experience</span>
+    </div>
+
+</div>
+
+    <!-- ══ 7. NOW & NEXT ════════════════════════════════════════ -->
+    <section class="pipeline" id="pipeline">
+        <div class="section-wrap">
+            <div class="pipeline__header reveal">
+                <p class="pipeline__eyebrow">Now &amp; next</p>
+                <h2 class="pipeline__headline">What we are actively building</h2>
+            </div>
+
+            <div class="pipeline__list">
+
+                <div class="pipeline__item reveal">
+                    <div>
+                        <p class="pipeline__time">Active &middot; 2026</p>
+                        <span class="pipeline__status pipeline__status--live">Live</span>
+                    </div>
+                    <div>
+                        <h3 class="pipeline__title">Mikoko Pamoja Blue Carbon Partnership</h3>
+                        <p class="pipeline__desc">Partner of the world's first community-led blue carbon project &mdash;
+                            protecting mangrove ecosystems along Kenya's coast. ~50 tonnes of carbon credits per year,
+                            positioned not as a marketing footnote but as a revenue-generating conservation asset within
+                            the Raw Unwind operating model.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline__item reveal">
+                    <div>
+                        <p class="pipeline__time">June 27, 2026</p>
+                        <span class="pipeline__status pipeline__status--active">In market</span>
+                    </div>
+                    <div>
+                        <h3 class="pipeline__title">Lewa Safari Marathon &mdash; Content &amp; Corporate Partner</h3>
+                        <p class="pipeline__desc">Active content and corporate sales partner for Africa's most iconic
+                            conservation marathon, held on Lewa Wildlife Conservancy in the shadow of Mount Kenya.
+                            Corporate travel hospitality packages are in market now.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline__item reveal">
+                    <div>
+                        <p class="pipeline__time">Q3 2026</p>
+                        <span class="pipeline__status pipeline__status--building">Pre-launch</span>
+                    </div>
+                    <div>
+                        <h3 class="pipeline__title">The Passage &mdash; Seven-Night Digital Detox Wilderness Immersion
+                        </h3>
+                        <p class="pipeline__desc">No phone. No signal. Seven nights in a private conservancy for
+                            high-performing professionals who need to remember who they are. A phone lockbox is not a
+                            gimmick &mdash; it is an architectural decision. Priced from USD 7,900 per person.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline__item reveal">
+                    <div>
+                        <p class="pipeline__time">Oct&ndash;Dec 2026</p>
+                        <span class="pipeline__status pipeline__status--building">In development</span>
+                    </div>
+                    <div>
+                        <h3 class="pipeline__title">Vietnam Outbound &mdash; Kenyan Market Launch</h3>
+                        <p class="pipeline__desc">In partnership with Apple Travel Vietnam for Vietnam packages
+                            targeting Kenyan outbound travellers. A reciprocal market expansion designed to position Raw
+                            Unwind as a true pan-world operator with Kenyan cultural authority.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline__item reveal">
+                    <div>
+                        <p class="pipeline__time">Dec 2026</p>
+                        <span class="pipeline__status pipeline__status--building">In development</span>
+                    </div>
+                    <div>
+                        <h3 class="pipeline__title">Rusinga &amp; Mfangano Islands &mdash; Lake Victoria Immersion</h3>
+                        <p class="pipeline__desc">A December 2026 editorial-grade experience anchored to Lake Victoria's
+                            hidden island communities. Flagship experiential product for both Sovereign guests and
+                            high-end Akiba clients &mdash; the Kenya most Kenyans have never seen.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline__item reveal">
+                    <div>
+                        <p class="pipeline__time">2027</p>
+                        <span class="pipeline__status pipeline__status--vision">Vision</span>
+                    </div>
+                    <div>
+                        <h3 class="pipeline__title">Amba Cultural Village &mdash; Makueni County</h3>
+                        <p class="pipeline__desc">A living cultural immersion property in Makueni County &mdash; Akamba
+                            land, Eric Koome's ancestral ground. The origin story anchor of the Raw Unwind brand, built
+                            as a revenue-generating destination rather than a heritage museum.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ 8. CTA ════════════════════════════════════════════════ -->
+    <section class="cta-section" id="contact">
+        <div class="section-wrap">
+            <p class="cta-section__eyebrow reveal">Begin the conversation</p>
+            <h2 class="cta-section__headline reveal reveal-delay-1">
+                This is not a booking form.<br>
+                <em>It is an introduction.</em>
+            </h2>
+            <p class="cta-section__sub reveal reveal-delay-2">
+                Every Raw Unwind journey begins with a conversation about what you are actually looking for &mdash; not
+                a package selection. Tell us where you want to go. We will tell you what is possible.
+            </p>
+            <div class="cta-section__actions reveal reveal-delay-3">
+                <a href="/contact/" class="btn btn--primary">
+                    Start a conversation <span class="btn__arrow">&rarr;</span>
+                </a>
+                <a href="https://wa.me/254712420338" class="btn btn--outline" target="_blank" rel="noopener">
+                    WhatsApp Eric <span class="btn__arrow">&rarr;</span>
+                </a>
+            </div>
+            <div class="cta-section__contact reveal reveal-delay-4">
+                <a href="mailto:info@rawunwindsafaris.com">info@rawunwindsafaris.com</a>
+                <a href="tel:+254712420338">+254 712 420 338</a>
+                <a href="/manifesto/">Read the manifesto</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            'use strict';
+
+            var revealEls = document.querySelectorAll('.reveal, .js-animate, .hero__rule');
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('in-view');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+                revealEls.forEach(function (el) { observer.observe(el); });
+            } else {
+                revealEls.forEach(function (el) { el.classList.add('in-view'); });
+            }
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -82,7 +82,7 @@ def Index(request):
     return render(request, 'app/homes.html')
 
 def About(request):
-    return render(request, 'app/about.html')
+    return render(request, 'app/abouts.html')
 
 def Reviews(request):
     return render(request, 'app/reviews.html')
