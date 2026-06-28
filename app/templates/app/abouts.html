@@ -903,103 +903,101 @@
         /* ═══════════════════════════════════════════════════════════ */
         /*  6. IMAGE MOSAIC                                           */
         /* ═══════════════════════════════════════════════════════════ */
-        
-    .mosaic {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 280px 280px;
-        gap: 4px;
-        width: 100%;
-        overflow: hidden;
-    }
 
-    .mosaic__cell {
-        position: relative;
-        overflow: hidden;
-        background: #111;
-    }
-
-    .mosaic__cell--span-v {
-        grid-row: span 2;
-    }
-
-    .mosaic__cell--span-h {
-        grid-column: span 2;
-    }
-
-    .mosaic__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.7s ease, filter 0.5s ease;
-        filter: brightness(0.9);
-    }
-
-    .mosaic__cell:hover .mosaic__image {
-        transform: scale(1.08);
-        filter: brightness(1);
-    }
-
-    .mosaic__cell::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.75) 0%,
-            rgba(0, 0, 0, 0.3) 35%,
-            rgba(0, 0, 0, 0) 70%
-        );
-        pointer-events: none;
-    }
-
-    .mosaic__label {
-        position: absolute;
-        bottom: 18px;
-        left: 18px;
-        z-index: 2;
-        color: #f2e8d5;
-        font-size: 0.75rem;
-        font-weight: 500;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: all 0.35s ease;
-    }
-
-    .mosaic__cell:hover .mosaic__label {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    @media (max-width: 992px) {
         .mosaic {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 280px 280px;
+            gap: 4px;
+            width: 100%;
+            overflow: hidden;
         }
 
         .mosaic__cell {
-            aspect-ratio: 1;
+            position: relative;
+            overflow: hidden;
+            background: #111;
         }
 
-        .mosaic__cell--span-v,
+        .mosaic__cell--span-v {
+            grid-row: span 2;
+        }
+
         .mosaic__cell--span-h {
-            grid-row: span 1;
-            grid-column: span 1;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .mosaic {
-            grid-template-columns: 1fr;
+            grid-column: span 2;
         }
 
-        .mosaic__cell {
-            aspect-ratio: 4/3;
+        .mosaic__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.7s ease, filter 0.5s ease;
+            filter: brightness(0.9);
         }
-    }
+
+        .mosaic__cell:hover .mosaic__image {
+            transform: scale(1.08);
+            filter: brightness(1);
+        }
+
+        .mosaic__cell::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.75) 0%,
+                    rgba(0, 0, 0, 0.3) 35%,
+                    rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+        }
+
+        .mosaic__label {
+            position: absolute;
+            bottom: 18px;
+            left: 18px;
+            z-index: 2;
+            color: #f2e8d5;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.35s ease;
+        }
+
+        .mosaic__cell:hover .mosaic__label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 992px) {
+            .mosaic {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+
+            .mosaic__cell {
+                aspect-ratio: 1;
+            }
+
+            .mosaic__cell--span-v,
+            .mosaic__cell--span-h {
+                grid-row: span 1;
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .mosaic {
+                grid-template-columns: 1fr;
+            }
+
+            .mosaic__cell {
+                aspect-ratio: 4/3;
+            }
+        }
 
 
         /* ═══════════════════════════════════════════════════════════ */
@@ -1377,25 +1375,25 @@
                 <div class="reveal">
                     <div class="origin__image-frame">
                         <!-- IMAGE SLOT: founder.jpg — replace gradient div with <img> -->
-                        <div class="placeholder-art w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
-                            <img src="{% static 'images/about/founder.jpeg' %}" alt="Founder Portrait" class="w-full h-full object-cover">
-                                <defs>
-                                    <linearGradient id="founderGrad" x1="0" y1="0" x2="1" y2="1">
-                                        <stop offset="0%" stop-color="#1C2B1A" />
-                                        <stop offset="60%" stop-color="#2E4A2C" />
-                                        <stop offset="100%" stop-color="#3A4F33" />
-                                    </linearGradient>
-                                </defs>
-                                <rect width="400" height="530" fill="url(#founderGrad)" />
-                                <circle cx="200" cy="200" r="3" fill="#C4872A" opacity="0.5" />
-                                <path d="M0,420 Q100,380 200,400 T400,390 L400,530 L0,530 Z" fill="#0D1109"
-                                    opacity="0.5" />
-                                <path d="M0,460 Q120,430 240,450 T400,435 L400,530 L0,530 Z" fill="#0D1109"
-                                    opacity="0.7" />
-                                <text x="200" y="270" text-anchor="middle" fill="#C4872A" opacity="0.4"
-                                    font-family="Cinzel, serif" font-size="9" letter-spacing="3">IMAGE SLOT 01</text>
-                                <text x="200" y="290" text-anchor="middle" fill="#F2E8D5" opacity="0.3"
-                                    font-family="Jost, sans-serif" font-size="10">Founder portrait &middot; 3:4</text>
+                        <div
+                            class="placeholder-art w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
+                            <img src="{% static 'images/about/founder.jpeg' %}" alt="Founder Portrait"
+                                class="w-full h-full object-cover">
+                            <defs>
+                                <linearGradient id="founderGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1C2B1A" />
+                                    <stop offset="60%" stop-color="#2E4A2C" />
+                                    <stop offset="100%" stop-color="#3A4F33" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="530" fill="url(#founderGrad)" />
+                            <circle cx="200" cy="200" r="3" fill="#C4872A" opacity="0.5" />
+                            <path d="M0,420 Q100,380 200,400 T400,390 L400,530 L0,530 Z" fill="#0D1109" opacity="0.5" />
+                            <path d="M0,460 Q120,430 240,450 T400,435 L400,530 L0,530 Z" fill="#0D1109" opacity="0.7" />
+                            <text x="200" y="270" text-anchor="middle" fill="#C4872A" opacity="0.4"
+                                font-family="Cinzel, serif" font-size="9" letter-spacing="3">IMAGE SLOT 01</text>
+                            <text x="200" y="290" text-anchor="middle" fill="#F2E8D5" opacity="0.3"
+                                font-family="Jost, sans-serif" font-size="10">Founder portrait &middot; 3:4</text>
                         </div>
                     </div>
                     <p class="origin__caption">Eric Koome &mdash; Nyeri highlands</p>
@@ -1562,131 +1560,217 @@
     <!-- ══ 6. IMAGE MOSAIC ═══════════════════════════════════════ -->
     <!-- IMAGE SLOTS: replace each .ph div with <img src="..."> when photography is ready -->
 
-<style>
-    .mosaic {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 280px 280px;
-        gap: 4px;
-        width: 100%;
-        overflow: hidden;
-    }
+    <style>
+        :root {
+            --gap: 18px;
+            --radius: 20px;
+        }
 
-    .mosaic__cell {
-        position: relative;
-        overflow: hidden;
-        background: #111;
-    }
-
-    .mosaic__cell--span-v {
-        grid-row: span 2;
-    }
-
-    .mosaic__cell--span-h {
-        grid-column: span 2;
-    }
-
-    .mosaic__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.7s ease, filter 0.5s ease;
-        filter: brightness(0.9);
-    }
-
-    .mosaic__cell:hover .mosaic__image {
-        transform: scale(1.08);
-        filter: brightness(1);
-    }
-
-    .mosaic__cell::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top,
-                rgba(0, 0, 0, 0.75) 0%,
-                rgba(0, 0, 0, 0.3) 35%,
-                rgba(0, 0, 0, 0) 70%);
-        pointer-events: none;
-    }
-
-    .mosaic__label {
-        position: absolute;
-        bottom: 18px;
-        left: 18px;
-        z-index: 2;
-        color: #f2e8d5;
-        font-size: 0.75rem;
-        font-weight: 500;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: all 0.35s ease;
-    }
-
-    .mosaic__cell:hover .mosaic__label {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    @media (max-width: 992px) {
         .mosaic {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 110px;
+            gap: var(--gap);
+
+            max-width: 1450px;
+            margin: 0 auto;
+            padding: 100px 50px;
+            background: var(--rw-cream);
         }
 
         .mosaic__cell {
-            aspect-ratio: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .12);
         }
 
-        .mosaic__cell--span-v,
-        .mosaic__cell--span-h {
-            grid-row: span 1;
-            grid-column: span 1;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .mosaic {
-            grid-template-columns: 1fr;
+        .mosaic__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .8s ease;
         }
 
-        .mosaic__cell {
-            aspect-ratio: 4/3;
+        .mosaic__cell:hover .mosaic__image {
+            transform: scale(1.08);
         }
-    }
-</style>
 
-<div class="mosaic" role="img" aria-label="Raw Unwind Safaris — Kenya landscape and safari experiences">
+        .mosaic__cell::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, .7),
+                    rgba(0, 0, 0, .15),
+                    transparent);
+            z-index: 1;
+        }
 
-    <div class="mosaic__cell mosaic__cell--span-v">
-        <img src="{% static 'images/about/LP_General_5.jpg' %}" alt="Laikipia Plateau" class="mosaic__image">
-        <span class="mosaic__label">Laikipia Plateau</span>
+        .mosaic__label {
+            position: absolute;
+            left: 22px;
+            bottom: 20px;
+            color: #fff;
+            font-size: .8rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            z-index: 2;
+            opacity: 0;
+            transition: .35s;
+            transform: translateY(10px);
+        }
+
+        .mosaic__cell:hover .mosaic__label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Layout */
+
+        .hero {
+            grid-column: 1 / span 6;
+            grid-row: 1 / span 4;
+        }
+
+        .tall {
+            grid-column: 7 / span 3;
+            grid-row: 1 / span 2;
+        }
+
+        .small1 {
+            grid-column: 10 / span 3;
+            grid-row: 1;
+        }
+
+        .small2 {
+            grid-column: 10 / span 3;
+            grid-row: 2;
+        }
+
+        .wide {
+            grid-column: 7 / span 6;
+            grid-row: 3 / span 2;
+        }
+
+        .medium1 {
+            grid-column: 1 / span 3;
+            grid-row: 5 / span 2;
+        }
+
+        .medium2 {
+            grid-column: 4 / span 3;
+            grid-row: 5 / span 2;
+        }
+
+        .medium3 {
+            grid-column: 7 / span 3;
+            grid-row: 5 / span 2;
+        }
+
+        .medium4 {
+            grid-column: 10 / span 3;
+            grid-row: 5 / span 2;
+        }
+
+        .banner {
+            grid-column: 1 / -1;
+            grid-row: 7 / span 2;
+        }
+
+        /* Tablet */
+
+        @media(max-width:992px) {
+
+            .mosaic {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 250px;
+                padding: 70px 25px;
+            }
+
+            .hero,
+            .tall,
+            .small1,
+            .small2,
+            .wide,
+            .medium1,
+            .medium2,
+            .medium3,
+            .medium4,
+            .banner {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+        }
+
+        /* Mobile */
+
+        @media(max-width:576px) {
+
+            .mosaic {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 240px;
+                padding: 60px 16px;
+            }
+
+        }
+    </style>
+
+    <div class="mosaic">
+
+        <div class="mosaic__cell hero">
+            <img src="{% static 'images/about/1.png' %}" class="mosaic__image">
+            <span class="mosaic__label">Safari Experience</span>
+        </div>
+
+        <div class="mosaic__cell tall">
+            <img src="{% static 'images/about/2.JPG' %}" class="mosaic__image">
+            <span class="mosaic__label">Wildlife</span>
+        </div>
+
+        <div class="mosaic__cell small1">
+            <img src="{% static 'images/about/3.png' %}" class="mosaic__image">
+            <span class="mosaic__label">Nature</span>
+        </div>
+
+        <div class="mosaic__cell small2">
+            <img src="{% static 'images/about/4.png' %}" class="mosaic__image">
+            <span class="mosaic__label">Adventure</span>
+        </div>
+
+        <div class="mosaic__cell wide">
+            <img src="{% static 'images/about/5.png' %}" class="mosaic__image">
+            <span class="mosaic__label">Luxury Safari</span>
+        </div>
+
+        <div class="mosaic__cell medium1">
+            <img src="{% static 'images/about/6.png' %}" class="mosaic__image">
+            <span class="mosaic__label">Game Drive</span>
+        </div>
+
+        <div class="mosaic__cell medium2">
+            <img src="{% static 'images/about/7.png' %}" class="mosaic__image">
+            <span class="mosaic__label">Big Five</span>
+        </div>
+
+        <div class="mosaic__cell medium3">
+            <img src="{% static 'images/about/8.JPG' %}" class="mosaic__image">
+            <span class="mosaic__label">Conservation</span>
+        </div>
+
+        <div class="mosaic__cell medium4">
+            <img src="{% static 'images/about/9.jpg' %}" class="mosaic__image">
+            <span class="mosaic__label">Scenic Views</span>
+        </div>
+
+        <div class="mosaic__cell banner">
+            <img src="{% static 'images/about/10.jpg' %}" class="mosaic__image">
+            <span class="mosaic__label">Raw Unwind Safaris</span>
+        </div>
+
     </div>
 
-    <div class="mosaic__cell">
-        <img src="{% static 'images/about/Luxe-Adventure.jpg' %}" alt="Luxury Adventure Safari" class="mosaic__image">
-        <span class="mosaic__label">Luxury Adventure</span>
-    </div>
-
-    <div class="mosaic__cell">
-        <img src="{% static 'images/about/maasai.jpg' %}" alt="Maasai Cultural Experience" class="mosaic__image">
-        <span class="mosaic__label">Maasai Experience</span>
-    </div>
-
-    <div class="mosaic__cell mosaic__cell--span-h">
-        <img src="{% static 'images/about/TAASASafari.jpg' %}" alt="TAASA Safari" class="mosaic__image">
-        <span class="mosaic__label">TAASA Safari</span>
-    </div>
-
-    <div class="mosaic__cell">
-        <img src="{% static 'images/about/TAASASafari.jpg' %}" alt="Safari Experience" class="mosaic__image">
-        <span class="mosaic__label">Safari Experience</span>
-    </div>
-
-</div>
 
     <!-- ══ 7. NOW & NEXT ════════════════════════════════════════ -->
     <section class="pipeline" id="pipeline">
@@ -1795,7 +1879,7 @@
                 a package selection. Tell us where you want to go. We will tell you what is possible.
             </p>
             <div class="cta-section__actions reveal reveal-delay-3">
-                <a href="/contact/" class="btn btn--primary">
+                <a href="mailto:info@rawunwindsafaris.com" target="_blank" class="btn btn--primary">
                     Start a conversation <span class="btn__arrow">&rarr;</span>
                 </a>
                 <a href="https://wa.me/254712420338" class="btn btn--outline" target="_blank" rel="noopener">
